@@ -1,0 +1,36 @@
+{
+  "sourceMaps": true,
+    "plugins": [
+      "transform-runtime",
+      "transform-decorators-legacy",
+      ["transform-object-rest-spread", { "useBuiltIns": true }],
+      ["transform-class-properties", { "spec": true }],
+      ["add-module-exports"]
+    ],
+  "presets": [
+    "react",
+    "airbnb",
+    "es2017",
+    "stage-0",
+    "stage-1",
+    "stage-2",
+    "stage-3",
+    ["env", {
+      "debug": true,
+      "loose": true,
+      "modules": false,
+      "useBuiltIns": true,
+      "targets": {
+        "browsers": ["> 5%", "last 2 versions"],
+        "node": "8.2.0"
+      },
+      "production":{
+        "presets":[
+          "transform-react-constant-elements",
+          "transform-react-inline-elements"
+        ]
+      }
+    }]
+  ]
+}
+
