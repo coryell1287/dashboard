@@ -4,12 +4,13 @@ import { ConnectedRouter } from 'connected-react-router';
 
 import { history } from 'store/configureStore';
 import Application from 'containers/Application';
+import SigninPage from 'containers/SigninPage';
 
 const Routes = () => {
   return (
     <ConnectedRouter history={history}>
       <Switch>
-        <Route exact path="/" component={Application}/>
+        <Route exact path="/" component={SigninPage}/>
       </Switch>
     </ConnectedRouter>
   );

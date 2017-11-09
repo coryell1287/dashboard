@@ -143,14 +143,6 @@ module.exports = (env) => {
                 minimize: isDev ? false : { discardComments: { removeAll: true } },
               },
             },
-            {
-              loader: 'sass-loader',
-              options: {
-                sourceMap: isDev,
-                paths: [resolve(__dirname, 'node_modules'), resolve(__dirname, 'src')],
-              },
-
-            },
             { loader: 'postcss-loader' },
           ],
         }),
