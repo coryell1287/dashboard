@@ -29,6 +29,10 @@ module.exports = (config) => {
             },
           },
           {
+            test: /\.css/,
+            loader: 'style-loader',
+          },
+          {
             test: /\.json$/,
             loader: 'json-loader',
           },

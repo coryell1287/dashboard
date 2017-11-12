@@ -4,7 +4,7 @@ import { ConnectedRouter } from 'connected-react-router';
 
 import { history } from 'store/configureStore';
 import Application from 'containers/Application';
-import SigninPage from 'containers/SigninPage';
+import SigninPage from 'components/Signin/SigninPage';
 
 const Routes = () => {
   return (

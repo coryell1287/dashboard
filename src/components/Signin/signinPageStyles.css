@@ -1,0 +1,78 @@
+
+.signinWrapper {
+  margin: 150px auto 0;
+  width: 25%;
+  padding-top: 30px;
+  background: #7B7CD6;
+  padding-right: 12px;
+  height: 380px;
+}
+
+.signupForm, .signinForm {
+
+}
+
+.navigation {
+  margin-left: 35px;
+}
+
+.navList li {
+  display: inline-block;
+  margin-bottom: 80px;
+}
+
+.navList li a {
+  color: #9DA9AF;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+
+.navList li:first-child {
+  margin-right: 30px;
+}
+
+.navList li:first-child a {
+  color: #FFF;
+  border-bottom: 2px solid #47ACA3;
+  padding-bottom: 14px;
+}
+
+.sigininForm {
+  margin-right: 34px;
+}
+
+.container {
+  padding: 0 23px;
+  overflow: hidden;
+}
+
+.signupForm {
+  position: relative;
+  top: -247px;
+  right: -540px;
+  opacity: 0;
+}
+
+.signinLabel {
+  font-weight: 400;
+  font-family: 'Roboto Regular', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  color: rgba(255, 255, 255, .7);
+  display: block;
+}
+
+.signinInputFields {
+  width: 100%;
+  height: 35px;
+  color: #FFF;
+  font-family: 'Roboto Regular', Arial, Helvetica, sans-serif;
+  padding-left: 15px;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, .2);
+}

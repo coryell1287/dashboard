@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import serviceReducer from 'reducers/serviceReducers';
+import signinReducer from 'reducers/SigninReducer';
 
 const rootReducer = combineReducers({
-  serviceState: serviceReducer,
+  signinState: signinReducer,
 });
 
 export default rootReducer;
