@@ -4,9 +4,6 @@ import { connect } from 'react-redux';
 import signinStyles from 'components/Signin/signinPageStyles';
 import appStyles from 'styles/appStyles';
 
-const scaleOut = signinStyles.scaleOut;
-const scaleIn = signinStyles.scaleIn;
-
 const SignupForm = () => (
   <form className={signinStyles.signupForm}>
     <div>

@@ -3,7 +3,6 @@ import React from 'react';
 import signinStyles from 'components/Signin/signinPageStyles';
 
 const { activeLink } = signinStyles;
-console.log(activeLink);
 
 const RenderedLinks = ({ link, index, isSelected, onSelectedLink }) => (
   <li className={isSelected}>

@@ -13,7 +13,7 @@ class SignInLinkState extends Component {
   @autobind
   handleLinkSelection(e, index) {
     e.preventDefault();
-    this.setState({ focused: index }, () => console.log(index));
+    this.setState({ focused: index });
   }
 
   render() {
