@@ -8,12 +8,12 @@ export default class ReactHelmet extends PureComponent {
       <div>
         <Helmet>
           <title>Project</title>
-          <html lang="en" />
+          <html lang="en"/>
           <meta name="description" content="Add the project description here" />
-          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         </Helmet>
         <div>
-          {React.cloneElement(this.props.children, { ...this.props })}
+          {React.cloneElement(this.props.children, ...this.props)}
         </div>
       </div>
     );
