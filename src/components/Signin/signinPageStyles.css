@@ -1,4 +1,3 @@
-
 .signinWrapper {
   margin: 150px auto 0;
   width: 25%;
@@ -23,7 +22,6 @@
   text-decoration: none;
   font-size: 1.4em;
   border-bottom: transparent;
-  padding-bottom: 0;
 }
 
 .navList li:first-child {
@@ -69,6 +67,7 @@
   height: 35px;
   color: #FFF;
   font-family: 'Roboto Regular', Arial, Helvetica, sans-serif;
+  font-size: 1.04em;
   padding-left: 15px;
   border: none;
   border-radius: 20px;

@@ -9,13 +9,13 @@ const SigninForm = ({ signin }) => (
     <div>
       <label htmlFor="username">
         <span className={signinStyles.signinLabel}>Username</span>
-        <input className={signinStyles.signinInputFields} id="username" type="text"/>
+        <input autoComplete="off" className={signinStyles.signinInputFields} id="username" type="text"/>
       </label>
     </div>
     <div>
       <label htmlFor="password">
         <span className={signinStyles.signinLabel}>Password</span>
-        <input className={signinStyles.signinInputFields} id="password" type="password"/>
+        <input autoComplete="off" className={signinStyles.signinInputFields} id="password" type="password"/>
       </label>
     </div>
     <SigninButtons />
