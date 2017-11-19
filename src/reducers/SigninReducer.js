@@ -1,26 +1,39 @@
 import { combineReducers } from 'redux';
 
 class SigninReducer {
-  static showSigninForm(state = 'signin', action) {
+  static signin(state = '', action) {
     switch (action.type) {
       case 'SHOW_SIGNIN_FORM': {
         return action.signin;
       }
       case 'HIDE_SIGNIN_FORM': {
-        return '';
+        return action.signin;
       }
       default:
         return state;
     }
   }
 
-  static showSignupForm(state = '', action) {
+  static formWrapper(state = '', action) {
+    switch (action.type) {
+      case 'EXPAND_FORM': {
+        return action.formWrapper;
+      }
+      case 'RESET_HEIGHT': {
+        return action.formWrapper;
+      }
+      default:
+        return state;
+    }
+  }
+
+  static signup(state = '', action) {
     switch (action.type) {
       case 'SHOW_SIGNUP_FORM': {
-        return action.register;
+        return action.signup;
       }
       case 'HIDE_SIGNUP_FORM': {
-        return '';
+        return action.signup;
       }
       default:
         return state;
@@ -29,8 +42,9 @@ class SigninReducer {
 }
 
 const reducers = {
-  signinForm: SigninReducer.showSigninForm,
-  signupForm: SigninReducer.showSignupForm,
+  signinForm: SigninReducer.signin,
+  signupForm: SigninReducer.signup,
+  formWrapper: SigninReducer.formWrapper,
 };
 
 export default combineReducers(reducers);

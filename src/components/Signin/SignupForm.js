@@ -1,11 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import classnames from 'classnames';
 
 import signinStyles from 'components/Signin/signinPageStyles';
 import appStyles from 'styles/appStyles';
 
-const SignupForm = () => (
-  <form className={signinStyles.signupForm}>
+const SignupForm = ({ signup }) => (
+  <form id="signup" className={classnames(signinStyles.signupForm, signup)}>
     <div>
       <label htmlFor="fullname">
         <span className={signinStyles.signinLabel}>Full name</span>
@@ -31,14 +32,13 @@ const SignupForm = () => (
       </label>
     </div>
     <div className={appStyles.actionButtons}>
-      <button className={appStyles.primaryButton}>Sign In</button>
-      <button className={appStyles.primaryButton}>Register</button>
+      <button className={appStyles.primaryButton}>Sign Up</button>
     </div>
   </form>
 );
 
 const mapStateToProps = state => ({
-  register: state.signinState.register,
-});
+  signup: state.signinState.signupForm,
+})
 
 export default connect(mapStateToProps)(SignupForm);

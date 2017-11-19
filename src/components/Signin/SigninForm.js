@@ -1,11 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import classnames from 'classnames';
 
 import SigninButtons from 'components/Signin/SigninButtons';
 import signinStyles from 'components/Signin/signinPageStyles';
 
 const SigninForm = ({ signin }) => (
-  <form id={signin} className={signinStyles.signinForm}>
+  <form id="signIn" className={classnames(signinStyles.signinForm, signin)}>
     <div>
       <label htmlFor="username">
         <span className={signinStyles.signinLabel}>Username</span>
@@ -25,6 +26,5 @@ const SigninForm = ({ signin }) => (
 const mapStateToProps = state => ({
   signin: state.signinState.signinForm,
 });
-
 
 export default connect(mapStateToProps)(SigninForm);

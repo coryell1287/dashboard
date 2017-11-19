@@ -5,6 +5,7 @@
   background: #7B7CD6;
   padding-right: 12px;
   height: 380px;
+  transition: height .5s ease;
 }
 
 .navigation {
@@ -35,20 +36,9 @@
   transition: border-bottom .3s ease, padding-bottom .3s ease;
 }
 
-.sigininForm {
-  margin-right: 34px;
-}
-
 .container {
   padding: 0 23px;
   overflow: hidden;
-}
-
-.signupForm {
-  position: relative;
-  top: -247px;
-  right: -540px;
-  opacity: 0;
 }
 
 .signinLabel {
@@ -73,4 +63,105 @@
   border-radius: 20px;
   margin-bottom: 20px;
   background: rgba(255, 255, 255, .2);
+}
+
+/**********************
+* Handling Animations *
+***********************/
+
+.signinForm {
+  margin-right: 34px;
+  position: relative;
+  right: 0;
+  transition: right .5s ease;
+}
+
+.signupForm {
+  position: relative;
+  top: -239px;
+  right: -540px;
+  opacity: 0;
+  transition: right .5s ease;
+}
+
+.slideInSignUpForm {
+  animation: signInslideIn .5s ease forwards;
+}
+
+.slideOutSignUpForm {
+  animation: signInslideOut .5s ease forwards;
+}
+
+.slideOutSignInForm {
+  animation: signOutslideOut .5s ease forwards;
+}
+
+.slideInSignInForm {
+  animation: signOutslideIn .5s ease forwards;
+}
+
+
+.expandForm {
+  animation: slideHeightDown .5s ease forwards;
+}
+
+.resetHeight {
+  animation: slideHeightUp .5s ease forwards;
+}
+@keyframes slideHeightDown {
+  0% {
+    height: 380px;
+  }
+  100% {
+    height: 550px;
+  }
+}
+
+@keyframes slideHeightUp {
+  0% {
+    height: 550px;
+  }
+  100% {
+    height: 380px;
+  }
+}
+
+@keyframes signOutslideOut {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 470px;
+  }
+}
+
+@keyframes signOutslideIn {
+  0% {
+    right: 470px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes signInslideIn {
+  0% {
+    right: -540px;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes signInslideOut{
+  0% {
+    right: 0;
+    opacity: 1;
+  }
+  100% {
+    right: -540px;
+    opacity: 0;
+  }
 }

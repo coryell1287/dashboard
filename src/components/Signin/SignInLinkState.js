@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import autobind from 'autobind-decorator';
+
+import { signUpUser, signInUser } from 'actions/SignInActions';
 
 class SignInLinkState extends Component {
   constructor(props) {
     super(props);
     this.state = {
       focused: 0,
-      signInLinks: ['Sign In', 'Sign Up'],
+      signInLinks: [
+        { id: 'signin', name: 'Sign in' },
+        { id: 'signup', name: 'Sign up' },
+      ],
     };
   }
 
@@ -14,6 +21,10 @@ class SignInLinkState extends Component {
   handleLinkSelection(e, index) {
     e.preventDefault();
     this.setState({ focused: index });
+    if (e.target.id === 'signup') {
+      return this.props.signUpUser();
+    }
+    return this.props.signInUser();
   }
 
   render() {
@@ -31,4 +42,6 @@ class SignInLinkState extends Component {
   }
 }
 
-export default SignInLinkState;
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ signUpUser, signInUser }, dispatch);
+export default connect(null, mapDispatchToProps)(SignInLinkState);

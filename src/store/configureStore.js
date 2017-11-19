@@ -1,4 +1,5 @@
 import thunk from 'redux-thunk';
+import multi from 'redux-multi';
 import { applyMiddleware, compose, createStore } from 'redux';
 import createHistory from 'history/createBrowserHistory';
 import { createLogger } from 'redux-logger';
@@ -18,7 +19,7 @@ const enhancers = compose(
 );
 
 const store = createStore(connectRouter(history)(rootReducer), enhancers, compose(
-  applyMiddleware(...middleware, routerMiddleware(history), asyncAwait)));
+  applyMiddleware(...middleware, multi, routerMiddleware(history), asyncAwait)));
 
 export {
   store,

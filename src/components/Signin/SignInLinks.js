@@ -1,36 +1,34 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import signinStyles from 'components/Signin/signinPageStyles';
 
 const { activeLink } = signinStyles;
 
-const RenderedLinks = ({ link, index, isSelected, onSelectedLink }) => (
+const RenderedLinks = ({ link, index, to, isSelected, onSelectedLink }) => (
   <li className={isSelected}>
-    <a onClick={e => onSelectedLink(e, index)} href="#">
+    <Link id={to} onClick={e => onSelectedLink(e, index)} to="">
       {link}
-    </a>
+    </Link>
   </li>
 );
 
 
-const SignInLinks = ({ signInLinks, focused, ...rest }) => {
-  return (
-    <nav className={signinStyles.navigation}>
-      <ul className={signinStyles.navList}>
-        {signInLinks.map((link, index) => {
-          return (
-            <RenderedLinks
-              {...rest}
-              isSelected={focused === index ? activeLink : ''}
-              link={link}
-              key={link}
-              index={index}
-            />
-          );
-        })}
-      </ul>
-    </nav>
-  );
-};
+const SignInLinks = ({ signInLinks, focused, ...rest }) => (
+  <nav className={signinStyles.navigation}>
+    <ul className={signinStyles.navList}>
+      {signInLinks.map((link, index) => (
+        <RenderedLinks
+          {...rest}
+          isSelected={focused === index ? activeLink : ''}
+          link={link.name}
+          to={link.id}
+          key={link.id}
+          index={index}
+        />
+      ))}
+    </ul>
+  </nav>
+);
 
 export default SignInLinks;

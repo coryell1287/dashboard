@@ -6,7 +6,7 @@ const { dispatch } = store;
 
 async function httpRequest(method, url, config) {
   try {
-    dispatch({ type: 'START_FETCHING' });
+    dispatch({ type: 'START_FETCHING', fetching: true });
     const { data } = method === 'get'
       ? await axios[method](url, config)
       : await axios[method](url, config.body, config);
@@ -14,7 +14,7 @@ async function httpRequest(method, url, config) {
   } catch (err) {
     return await dispatch(config.onError(err));
   } finally {
-    dispatch({ type: 'STOP_FETCHING' });
+    dispatch({ type: 'STOP_FETCHING', fetching: false });
   }
 }
 
