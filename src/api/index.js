@@ -18,11 +18,9 @@ async function httpRequest(method, url, config) {
   }
 }
 
-export const get = (basePath, config) => {
-  return httpRequest('get', `${host}${basePath}`, config);
-};
+export const get = (basePath, config) =>
+  httpRequest('get', `${host}${basePath}`, config);
 
-export const post = (basePath, body, config) => {
-  return httpRequest('post', `${host}${basePath}`, body, config);
-};
+export const post = (basePath, body, config) =>
+  httpRequest('post', `${host}${basePath}`, body, config);
 

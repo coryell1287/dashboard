@@ -32,6 +32,7 @@ class SignInLinkState extends Component {
       <aside>
         {React.Children.map(this.props.children,
           child => React.cloneElement(child, {
+            ...child.props,
             ...this.props,
             ...this.state,
             onSelectedLink: this.handleLinkSelection,

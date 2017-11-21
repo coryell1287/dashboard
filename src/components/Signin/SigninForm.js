@@ -5,21 +5,25 @@ import classnames from 'classnames';
 import SigninButtons from 'components/Signin/SigninButtons';
 import signinStyles from 'components/Signin/signinPageStyles';
 
-const SigninForm = ({ signin }) => (
+const Input = ({ id, field, type }) => (
+  <label htmlFor={id}>
+    <span className={signinStyles.signinLabel}>{field}</span>
+    <input autoComplete="off" className={signinStyles.signinInputFields} id={id} type={type}/>
+  </label>
+);
+
+const SigninForm = ({ signin, signInFields, buttons: { signInButton } }) => (
   <form id="signIn" className={classnames(signinStyles.signinForm, signin)}>
     <div>
-      <label htmlFor="username">
-        <span className={signinStyles.signinLabel}>Username</span>
-        <input autoComplete="off" className={signinStyles.signinInputFields} id="username" type="text"/>
-      </label>
+      {signInFields.map(input => (
+        <Input
+          key={input.id}
+          field={input.field}
+          id={input.id}
+        />
+      ))}
     </div>
-    <div>
-      <label htmlFor="password">
-        <span className={signinStyles.signinLabel}>Password</span>
-        <input autoComplete="off" className={signinStyles.signinInputFields} id="password" type="password"/>
-      </label>
-    </div>
-    <SigninButtons />
+    <SigninButtons control={signInButton} />
   </form>
 );
 

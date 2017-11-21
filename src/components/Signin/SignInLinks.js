@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import signinStyles from 'components/Signin/signinPageStyles';
+import signinStyles, { activeLink } from 'components/Signin/signinPageStyles';
 
-const { activeLink } = signinStyles;
 
 const RenderedLinks = ({ link, index, to, isSelected, onSelectedLink }) => (
   <li className={isSelected}>

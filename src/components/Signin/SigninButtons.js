@@ -2,9 +2,9 @@ import React from 'react';
 
 import appStyles from 'styles/appStyles';
 
-const SigninButtons = () => (
+const SigninButtons = ({ control }) => (
   <div className={appStyles.actionButtons}>
-    <button className={appStyles.primaryButton}>Sign In</button>
+    <button className={appStyles.primaryButton}>{control}</button>
   </div>
 );
 

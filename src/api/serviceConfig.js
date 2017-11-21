@@ -1,18 +1,14 @@
-const successfulServiceRequest = (service) => {
-  return {
-    type: service.type,
-    payload: {
-      data: service.data,
-    },
-  };
-};
+const successfulServiceRequest = service => ({
+  type: service.type,
+  payload: {
+    data: service.data,
+  },
+});
 
-const failedServiceRequest = (err) => {
-  return {
-    type: 'FAILED_SERVICE_REQUEST',
-    err: err.message,
-  };
-};
+const failedServiceRequest = err => ({
+  type: 'FAILED_SERVICE_REQUEST',
+  err: err.message,
+});
 
 const getBaseUrl = () => {
   let baseUrl;

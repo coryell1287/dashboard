@@ -6,6 +6,7 @@ import SigninForm from 'components/Signin/SigninForm';
 import SignupForm from 'components/Signin/SignupForm';
 import SignInLinkState from 'components/Signin/SignInLinkState';
 import SignInLinks from 'components/Signin/SignInLinks';
+import SignInFormValidation from 'components/Signin/SignInFormValidation';
 
 import signinStyles from 'components/Signin/signinPageStyles';
 
@@ -14,14 +15,15 @@ const SigninPage = ({ formWrapper }) => (
     <SignInLinkState>
       <SignInLinks />
     </SignInLinkState>
-    <section className={signinStyles.container}>
+    <SignInFormValidation containerStyle={signinStyles.container}>
       <SigninForm />
       <SignupForm />
-    </section>
+    </SignInFormValidation>
   </article>
 );
 
 const mapStateToProps = state => ({
   formWrapper: state.signinState.formWrapper,
-})
+});
+
 export default connect(mapStateToProps)(SigninPage);
