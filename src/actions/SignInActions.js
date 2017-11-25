@@ -5,34 +5,34 @@ import {
   slideInSignInForm,
   expandForm,
   resetHeight,
-} from 'components/Signin/signinPageStyles';
+} from 'components/SignIn/signInPageStyles';
 
 export default class SignInActions {
   static showSignInForm() {
     return {
       type: 'SHOW_SIGNIN_FORM',
-      signin: slideInSignInForm,
+      signIn: slideInSignInForm,
     };
   }
 
   static hideSignInForm() {
     return {
       type: 'HIDE_SIGNIN_FORM',
-      signin: slideOutSignInForm,
+      signIn: slideOutSignInForm,
     };
   }
 
   static showSignUpForm() {
     return {
       type: 'SHOW_SIGNUP_FORM',
-      signup: slideInSignUpForm,
+      signUp: slideInSignUpForm,
     };
   }
 
   static hideSignUpForm() {
     return {
       type: 'HIDE_SIGNUP_FORM',
-      signup: slideOutSignUpForm,
+      signUp: slideOutSignUpForm,
     };
   }
 

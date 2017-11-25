@@ -9,3 +9,15 @@ export const asyncGet = () => (dispatch) => {
   };
   dispatch(get(options.url, config));
 };
+
+
+class AsyncGet {
+  static getSomething() {
+    return (dispatch) => {
+      const options = {
+        url: '',
+      }
+      dispatch(get(options));
+    };
+  }
+}

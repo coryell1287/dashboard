@@ -11,8 +11,8 @@ class SignInLinkState extends Component {
     this.state = {
       focused: 0,
       signInLinks: [
-        { id: 'signin', name: 'Sign in' },
-        { id: 'signup', name: 'Sign up' },
+        { id: 'signIn', name: 'Sign in' },
+        { id: 'signUp', name: 'Sign up' },
       ],
     };
   }
@@ -21,7 +21,7 @@ class SignInLinkState extends Component {
   handleLinkSelection(e, index) {
     e.preventDefault();
     this.setState({ focused: index });
-    if (e.target.id === 'signup') {
+    if (e.target.id === 'signUp') {
       return this.props.signUpUser();
     }
     return this.props.signInUser();

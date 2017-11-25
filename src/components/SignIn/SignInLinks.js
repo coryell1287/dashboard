@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import signinStyles, { activeLink } from 'components/Signin/signinPageStyles';
-
+import signInStyles, { activeLink } from 'components/SignIn/signInPageStyles';
 
 const RenderedLinks = ({ link, index, to, isSelected, onSelectedLink }) => (
   <li className={isSelected}>
@@ -14,8 +13,8 @@ const RenderedLinks = ({ link, index, to, isSelected, onSelectedLink }) => (
 
 
 const SignInLinks = ({ signInLinks, focused, ...rest }) => (
-  <nav className={signinStyles.navigation}>
-    <ul className={signinStyles.navList}>
+  <nav className={signInStyles.navigation}>
+    <ul className={signInStyles.navList}>
       {signInLinks.map((link, index) => (
         <RenderedLinks
           {...rest}

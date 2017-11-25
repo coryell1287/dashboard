@@ -4,16 +4,14 @@ import { ConnectedRouter } from 'connected-react-router';
 
 import { history } from 'store/configureStore';
 import Application from 'containers/Application';
-import SigninPage from 'components/Signin/SigninPage';
+import SignInPage from 'components/SignIn/SignInPage';
 
-const Routes = () => {
-  return (
-    <ConnectedRouter history={history}>
-      <Switch>
-        <Route exact path="/" component={SigninPage}/>
-      </Switch>
-    </ConnectedRouter>
-  );
-};
+const Routes = () => (
+  <ConnectedRouter history={history}>
+    <Switch>
+      <Route exact path="/" component={SignInPage} />
+    </Switch>
+  </ConnectedRouter>
+);
 
 export default Routes;

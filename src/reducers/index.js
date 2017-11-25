@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import signinReducer from 'reducers/SigninReducer';
+import signInReducer from 'reducers/SignInReducer';
 
 const rootReducer = combineReducers({
-  signinState: signinReducer,
+  signInState: signInReducer,
 });
 
 export default rootReducer;
