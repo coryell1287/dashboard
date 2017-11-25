@@ -5,6 +5,8 @@ class SignInFormValidation extends Component {
   state = {
     buttons: {
       signInButton: 'Sign In',
+      disableSignInButton: false,
+      disableSignUpButton: false,
       signUpButton: 'Sign Up',
     },
     signInFormControls: {
@@ -113,12 +115,19 @@ class SignInFormValidation extends Component {
     const signInControls = { ...this.state.signInFormControls };
     const signUpControls = { ...this.state.signUpFormControls };
 
+
     switch (fieldName) {
       case 'username':
         if (isSignInForm) {
           userError = (value.length > 1 && isSignInForm);
           signInControls.signInFlags.username = userError;
-          return this.setState({ ...this.state, signInControls });
+          return this.setState(
+            {
+              ...this.state,
+              signInControls,
+            },
+            () => this.validateForm(),
+          );
         }
         userError = (value.length > 1 && isSignUpForm);
         signUpControls.signUpFlags.username = userError;
@@ -127,26 +136,55 @@ class SignInFormValidation extends Component {
         if (isSignInForm) {
           passError = (value.length > 1 && isSignInForm);
           signInControls.signInFlags.password = passError;
-          return this.setState({ ...this.state, signInControls });
+          return this.setState(
+            {
+              ...this.state,
+              signInControls,
+            },
+            () => this.validateForm(),
+          );
         }
         passError = (value.length > 1 && isSignUpForm);
         signUpControls.signUpFlags.password = passError;
-        return this.setState({ ...this.state, signUpControls });
+        return this.setState(
+          {
+            ...this.state,
+            signUpControls,
+          },
+          () => this.validateForm(),
+        );
       case 'email':
         emailError = (value.length > 1 && isSignUpForm);
         signUpControls.signUpFlags.email = emailError;
-        return this.setState({ ...this.state, signUpControls });
+        return this.setState(
+          {
+            ...this.state,
+            signUpControls,
+          },
+          () => this.validateForm(),
+        );
       case 'confirm':
         confirmError = (value.length > 1 && isSignUpForm);
         signUpControls.signUpFlags.confirm = confirmError;
-        return this.setState({ ...this.state, signUpControls });
+        return this.setState(
+          {
+            ...this.state,
+            signUpControls,
+          },
+          () => this.validateForm(),
+        );
       default:
         break;
     }
   };
 
+  validateForm() {
+    const buttons = { ...this.state.buttons };
+    buttons.disableSignInButton = true;
+    return this.setState({ ...this.state, buttons });
+  }
+
   render() {
-    console.log(this.state.signInFormControls)
     return (
       <section className={this.props.containerStyle}>
         {
