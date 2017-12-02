@@ -11,7 +11,7 @@ body {
   font-family: 'Roboto Regular', Arial, Helvetica, sans-serif;
 }
 
-.primaryButton {
+.button {
   background: #7B7CD6;
   color: #FFF;
   border: none;
@@ -23,7 +23,7 @@ body {
   font-size: 1.15em;
 }
 
-.primaryButton:hover {
+.button:hover {
   cursor: pointer;
 }
 

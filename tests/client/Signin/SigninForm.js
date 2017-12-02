@@ -3,7 +3,7 @@ import React from 'react';
 import signinStyles from './signinPageStyles.css';
 import appStyles from './appStyles.css';
 
-const SigninForm = () => (
+const SignInForm = () => (
   <form className={signinStyles.signinForm}>
     <div>
       <label htmlFor="username">
@@ -18,12 +18,12 @@ const SigninForm = () => (
       </label>
     </div>
     <div className={appStyles.actionButtons}>
-      <button className={appStyles.primaryButton}>Login</button>
-      <button className={appStyles.primaryButton}>Register</button>
+      <button className={appStyles.primaryColor}>Login</button>
+      <button className={appStyles.primaryColor}>Register</button>
     </div>
   </form>
 );
 
-export default SigninForm;
+export default SignInForm;
 
 

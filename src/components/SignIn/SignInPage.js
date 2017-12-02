@@ -11,15 +11,17 @@ import SignInFormValidation from 'components/SignIn/SignInFormValidation';
 import signInStyles from 'components/SignIn/signInPageStyles';
 
 const SignInPage = ({ formWrapper }) => (
-  <article id="formWrapper" className={classnames(signInStyles.signInWrapper, formWrapper)}>
-    <SignInLinkState>
-      <SignInLinks />
-    </SignInLinkState>
-    <SignInFormValidation containerStyle={signInStyles.container}>
-      <SignInForm />
-      <SignUpForm />
-    </SignInFormValidation>
-  </article>
+  <main className={signInStyles.signInBackground}>
+    <article id="formWrapper" className={classnames(signInStyles.signInWrapper, formWrapper)}>
+      <SignInLinkState>
+        <SignInLinks />
+      </SignInLinkState>
+      <SignInFormValidation containerStyle={signInStyles.container}>
+        <SignInForm />
+        <SignUpForm />
+      </SignInFormValidation>
+    </article>
+  </main>
 );
 
 const mapStateToProps = state => ({

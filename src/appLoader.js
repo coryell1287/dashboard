@@ -12,11 +12,11 @@ import HotLoader from './reactHotLoader';
 const renderUI = (App) => {
   render(
     <HotLoader>
-        <ReactHelmet>
-          <Provider store={store}>
-            <App/>
-          </Provider>
-        </ReactHelmet>
+      <ReactHelmet>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </ReactHelmet>
     </HotLoader>,
     document.getElementById('app'),
   );

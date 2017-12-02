@@ -9,13 +9,11 @@
 }
 
 body {
-  background: #52657C;
   font-family: 'Roboto Regular', Arial, Helvetica, sans-serif;
+  width: 100%;
 }
 
-.primaryButton {
-  background: #47ACA3;
-  color: #FFF;
+.button {
   border: none;
   font-family: 'Roboto Regular', Arial, Helvetica, sans-serif;
   padding: 15px;
@@ -25,10 +23,61 @@ body {
   font-size: 1.15em;
 }
 
-.primaryButton:hover {
+.button:hover {
   cursor: pointer;
+}
+
+.primaryColor {
+  background: #7B7CD6;
+  color: #FFF;
+}
+
+.secondaryColor {
+  background: #52657C;
+}
+
+.accentColor {
+  background: #47ACA3;
+}
+
+.defaultColor {
+  background: #FFF;
+}
+
+.disable {
+  background: #E2E6ED;
+  color: #9DA9AF;
+}
+
+.disable:hover {
+  cursor: not-allowed;
 }
 
 .actionButtons {
   text-align: center;
+}
+
+.appBar {
+  min-height: 90px;
+  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);
+}
+
+.sideBar {
+  width: 10%;
+  height: 100vh;
+}
+
+.contentWrapper .mainContent, .contentWrapper .sideBar {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.purple {
+  min-height: 500px;
+  background: purple;
+}
+
+.mainContent {
+  composes: purple;
+  width: 90%;
 }

@@ -181,6 +181,12 @@ class SignInFormValidation extends Component {
   validateForm() {
     const buttons = { ...this.state.buttons };
     buttons.disableSignInButton = true;
+    const { signInFormControls: { signInFlags: { username, password } } } = this.state;
+    console.log(username, password);
+    if (username || password) {
+      return this.setState({ ...this.state, buttons });
+    }
+    buttons.disableSignInButton = false;
     return this.setState({ ...this.state, buttons });
   }
 

@@ -24,7 +24,7 @@ const Input = (props) => (
   </label>
 );
 
-const SignUpForm = ({ signUp, signUpFields, buttons: { signUpButton }, ...rest }) => (
+const SignUpForm = ({ signUp, signUpFields, buttons: { signUpButton, disableSignUpButton }, ...rest }) => (
   <form id="signUp" className={classnames(signUpForm, signUp)}>
     <div>
       {signUpFields.map((input, idx) => (
@@ -42,6 +42,7 @@ const SignUpForm = ({ signUp, signUpFields, buttons: { signUpButton }, ...rest }
     </div>
     <SignInButtons
       {...rest}
+      disabledButton={!disableSignUpButton}
       control={signUpButton}/>
   </form>
 );
