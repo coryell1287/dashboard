@@ -1,3 +1,4 @@
+@import './variables.css';
 @import './reset.css';
 
 @font-face {
@@ -8,14 +9,31 @@
   font-weight: normal;
 }
 
+@font-face {
+  font-family: 'Material Icon';
+  src: url('fonts/MaterialIcons-Regular.eot');
+  src: url('fonts/MaterialIcons-Regular.eot?#iefix') format('embedded-opentype'), url('fonts/MaterialIcons-Regular.woff') format('woff'), url('fonts/MaterialIcons-Regular.ttf') format('truetype'), url('fonts/MaterialIcons-Regular.svg#MaterialIcons-Regular') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+
 body {
-  font-family: 'Roboto Regular', Arial, Helvetica, sans-serif;
+  font-family: var(--default-font-family);
   width: 100%;
 }
 
+
+.material-icons {
+  font-family: 'Material Icon';
+  color: var(--color-accent, #F00);
+  background: var(--icon-color, #F00);
+}
+
+
+
 .button {
   border: none;
-  font-family: 'Roboto Regular', Arial, Helvetica, sans-serif;
+  font-family: var(--default-font-family);
   padding: 15px;
   border-radius: 95px;
   width: 120px;
@@ -28,12 +46,12 @@ body {
 }
 
 .primaryColor {
-  background: #7B7CD6;
-  color: #FFF;
+  background: var(--primary-button-color);
+  color: var(--default-color);
 }
 
 .secondaryColor {
-  background: #52657C;
+  background: var(--secondary-color);
 }
 
 .accentColor {
@@ -41,7 +59,7 @@ body {
 }
 
 .defaultColor {
-  background: #FFF;
+  background: var(--default-color);
 }
 
 .disable {

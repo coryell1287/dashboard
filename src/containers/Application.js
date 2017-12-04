@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { mapDispatchToProps, mapStateToProps } from 'containers/propConfig';
 import appStyles from 'styles/appStyles';
 import classnames from 'classnames';
-import FontIcon from 'react-toolbox/lib/font_icon';
-
+import AppHeader from 'components/AppHeader/AppHeader';
 
 const appBarStyles = classnames(appStyles.appBar, appStyles.defaultColor);
+
 class Application extends Component {
 
   componentDidMount() {
@@ -18,7 +17,7 @@ class Application extends Component {
       <div>
         <article>
           <section id="appBar" className={appBarStyles}>
-            <FontIcon value='account_circle' />
+           <AppHeader />
           </section>
           <section id="contentWrapper" className={appStyles.contentWrapper}>
             <aside id="sidebar" className={classnames(appStyles.sideBar, appStyles.secondaryColor)}>Side bar</aside>

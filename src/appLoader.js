@@ -1,23 +1,26 @@
 import React from 'react';
 import { connectRouter } from 'connected-react-router';
 import { render } from 'react-dom';
+import ThemeProvider from 'styles/react-toolbox/lib/ThemeProvider';
+import { Provider } from 'react-redux';
+
 import { store, history } from 'store/configureStore';
 import ReactHelmet from 'containers/ReactHelmet';
 import Routes from 'routes';
-import { Provider } from 'react-redux';
 import rootReducer from 'reducers';
 import HotLoader from './reactHotLoader';
 
-
 const renderUI = (App) => {
   render(
-    <HotLoader>
-      <ReactHelmet>
-        <Provider store={store}>
-          <App />
-        </Provider>
-      </ReactHelmet>
-    </HotLoader>,
+    <ThemeProvider>
+      <HotLoader>
+        <ReactHelmet>
+          <Provider store={store}>
+            <App />
+          </Provider>
+        </ReactHelmet>
+      </HotLoader>
+    </ThemeProvider>,
     document.getElementById('app'),
   );
 };
