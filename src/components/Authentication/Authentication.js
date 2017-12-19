@@ -1,15 +1,13 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Route } from 'react-router-dom';
 
-class Authentication extends Component {
+class Authentication extends PureComponent {
   render() {
     const { component: Component, ...rest } = this.props;
     return (
       <Route
         {...rest}
-        render={props => {
-          return <Component {...this.props} />
-        }}
+        render={props => (<Component {...props} />)}
       />
     );
   }

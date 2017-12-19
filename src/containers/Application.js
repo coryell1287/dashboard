@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import appStyles from 'styles/appStyles';
 import classnames from 'classnames';
-import AppHeader from 'components/AppHeader/AppHeader';
 
-const appBarStyles = classnames(appStyles.appBar, appStyles.defaultColor);
+import appStyles from 'styles/appStyles';
+import AppHeader from 'components/AppHeader/AppHeader';
+import SideBar from 'components/SideBar/SideBar';
+import SideBarControls from 'components/SideBar/SideBarControls';
 
 class Application extends Component {
 
@@ -16,11 +17,11 @@ class Application extends Component {
     return (
       <div>
         <article>
-          <section id="appBar" className={appBarStyles}>
-           <AppHeader />
-          </section>
+          <AppHeader />
           <section id="contentWrapper" className={appStyles.contentWrapper}>
-            <aside id="sidebar" className={classnames(appStyles.sideBar, appStyles.secondaryColor)}>Side bar</aside>
+            <SideBarControls>
+              <SideBar />
+            </SideBarControls>
             <main id="mainContent" className={classnames(appStyles.mainContent)}>Main Content</main>
           </section>
         </article>

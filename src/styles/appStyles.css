@@ -1,6 +1,14 @@
 @import './variables.css';
 @import './reset.css';
 
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
 @font-face {
   font-family: 'Roboto Regular';
   src: url('fonts/Roboto-Regular.eot');
@@ -67,8 +75,12 @@ body {
   background: #47ACA3;
 }
 
-.defaultColor {
+.defaultBackgroundColor {
   background: var(--default-color);
+}
+
+.defaultColor {
+  color: var(--default-color);
 }
 
 .disable {
