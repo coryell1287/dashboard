@@ -21,7 +21,10 @@ const SideBar = (props) => (
       </h2>
       <h2
         id="intent"
+        ref={props.intent}
+        data-open={props.itemClick === 'intent'}
         onClick={e => props.onMenuItemSelectd(e)}
+        onDoubleClick={e => props.onCloseOpenMenuItem(e)}
         className={classnames(sideBarStyles.menuController, appStyles.defaultColor)}
       >
         Intent
@@ -40,7 +43,10 @@ const SideBar = (props) => (
     <section className={sideBarStyles.sideBarContainer}>
       <h2
         id="content"
+        ref={props.content}
+        data-open={props.itemClick === 'content'}
         onClick={e => props.onMenuItemSelectd(e)}
+        onDoubleClick={e => props.onCloseOpenMenuItem(e)}
         className={classnames(sideBarStyles.menuController, appStyles.defaultColor)}>
         Content
       </h2>

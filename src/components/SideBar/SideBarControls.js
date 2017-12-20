@@ -10,8 +10,29 @@ class SideBarControls extends Component {
   @autobind
   handleMenuItemSelected(e) {
     if (e.target.id !== 'dashboard') {
-      e.target.nextElementSibling.style.height = `${e.target.nextElementSibling.scrollHeight}px`;
-      console.log(e.target.nextElementSibling.scrollHeight);
+      const navItem = e.target;
+      const navID = e.target.id;
+      navItem.nextElementSibling.style.height = `${navItem.nextElementSibling.scrollHeight}px`;
+      this.setState({ itemClick: navID }, () => this.closeMenuController(navID));
+    }
+  }
+
+  closeOpenMenuController(e) {
+    if (e.target.dataset.open) {
+      e.target.nextElementSibling.style.height = 0;
+    }
+  }
+
+  closeMenuController(navID) {
+    const intent = this.intentHeader;
+    const content = this.contentHeader;
+
+    if (navID !== intent.id) {
+      intent.nextElementSibling.style.height = 0;
+    }
+
+    if (navID !== content.id) {
+      content.nextElementSibling.style.height = 0;
     }
   }
 
@@ -24,6 +45,13 @@ class SideBarControls extends Component {
               ...this.props,
               ...this.state,
               onMenuItemSelectd: this.handleMenuItemSelected,
+              onCloseOpenMenuItem: this.closeOpenMenuController,
+              intent: (node) => {
+                this.intentHeader = node;
+              },
+              content: (node) => {
+                this.contentHeader = node;
+              },
             }),
           )}
       </span>
