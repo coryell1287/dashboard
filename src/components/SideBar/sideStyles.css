@@ -30,6 +30,8 @@
   color: var(--default-font-color);
   text-decoration: none;
   transition: color 0.5s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .navigationWrapper li:hover {

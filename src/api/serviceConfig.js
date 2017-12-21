@@ -14,10 +14,10 @@ const getBaseUrl = () => {
   let baseUrl;
   const { location: { hostname, origin } } = window;
   if (hostname !== 'localhost') {
-    baseUrl = `${origin}/rest/`;
+    baseUrl = `${origin}/api/`;
     return baseUrl;
   }
-  baseUrl = 'http://localhost:4000/rest/';
+  baseUrl = 'http://localhost:4000/api/';
   return baseUrl;
 };
 
