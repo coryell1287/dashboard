@@ -6,7 +6,6 @@ import { withRouter } from 'react-router';
 import appStyles from 'styles/appStyles';
 import Content from 'components/Content/Content';
 
-console.log('Main component');
 const Main = () => (
   <main id="mainContent" className={classnames(appStyles.mainContent)}>
     <Switch>

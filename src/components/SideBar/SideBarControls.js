@@ -2,6 +2,28 @@ import React, { Component } from 'react';
 import autobind from 'autobind-decorator';
 import { withRouter } from 'react-router';
 
+import ContentMenu from 'components/Content/ContentMenu';
+import IntentMenu from 'components/Intent/IntentMenu';
+
+const sideBarConfig = [
+  {
+    id: 'dashboard',
+    text: 'Dashboard',
+  },
+  {
+    id: 'intent',
+    text: 'Intent',
+    ref: 'intent',
+    component: <IntentMenu/>,
+  },
+  {
+    id: 'content',
+    text: 'Content',
+    ref: 'content',
+    component: <ContentMenu/>,
+  },
+];
+
 class SideBarControls extends Component {
 
   state = {
@@ -10,6 +32,7 @@ class SideBarControls extends Component {
 
   @autobind
   handleMenuItemSelected(e) {
+    console.log('Event callled.', e.target.id)
     if (e.target.id !== 'dashboard') {
       const navItem = e.target;
       const navID = e.target.id;
@@ -31,6 +54,7 @@ class SideBarControls extends Component {
   }
 
   closeMenuController(navID) {
+    console.log(navID, ' is the value inside of closeMenuController()')
     const intent = this.intentHeader;
     const content = this.contentHeader;
 
@@ -51,7 +75,8 @@ class SideBarControls extends Component {
             child => React.cloneElement(child, {
               ...this.props,
               ...this.state,
-              onMenuItemSelectd: this.handleMenuItemSelected,
+              sideBarConfig,
+              onMenuItemSelected: this.handleMenuItemSelected,
               onCloseOpenMenuItem: this.closeOpenMenuController,
               intent: (node) => {
                 this.intentHeader = node;

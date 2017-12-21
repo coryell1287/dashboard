@@ -1,5 +1,4 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import classnames from 'classnames';
 
@@ -8,46 +7,41 @@ import sideBarStyles from 'components/SideBar/sideStyles';
 import IntentMenu from 'components/Intent/IntentMenu';
 import ContentMenu from 'components/Content/ContentMenu';
 
+const sideBarContainerStyles = sideBarStyles.sideBarContainer;
 const sideBarWrapper = classnames(appStyles.sideBar, appStyles.secondaryColor);
+const sideBarHeaderStyles = classnames(sideBarStyles.menuController, appStyles.defaultColor);
 
-const SideBar = (props) => (
-  <aside
-    id="sidebar"
-    className={sideBarWrapper}
-  >
-    <section className={sideBarStyles.sideBarContainer}>
-      <h2
-        id="dashboard"
-        onClick={e => props.onMenuItemSelectd(e)}
-        className={classnames(sideBarStyles.menuController, appStyles.defaultColor)}
+class SideBar extends Component {
+  render() {
+    return (
+      <aside
+        id="sidebar"
+        className={sideBarWrapper}
       >
-        Dashboard
-      </h2>
-      <h2
-        id="intent"
-        ref={props.intent}
-        data-open={props.itemClick === 'intent'}
-        onClick={e => props.onMenuItemSelectd(e)}
-        onDoubleClick={e => props.onCloseOpenMenuItem(e)}
-        className={classnames(sideBarStyles.menuController, appStyles.defaultColor)}
-      >
-        Intent
-      </h2>
-      <IntentMenu/>
-    </section>
-    <section className={sideBarStyles.sideBarContainer}>
-      <h2
-        id="content"
-        ref={props.content}
-        data-open={props.itemClick === 'content'}
-        onClick={e => props.onMenuItemSelectd(e)}
-        onDoubleClick={e => props.onCloseOpenMenuItem(e)}
-        className={classnames(sideBarStyles.menuController, appStyles.defaultColor)}>
-        Content
-      </h2>
-      <ContentMenu/>
-    </section>
-  </aside>
-);
+        <section className={sideBarContainerStyles}>
+
+          {
+            this.props.sideBarConfig.map(config =>
+              <section>
+                <h2
+                  key={config.id}
+                  id={config.id}
+                  ref={this.props[config.ref]}
+                  data-open={this.props.itemClick === config.id}
+                  onClick={e => this.props.onMenuItemSelected(e)}
+                  onDoubleClick={e => this.props.onCloseOpenMenuItem(e)}
+                  className={sideBarHeaderStyles}
+                >
+                  {config.text}
+                </h2>
+                {config.component}
+              </section>)
+          }
+
+        </section>
+      </aside>
+    );
+  }
+}
 
 export default withRouter(SideBar);

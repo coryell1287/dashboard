@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
 import { withRouter } from 'react-router'
 
 import appStyles from 'styles/appStyles';
@@ -8,27 +7,18 @@ import SideBar from 'components/SideBar/SideBar';
 import SideBarControls from 'components/SideBar/SideBarControls';
 import Main from 'components/Main/Main';
 
-class Application extends Component {
+const Application = () => (
+  <div>
+    <article>
+      <AppHeader />
+      <section id="contentWrapper" className={appStyles.contentWrapper}>
+        <SideBarControls>
+          <SideBar />
+        </SideBarControls>
+        <Main />
+      </section>
+    </article>
+  </div>
+);
 
-  componentDidMount() {
-    console.log('Application component mounted');
-  }
-
-  render() {
-    return (
-      <div>
-        <article>
-          <AppHeader/>
-          <section id="contentWrapper" className={appStyles.contentWrapper}>
-            <SideBarControls>
-              <SideBar/>
-            </SideBarControls>
-            <Main />
-          </section>
-        </article>
-      </div>
-    );
-  }
-}
-
-export default withRouter(connect(null)(Application));
+export default withRouter(Application);
