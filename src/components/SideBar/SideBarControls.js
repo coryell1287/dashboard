@@ -2,27 +2,7 @@ import React, { Component } from 'react';
 import autobind from 'autobind-decorator';
 import { withRouter } from 'react-router';
 
-import ContentMenu from 'components/Content/ContentMenu';
-import IntentMenu from 'components/Intent/IntentMenu';
-
-const sideBarConfig = [
-  {
-    id: 'dashboard',
-    text: 'Dashboard',
-  },
-  {
-    id: 'intent',
-    text: 'Intent',
-    ref: 'intent',
-    component: <IntentMenu/>,
-  },
-  {
-    id: 'content',
-    text: 'Content',
-    ref: 'content',
-    component: <ContentMenu/>,
-  },
-];
+import sideBarConfig from 'components/SideBar/sideBarConfig';
 
 class SideBarControls extends Component {
 
