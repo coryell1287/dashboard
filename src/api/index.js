@@ -4,7 +4,7 @@ import { host } from 'api/serviceConfig';
 
 const { dispatch } = store;
 
-async function httpRequest(method, url, config) {
+const httpRequest = async (method, url, config) => {
   try {
     dispatch({ type: 'START_FETCHING', fetching: true });
     const { data } = method === 'get'
@@ -16,7 +16,7 @@ async function httpRequest(method, url, config) {
   } finally {
     dispatch({ type: 'STOP_FETCHING', fetching: false });
   }
-}
+};
 
 export const get = (basePath, config) =>
   httpRequest('get', `${host}${basePath}`, config);

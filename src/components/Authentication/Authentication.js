@@ -6,6 +6,7 @@ class Authentication extends PureComponent {
     const { component: Component, ...rest } = this.props;
     return (
       <Route
+        exact
         {...rest}
         render={props => (<Component {...props} />)}
       />

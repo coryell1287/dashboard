@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import classnames from 'classnames';
+import { withRouter } from 'react-router'
 
 import appStyles from 'styles/appStyles';
 import AppHeader from 'components/AppHeader/AppHeader';
 import SideBar from 'components/SideBar/SideBar';
 import SideBarControls from 'components/SideBar/SideBarControls';
+import Main from 'components/Main/Main';
 
 class Application extends Component {
 
@@ -17,12 +18,12 @@ class Application extends Component {
     return (
       <div>
         <article>
-          <AppHeader />
+          <AppHeader/>
           <section id="contentWrapper" className={appStyles.contentWrapper}>
             <SideBarControls>
-              <SideBar />
+              <SideBar/>
             </SideBarControls>
-            <main id="mainContent" className={classnames(appStyles.mainContent)}>Main Content</main>
+            <Main />
           </section>
         </article>
       </div>
@@ -30,4 +31,4 @@ class Application extends Component {
   }
 }
 
-export default connect(null)(Application);
+export default withRouter(connect(null)(Application));

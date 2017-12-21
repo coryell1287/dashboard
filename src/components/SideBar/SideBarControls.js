@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import autobind from 'autobind-decorator';
+import { withRouter } from 'react-router';
 
 class SideBarControls extends Component {
 
@@ -14,12 +15,18 @@ class SideBarControls extends Component {
       const navID = e.target.id;
       navItem.nextElementSibling.style.height = `${navItem.nextElementSibling.scrollHeight}px`;
       this.setState({ itemClick: navID }, () => this.closeMenuController(navID));
+    } else if (e.target.id === 'dashboard') {
+      const navID = e.target;
+      this.closeMenuController(navID);
+      this.props.history.push('/');
     }
   }
 
   closeOpenMenuController(e) {
-    if (e.target.dataset.open) {
-      e.target.nextElementSibling.style.height = 0;
+    if (e.target.id !== 'dashboard') {
+      if (e.target.dataset.open) {
+        e.target.nextElementSibling.style.height = 0;
+      }
     }
   }
 
@@ -59,4 +66,4 @@ class SideBarControls extends Component {
   }
 }
 
-export default SideBarControls;
+export default withRouter(SideBarControls);
