@@ -4,8 +4,6 @@ import classnames from 'classnames';
 
 import appStyles from 'styles/appStyles';
 import sideBarStyles from 'components/SideBar/sideStyles';
-import IntentMenu from 'components/Intent/IntentMenu';
-import ContentMenu from 'components/Content/ContentMenu';
 
 const sideBarContainerStyles = sideBarStyles.sideBarContainer;
 const sideBarWrapper = classnames(appStyles.sideBar, appStyles.secondaryColor);
