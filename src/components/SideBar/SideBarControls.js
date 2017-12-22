@@ -12,7 +12,6 @@ class SideBarControls extends Component {
 
   @autobind
   handleMenuItemSelected(e) {
-    console.log('Event callled.', e.target.id)
     if (e.target.id !== 'dashboard') {
       const navItem = e.target;
       const navID = e.target.id;
@@ -34,7 +33,6 @@ class SideBarControls extends Component {
   }
 
   closeMenuController(navID) {
-    console.log(navID, ' is the value inside of closeMenuController()')
     const intent = this.intentHeader;
     const content = this.contentHeader;
 

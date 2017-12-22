@@ -8,9 +8,20 @@ import sideBarStyles from 'components/SideBar/sideStyles';
 const sideBarContainerStyles = sideBarStyles.sideBarContainer;
 const sideBarWrapper = classnames(appStyles.sideBar, appStyles.secondaryColor);
 const sideBarHeaderStyles = classnames(sideBarStyles.menuController, appStyles.defaultColor);
+const dashboardControlsStyles = classnames(sideBarStyles.menuController, sideBarStyles.dashboard, appStyles.defaultColor);
 
 class SideBar extends Component {
   render() {
+
+    const controlStyles = (itemClick, elem) => {
+      console.log(this.props.location.pathname === '/');
+      return (
+        (elem === 'dashboard' && this.props.location.pathname === '/')
+          ? dashboardControlsStyles
+          : sideBarHeaderStyles
+      );
+    };
+
     return (
       <aside
         id="sidebar"
@@ -20,15 +31,14 @@ class SideBar extends Component {
 
           {
             this.props.sideBarConfig.map(config =>
-              <section>
+              <section key={config.id}>
                 <h2
-                  key={config.id}
                   id={config.id}
                   ref={this.props[config.ref]}
                   data-open={this.props.itemClick === config.id}
                   onClick={e => this.props.onMenuItemSelected(e)}
                   onDoubleClick={e => this.props.onCloseOpenMenuItem(e)}
-                  className={sideBarHeaderStyles}
+                  className={controlStyles(this.props.itemClick, config.id)}
                 >
                   {config.text}
                 </h2>

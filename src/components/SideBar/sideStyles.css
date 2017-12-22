@@ -6,8 +6,13 @@
 
 .menuController {
   font-family: var(--default-font-family);
-  color: var(--default-font-color);
+  color: var(--default-color);
   padding: 13px 15px;
+}
+
+.menuController.dashboard {
+  background: var(--accent-color);
+  color: var(--default-color);
 }
 
 .menuController:hover {
@@ -15,23 +20,32 @@
 }
 
 .navigationWrapper {
-  background: rgba(128, 155, 168, 1);
+  background: var(--primary-color);
   height: 0;
   transition: height 0.5s ease;
   overflow: hidden;
 }
 
-.navigationWrapper li {
-}
+
 
 .navigationWrapper li a {
   display: inline-block;
   padding: 10px 15px;
-  color: var(--default-font-color);
+  color: var(--default-color);
   text-decoration: none;
   transition: color 0.5s ease;
   width: 100%;
   box-sizing: border-box;
+}
+
+.navigationWrapper li:hover a {
+  color: var(--default-color);
+  transition: color 0.5s ease;
+}
+
+.navigationWrapper li a.activeController {
+  background: var(--accent-color);
+  color: var(--default-color);
 }
 
 .navigationWrapper li:hover {
@@ -40,7 +54,3 @@
   transition: color ease 0.5s, background ease 0.5s;
 }
 
-.navigationWrapper li:hover a{
-  color: var(--default-color);
-  transition: color 0.5s ease;
-}

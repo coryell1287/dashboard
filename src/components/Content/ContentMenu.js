@@ -3,11 +3,11 @@ import { NavLink } from 'react-router-dom';
 import sideBarStyles from 'components/SideBar/sideStyles';
 
 
-const ContentMenu = (props) => (
+const ContentMenu = () => (
   <nav className={sideBarStyles.navigationWrapper}>
     <ul>
       <li>
-        <NavLink to="/content" activeClassName="active">
+        <NavLink to="/content" activeClassName={sideBarStyles.activeController}>
           CLICK HERE
         </NavLink>
       </li>
