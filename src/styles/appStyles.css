@@ -30,6 +30,10 @@ body {
   width: 100%;
 }
 
+main {
+ background: var(--main-background-color)
+}
+
 .material-icons {
   font-family: var(--material-icons);
   font-weight: normal;
@@ -97,8 +101,7 @@ body {
 }
 
 .appBar {
-  min-height: 90px;
-  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02);
 }
 
 .sideBar {
@@ -113,7 +116,6 @@ body {
 
 .purple {
   min-height: 500px;
-  background: purple;
 }
 
 .mainContent {
