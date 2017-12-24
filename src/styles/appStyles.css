@@ -121,4 +121,5 @@ main {
 .mainContent {
   composes: purple;
   width: 90%;
+  height: 100vh;
 }

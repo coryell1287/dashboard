@@ -7,7 +7,7 @@ import axios from 'axios';
 
 import { host } from 'api/serviceConfig';
 import { store, history } from 'store/configureStore';
-import ReactHelmet from 'containers/ReactHelmet';
+import { ReactHelmet } from 'containers';
 import Routes from 'routes';
 import rootReducer from 'reducers';
 import HotLoader from './reactHotLoader';

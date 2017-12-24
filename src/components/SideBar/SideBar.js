@@ -14,7 +14,6 @@ class SideBar extends Component {
   render() {
 
     const controlStyles = (itemClick, elem) => {
-      console.log(this.props.location.pathname === '/');
       return (
         (elem === 'dashboard' && this.props.location.pathname === '/')
           ? dashboardControlsStyles

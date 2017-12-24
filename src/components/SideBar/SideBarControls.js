@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import autobind from 'autobind-decorator';
 import { withRouter } from 'react-router';
 
-import sideBarConfig from 'components/SideBar/sideBarConfig';
+import { sideBarConfig } from 'components/SideBar';
 
 class SideBarControls extends Component {
 

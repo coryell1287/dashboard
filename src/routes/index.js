@@ -8,7 +8,7 @@ import Authentication from 'components/Authentication/Authentication';
 
 const Routes = () => (
   <ConnectedRouter history={history}>
-    <Application/>
+    <Application />
   </ConnectedRouter>
 );
 
