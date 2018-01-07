@@ -1,0 +1,16 @@
+@import '../../styles/variables.css';
+
+.headerDisplay {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.navContextWrapper span {
+  margin-right: 15px;
+}
+
+.navContextWrapper a {
+  color: var(--default-font-color);
+  font-size: 1.25em;
+}

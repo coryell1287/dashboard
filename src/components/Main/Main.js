@@ -5,11 +5,14 @@ import { withRouter } from 'react-router';
 
 import appStyles from 'styles/appStyles';
 import { Content } from 'components/Content';
+import Dashboard from 'components/Dashboard';
+import MainHeader from 'components/MainHeader';
 
 const Main = () => (
   <main id="mainContent" className={classnames(appStyles.mainContent)}>
+    <MainHeader />
     <Switch>
-      <Route exact path="/" render={() => <h1>Hello Motto</h1>} />
+      <Route exact path="/" component={Dashboard} />
       <Route path="/content" component={Content} />
     </Switch>
   </main>
