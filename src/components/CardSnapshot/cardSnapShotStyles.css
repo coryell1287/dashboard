@@ -1,0 +1,4 @@
+.snapShotContainer {
+  display: flex;
+  justify-content: space-between;
+}

@@ -20,7 +20,7 @@ const Email = () => (
 
 const AppHeader = () => (
   <section id="appBar" className={appBarStyles}>
-    <AppBar title="Dashboard" leftIcon={<Logo/>} rightIcon={<Logo/>}>
+    <AppBar title="Dashboard" rightIcon={<Logo />}>
       <Navigation type="horizontal">
         <Link href="http://" label="Inbox" icon={<Email/>}/>
         <Link href="http://" active label="Profile" icon={<AccountCircle/>}/>

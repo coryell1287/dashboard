@@ -9,6 +9,10 @@ h2 {
   font-size: 1.2em;
 }
 
+a {
+  text-decoration: none;
+}
+
 @font-face {
   font-family: 'Roboto Regular';
   src: url('fonts/Roboto-Regular.eot');
@@ -31,7 +35,7 @@ body {
 }
 
 main {
- background: var(--main-background-color)
+  background: var(--main-background-color)
 }
 
 .material-icons {
@@ -76,7 +80,7 @@ main {
 }
 
 .accentColor {
-  background: #47ACA3;
+  background: var(--accent-color);
 }
 
 .defaultBackgroundColor {
@@ -114,12 +118,10 @@ main {
   vertical-align: top;
 }
 
-.purple {
-  min-height: 500px;
-}
-
 .mainContent {
-  composes: purple;
+  min-height: 500px;
+  padding: 20px;
+  box-sizing: border-box;
   width: 90%;
   height: 100vh;
 }
