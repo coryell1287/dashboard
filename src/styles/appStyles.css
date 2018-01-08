@@ -39,6 +39,7 @@ main {
 }
 
 .material-icons {
+  color: var(--main-background-color);
   font-family: var(--material-icons);
   font-weight: normal;
   font-style: normal;

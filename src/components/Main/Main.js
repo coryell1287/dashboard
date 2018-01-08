@@ -8,7 +8,7 @@ import { Content } from 'components/Content';
 import Dashboard from 'components/Dashboard';
 import MainHeader from 'components/MainHeader';
 
-const Main = () => (
+const Main = (props) => (
   <main id="mainContent" className={classnames(appStyles.mainContent)}>
     <MainHeader />
     <Switch>

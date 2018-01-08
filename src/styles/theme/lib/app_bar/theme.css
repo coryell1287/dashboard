@@ -428,7 +428,8 @@
   font-weight: bold;
   overflow-x: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap
+  white-space: nowrap;
+  overflow-y: hidden;
 }
 .title > small {
   font-size: calc(1.8 * var(--unit));

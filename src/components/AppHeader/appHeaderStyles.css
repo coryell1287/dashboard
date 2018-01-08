@@ -1,0 +1,12 @@
+.profileCircle {
+  border-radius: 95px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.imageDimensions{
+  width: 40px;
+  height: 40px;
+}
