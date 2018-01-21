@@ -81,6 +81,7 @@ module.exports = (env) => {
         routes: resolve(__dirname, 'src/routes/'),
         stores: resolve(__dirname, 'src/stores/'),
         styles: resolve(__dirname, './src/styles/'),
+        tests: resolve(__dirname, './src/tests/'),
       },
     },
     output: {

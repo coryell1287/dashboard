@@ -15,6 +15,6 @@ const MainHeader = (props) => {
       </section>
     </header>
   );
-}
+};
 
 export default withRouter(MainHeader);

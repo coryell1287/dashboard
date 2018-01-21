@@ -1,4 +1,7 @@
 const path = require('path');
+const webpack = require('karma-webpack');
+const webpackConfig = require('./webpack.config');
+const Text = require('extract-text-webpack-plugin');
 
 module.exports = (config) => {
   config.set({
@@ -7,16 +10,17 @@ module.exports = (config) => {
     frameworks: ['mocha'],
     files: [
       'node_modules/babel-polyfill/dist/polyfill.js',
-      'tests/client/**/*.test.js',
+      'src/**/*.test.js',
+      'src/**/*.css',
     ],
-
     preprocessors: {
       'src/appLoader.js': ['webpack', 'sourcemap'],
-      'tests/client/**/*.test.js': ['webpack', 'sourcemap'],
+      'src/**/*.test.js': ['webpack', 'sourcemap'],
     },
 
     webpack: {
       devtool: 'inline-source-map',
+      resolve: webpackConfig.resolve,
       module: {
         loaders: [
           {

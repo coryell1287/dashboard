@@ -3,6 +3,10 @@
     "plugins": [
       "transform-runtime",
       "transform-decorators-legacy",
+      [ "babel-plugin-webpack-alias", {
+        "config": "${PWD}/karmaconf.js"
+      }
+      ],
       ["transform-object-rest-spread", { "useBuiltIns": true }],
       ["transform-class-properties", { "spec": true }],
       ["transform-react-jsx-source"],
