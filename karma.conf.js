@@ -1,7 +1,6 @@
-const path = require('path');
 const webpack = require('karma-webpack');
 const webpackConfig = require('./webpack.config');
-const Text = require('extract-text-webpack-plugin');
+
 
 module.exports = (config) => {
   config.set({
@@ -11,44 +10,11 @@ module.exports = (config) => {
     files: [
       'node_modules/babel-polyfill/dist/polyfill.js',
       'src/**/*.test.js',
-      'src/**/*.css',
     ],
     preprocessors: {
       'src/appLoader.js': ['webpack', 'sourcemap'],
       'src/**/*.test.js': ['webpack', 'sourcemap'],
     },
-
-    webpack: {
-      devtool: 'inline-source-map',
-      resolve: webpackConfig.resolve,
-      module: {
-        loaders: [
-          {
-            test: /\.js$/,
-            loader: 'babel-loader',
-            exclude: path.resolve(__dirname, 'node_modules'),
-            query: {
-              plugins: ['transform-decorators-legacy', 'transform-regenerator'],
-              presets: ['react', 'airbnb', 'es2017', 'stage-0', 'stage-1', 'stage-2', 'stage-3'],
-            },
-          },
-          {
-            test: /\.css/,
-            loader: 'style-loader',
-          },
-          {
-            test: /\.json$/,
-            loader: 'json-loader',
-          },
-        ],
-      },
-      externals: {
-        'react/addons': true,
-        'react/lib/ExecutionEnvironment': true,
-        'react/lib/ReactContext': true,
-      },
-    },
-
     htmlReporter: {
       outputFile: 'tests/test.html',
       pageTitle: 'Dashboard Tests',
@@ -63,6 +29,7 @@ module.exports = (config) => {
     },
 
     reporters: ['nyan', 'verbose', 'html'],
+    webpack: webpackConfig,
 
     nyanReporter: {
       suppressErrorHighlighting: true,

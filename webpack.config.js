@@ -84,6 +84,11 @@ module.exports = (env) => {
         tests: resolve(__dirname, './src/tests/'),
       },
     },
+    externals: {
+      'react/addons': isDev,
+      'react/lib/ExecutionEnvironment': isDev,
+      'react/lib/ReactContext': isDev,
+    },
     output: {
       publicPath: '',
       path: resolve(__dirname, './dist'),
