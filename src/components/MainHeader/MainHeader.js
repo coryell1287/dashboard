@@ -1,17 +1,18 @@
 import React from 'react';
 import { withRouter } from 'react-router';
-
-import mainHeaderStyles from 'components/MainHeader/mainHeaderStyles';
+import { Link } from 'react-router-dom';
 
 const MainHeader = (props) => {
-  const path = props.location.pathname.split('/').filter(url => url !== '');
-  const title = path.length === 0 ? 'Dashboard' : path.toString();
+  const removeSpace = props.location.pathname.split('/').filter(url => url !== '');
+  const name = removeSpace[0] !== undefined ? removeSpace[0].toString() : '';
+  const title = name.length === 0 ? 'Dashboard' : name.replace(/-/g, ' ');
+
   return (
-    <header className={mainHeaderStyles.headerDisplay}>
-      <h1 style={{ textTransform: 'capitalize' }}>{title}</h1>
-      <section className={mainHeaderStyles.navContextWrapper}>
-        <span><a href="">Home/</a></span>
-        <span><a style={{ textTransform: 'capitalize', display: 'inline-block' }} href="">{title}</a></span>
+    <header className="headerDisplay">
+      <h1 className="mainHeader_pageTitle">{title}</h1>
+      <section className="navContextWrapper">
+        <span><Link to="/" className="mainHeader_pageTitle mainHeader_accentColor"> Home</Link> /</span>
+        <span className="mainHeader_pageTitle">{title}</span>
       </section>
     </header>
   );

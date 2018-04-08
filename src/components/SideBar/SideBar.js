@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import classnames from 'classnames';
 
-import appStyles from 'styles/appStyles';
-import sideBarStyles from 'components/SideBar/sideStyles';
 
-const sideBarContainerStyles = sideBarStyles.sideBarContainer;
-const sideBarWrapper = classnames(appStyles.sideBar, appStyles.secondaryColor);
-const sideBarHeaderStyles = classnames(sideBarStyles.menuController, appStyles.defaultColor);
-const dashboardControlsStyles = classnames(sideBarStyles.menuController, sideBarStyles.dashboard, appStyles.defaultColor);
+const sideBarHeaderStyles = 'defaultColor menuController';
+const dashboardControlsStyles = 'menuController dashboard defaultColor';
+
+const resize = 'resizeSideBar';
 
 class SideBar extends Component {
+
   render() {
 
-    const controlStyles = (itemClick, elem) => {
+    const controlStyles = (elem) => {
       return (
         (elem === 'dashboard' && this.props.location.pathname === '/')
           ? dashboardControlsStyles
@@ -24,31 +24,68 @@ class SideBar extends Component {
     return (
       <aside
         id="sidebar"
-        className={sideBarWrapper}
+        className={classnames('sideBar',
+          this.props.resize ? resize : '',
+        )}
       >
-        <section className={sideBarContainerStyles}>
-
+        <section className={classnames('sideBarContainer',
+          this.props.resize ? resize : '',
+        )}>
           {
             this.props.sideBarConfig.map(config =>
-              <section key={config.id}>
-                <h2
+              <section
+                className="menuContainer"
+                key={config.id}
+              >
+                <div
                   id={config.id}
+                  data-open={(this.props.itemClick === config.id && this.props.focus === 'true')}
                   ref={this.props[config.ref]}
-                  data-open={this.props.itemClick === config.id}
-                  onClick={e => this.props.onMenuItemSelected(e)}
-                  onDoubleClick={e => this.props.onCloseOpenMenuItem(e)}
-                  className={controlStyles(this.props.itemClick, config.id)}
+                  className={controlStyles(config.id)}
+                  onClick={e => {
+                    this.props.onMenuItemSelected(e);
+                    this.props.onPageReset();
+                  }}
                 >
-                  {config.text}
-                </h2>
+                  <div className="navigationIcons">{config.icon}</div>
+                  <div className="menuControllerContainer">
+                    <h2
+                      className={classnames('sideHeader',
+                        this.props.resize && 'sideHeaderTransition',
+                      )}
+                      data-header={config.id}
+                    >
+                      {config.heading}
+                    </h2>
+                  </div>
+                  {
+                    config.id !== 'dashboard' &&
+                    <div className="arrowControls">
+                      <i
+                        className={classnames(
+                          'material-icons',
+                          'arrowController',
+                          this.props.resize && 'arrowTransition',
+                          this.props.arrowStyle === config.id
+                            ? 'transformArrow'
+                            : 'resetArrow',
+                        )}
+                      >
+                        keyboard_arrow_down
+                      </i>
+                    </div>
+                  }
+                </div>
                 {config.component}
               </section>)
           }
-
         </section>
       </aside>
     );
   }
 }
 
-export default withRouter(SideBar);
+const mapStateToProps = state => ({
+  resize: state.resizeState.resizePage,
+});
+export default withRouter(connect(mapStateToProps)(SideBar));

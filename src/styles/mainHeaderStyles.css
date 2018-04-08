@@ -1,0 +1,27 @@
+@import './variables.css';
+
+.headerDisplay {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: var(--default-font-color);
+}
+
+.navContextWrapper span {
+  margin-right: 15px;
+}
+
+.navContextWrapper a {
+  font-size: 1.25em;
+}
+
+.mainHeader_accentColor {
+  color: var(--accent-color);
+}
+
+.mainHeader_pageTitle {
+  text-transform: capitalize;
+  display: inline-block;
+  font-size: 1.25em;
+}
+

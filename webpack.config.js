@@ -29,6 +29,7 @@ module.exports = (env) => {
     'redux-thunk',
     'react-router',
     'react-helmet',
+    'babel-polyfill',
     'core-decorators',
     'react-router-dom',
     'redux-async-await',
@@ -48,7 +49,7 @@ module.exports = (env) => {
     stats: {
       children: false,
     },
-    entry: { vendor, app },
+    entry: { app, vendor },
     performance: { maxEntrypointSize: 400000 },
     context: resolve(__dirname, './src'),
     devtool: 'source-map',
@@ -72,25 +73,19 @@ module.exports = (env) => {
       alias: {
         actions: resolve(__dirname, './src/actions/'),
         api: resolve(__dirname, 'src/api/'),
-        assets: resolve(__dirname, 'src/assets'),
         components: resolve(__dirname, './src/components/'),
         containers: resolve(__dirname, 'src/containers/'),
-        reducers: resolve(__dirname, './src/reducers/'),
-        images: resolve(__dirname, './src/images/'),
         fonts: resolve(__dirname, './src/fonts/'),
+        images: resolve(__dirname, './src/images/'),
+        reducers: resolve(__dirname, './src/reducers/'),
         routes: resolve(__dirname, 'src/routes/'),
-        stores: resolve(__dirname, 'src/stores/'),
+        store: resolve(__dirname, 'src/store/'),
         styles: resolve(__dirname, './src/styles/'),
-        tests: resolve(__dirname, './src/tests/'),
+        utils: resolve(__dirname, './src/utils/'),
       },
     },
-    externals: {
-      'react/addons': isDev,
-      'react/lib/ExecutionEnvironment': isDev,
-      'react/lib/ReactContext': isDev,
-    },
     output: {
-      publicPath: '',
+      publicPath: '/',
       path: resolve(__dirname, './dist'),
       filename: ifEnv('[name].bundle.js', '[name].[chunkhash].js'),
     },
@@ -103,7 +98,7 @@ module.exports = (env) => {
       ifProd(new CleanWebpackPlugin(['dist'], { verbose: true })),
       ifProd(new CopyWebpackPlugin([
         { from: 'fonts/', to: './fonts' },
-        { from: 'images/', to: './images' },
+        { from: 'assets/', to: './assets' },
       ])),
       new webpack.EnvironmentPlugin({
         DEBUG: isDev,
@@ -135,7 +130,7 @@ module.exports = (env) => {
         test: /\.jsx?$/,
         include: [resolve(__dirname, './src')],
       }, {
-        test: /\.(sass|scss|css)$/,
+        test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
@@ -144,7 +139,6 @@ module.exports = (env) => {
               options: {
                 sourceMap: isDev,
                 importLoaders: 1,
-                modules: true,
                 url: true,
                 minimize: isDev ? false : { discardComments: { removeAll: true } },
               },
@@ -178,3 +172,4 @@ module.exports = (env) => {
     },
   };
 };
+

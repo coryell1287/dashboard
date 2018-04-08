@@ -1,14 +1,11 @@
 import React from 'react';
-import classnames from 'classnames';
-
-import { actionButtons, primaryColor, button, disabled } from 'styles/appStyles';
 
 const SignInButtons = ({ control, disableButton }) => (
-  <div className={actionButtons}>
+  <div className="actionButtons">
     {
       disableButton ?
-        <button type="submit" className={classnames(primaryColor, button)}>{control}</button>
-        : <button type="button" className={classnames(button, disabled)}>{control}</button>
+        <button type="submit" className="primaryColor button">{control}</button>
+        : <button type="button" className="primaryColor disable">{control}</button>
     }
   </div>
 );

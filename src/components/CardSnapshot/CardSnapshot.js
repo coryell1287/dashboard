@@ -1,10 +1,9 @@
 import React from 'react';
-import { Card, CardMedia, CardTitle, CardText, CardActions } from 'styles/theme/lib/card';
-import { Button } from 'styles/theme/lib/button';
+import { Card, CardText, CardTitle } from 'material-ui/Card';
 
 const dummyText = 8000;
 
-const CardSnapshot = (props) => (
+const CardSnapshot = props => (
   <Card style={{ width: '350px' }}>
     <CardTitle
       title={props.title}

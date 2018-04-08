@@ -1,26 +1,21 @@
 import axios from 'axios';
-import { store } from 'store/configureStore';
-import { host } from 'api/serviceConfig';
 
-const { dispatch } = store;
-
-const httpRequest = async (method, url, config) => {
+const httpRequest = (method, options) => async (dispatch) => {
   try {
     dispatch({ type: 'START_FETCHING', fetching: true });
     const { data } = method === 'get'
-      ? await axios[method](url, config)
-      : await axios[method](url, config.body, config);
-    return await dispatch(config.onSuccess(data));
+      ? await axios[method](options.url)
+      : await axios[method](options.url, options.body);
+    return await dispatch(options.onSuccess(data));
   } catch (err) {
-    return await dispatch(config.onError(err));
+    return await dispatch(options.onError(err));
   } finally {
     dispatch({ type: 'STOP_FETCHING', fetching: false });
   }
 };
 
-export const get = (basePath, config) =>
-  httpRequest('get', `${host}${basePath}`, config);
-
-export const post = (basePath, body, config) =>
-  httpRequest('post', `${host}${basePath}`, body, config);
-
+export const post = options => httpRequest('post', options);
+export const get = options => httpRequest('get', options);
+export const put = options => httpRequest('put', options);
+export const patch = options => httpRequest('patch', options);
+export const remove = options => httpRequest('delete', options);

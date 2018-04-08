@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const successfulServiceRequest = service => ({
   type: service.type,
   payload: {
@@ -10,15 +12,21 @@ const failedServiceRequest = err => ({
   err: err.message,
 });
 
+
+
+
+
 const getBaseUrl = () => {
-  let baseUrl;
-  const { location: { hostname, origin } } = window;
-  if (hostname !== 'localhost') {
-    baseUrl = `${origin}/api/`;
-    return baseUrl;
+  const pipeline = sessionStorage.getItem('pipeline') || 'undefined';
+  let url;
+  const { origin, hostname } = window.location;
+
+  if (hostname === 'localhost') {
+    url = `http://localhost:8080/oculus/rest/${pipeline}/`;
+    return url;
   }
-  baseUrl = 'http://localhost:4000/api/';
-  return baseUrl;
+  url = `${origin}/oculus/rest/${pipeline}/`;
+  return url;
 };
 
 const host = getBaseUrl();
@@ -27,11 +35,6 @@ const config = {
   timeout: 4000,
   onSuccess: successfulServiceRequest,
   onError: failedServiceRequest,
-  headers: {
-    'Accept': 'application/json',
-    'Accept-Language': 'en_US',
-    'Content-Type': 'application/json',
-  },
 };
 
 export {

@@ -1,8 +1,7 @@
 import React from 'react';
-import cardSnapShotStyles from 'components/CardSnapshot/cardSnapShotStyles';
 
 const SnapShotContainer = (props) => (
-  <article id="snapShotContainer" className={cardSnapShotStyles.snapShotContainer}>
+  <article id="snapShotContainer" className="snapShotContainer">
     {props.children}
   </article>
 );

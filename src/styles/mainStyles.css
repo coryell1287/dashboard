@@ -1,0 +1,27 @@
+@import "./variables.css";
+  
+.contentWrapper .mainContent, .sideBar {
+  height: 100vh;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.contentWrapper {
+  position: relative;
+  top: 64px;
+}
+
+.mainContent {
+  min-height: 500px;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  width: 89%;
+  height: 100vh;
+  color: var(--default-font-color);
+  transition: width 0.5s ease;
+}
+
+.mainContent.resizeMainContent {
+  width: 97%;
+  transition: width 0.5s ease;
+}

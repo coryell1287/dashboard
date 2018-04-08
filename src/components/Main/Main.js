@@ -1,19 +1,18 @@
 import React from 'react';
-import classnames from 'classnames';
 import { Route, Switch } from 'react-router-dom';
 import { withRouter } from 'react-router';
 
-import appStyles from 'styles/appStyles';
-import { Content } from 'components/Content';
+import { Content, QueryString } from 'components/Content';
 import Dashboard from 'components/Dashboard';
 import MainHeader from 'components/MainHeader';
 
-const Main = (props) => (
-  <main id="mainContent" className={classnames(appStyles.mainContent)}>
+const Main = () => (
+  <main id="mainContent" className="mainContent">
     <MainHeader />
     <Switch>
       <Route exact path="/" component={Dashboard} />
       <Route path="/content" component={Content} />
+      <Route path="/query-string/:id" component={QueryString} />
     </Switch>
   </main>
 

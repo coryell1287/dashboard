@@ -1,40 +1,41 @@
 import React from 'react';
 import { connectRouter } from 'connected-react-router';
 import { render } from 'react-dom';
-import ThemeProvider from 'styles/theme/lib/ThemeProvider';
+import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
-import axios from 'axios';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import 'api/serviceConfig';
 
-import { host } from 'api/serviceConfig';
+import defaultTheme from 'styles/theme/material-ui-theme';
 import { store, history } from 'store/configureStore';
 import { ReactHelmet } from 'containers';
-import Routes from 'routes';
+import App from 'routes';
 import rootReducer from 'reducers';
-import HotLoader from './reactHotLoader';
 
-axios.defaults.baseURL = host;
-axios.interceptors.request.use((request) => {
-  return request;
-});
+injectTapEventPlugin();
+const theme = getMuiTheme(defaultTheme);
 
-const renderUI = (App) => {
+
+const renderUI = (Component) => {
   render(
-    <ThemeProvider>
-      <HotLoader>
+    <MuiThemeProvider muiTheme={theme}>
+      <AppContainer>
         <ReactHelmet>
           <Provider store={store}>
-            <App />
+            <Component />
           </Provider>
         </ReactHelmet>
-      </HotLoader>
-    </ThemeProvider>,
+      </AppContainer>
+    </MuiThemeProvider>,
     document.getElementById('app'),
   );
 };
 
-renderUI(Routes);
+renderUI(App);
 
 if (module.hot) {
-  module.hot.accept('routes', () => renderUI(Routes));
+  module.hot.accept('routes', () => renderUI(App));
   module.hot.accept('reducers', () => store.replaceReducer(connectRouter(history)(rootReducer)));
 }

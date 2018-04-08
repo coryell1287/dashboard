@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import autobind from 'autobind-decorator';
+import { connect } from 'react-redux';
+import { resizePage } from 'components/PageResizeControl/PageResizeAction';
+import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router';
 
 import { sideBarConfig } from 'components/SideBar';
@@ -8,27 +11,48 @@ class SideBarControls extends Component {
 
   state = {
     itemClick: 'dashboard',
+    arrowStyle: '',
+    focus: 'true',
   };
+
+  componentWillReceiveProps(nextProps) {
+    const item = document.getElementById(this.state.itemClick);
+    if (item.id !== 'dashboard' && nextProps.resize) {
+      item.nextElementSibling.style.height = 0;
+      this.setState({ arrowStyle: '' });
+      return;
+    }
+    return false;
+  }
+
+  @autobind
+  handlePageReset() {
+    if (this.props.resize) {
+      return this.props.resizePage();
+    }
+    return false;
+  }
+
+  handleArrowTransform(id) {
+    this.setState({ arrowStyle: id });
+  }
 
   @autobind
   handleMenuItemSelected(e) {
-    if (e.target.id !== 'dashboard') {
-      const navItem = e.target;
-      const navID = e.target.id;
-      navItem.nextElementSibling.style.height = `${navItem.nextElementSibling.scrollHeight}px`;
-      this.setState({ itemClick: navID }, () => this.closeMenuController(navID));
-    } else if (e.target.id === 'dashboard') {
-      const navID = e.target;
-      this.closeMenuController(navID);
-      this.props.history.push('/');
-    }
-  }
+    const navItem = e.currentTarget;
+    const navID = e.currentTarget.id;
 
-  closeOpenMenuController(e) {
-    if (e.target.id !== 'dashboard') {
-      if (e.target.dataset.open) {
-        e.target.nextElementSibling.style.height = 0;
-      }
+    if (e.currentTarget.id !== 'dashboard' && e.currentTarget.dataset.open === 'false') {
+      navItem.nextElementSibling.style.height = `${navItem.nextElementSibling.scrollHeight}px`;
+      this.handleArrowTransform(e.currentTarget.id);
+      this.setState({ itemClick: navID, focus: 'true' }, () => this.closeMenuController(navID));
+    } else if (e.currentTarget.id !== 'dashboard' && e.currentTarget.dataset.open === 'true') {
+      this.closeMenuController(navItem);
+      this.setState({ arrowStyle: '', itemClick: navID, focus: 'false' });
+    } else if (e.currentTarget.id === 'dashboard') {
+      this.props.history.push('/');
+      this.closeMenuController(navItem);
+      this.setState({ arrowStyle: '', itemClick: navID, focus: 'false' });
     }
   }
 
@@ -46,27 +70,25 @@ class SideBarControls extends Component {
   }
 
   render() {
-    return (
-      <span>
-        {
-          React.Children.map(this.props.children,
-            child => React.cloneElement(child, {
-              ...this.props,
-              ...this.state,
-              sideBarConfig,
-              onMenuItemSelected: this.handleMenuItemSelected,
-              onCloseOpenMenuItem: this.closeOpenMenuController,
-              intent: (node) => {
-                this.intentHeader = node;
-              },
-              content: (node) => {
-                this.contentHeader = node;
-              },
-            }),
-          )}
-      </span>
+    return React.Children.map(this.props.children,
+      child => React.cloneElement(child, {
+        ...this.props,
+        ...this.state,
+        sideBarConfig,
+        onMenuItemSelected: this.handleMenuItemSelected,
+        onPageReset: this.handlePageReset,
+        intent: (node) => {
+          this.intentHeader = node;
+        },
+        content: (node) => {
+          this.contentHeader = node;
+        },
+      }),
     );
   }
 }
 
-export default withRouter(SideBarControls);
+
+const mapStateToProps = state => ({ resize: state.resizeState.resizePage });
+const mapDispatchToProps = dispatch => bindActionCreators({ resizePage }, dispatch);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SideBarControls));

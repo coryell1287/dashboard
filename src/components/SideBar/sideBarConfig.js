@@ -5,17 +5,17 @@ import IntentMenu from 'components/Intent/IntentMenu';
 export default [
   {
     id: 'dashboard',
-    text: 'Dashboard',
+    heading: 'Dashboard',
   },
   {
     id: 'intent',
-    text: 'Intent',
+    heading: 'Intent',
     ref: 'intent',
     component: <IntentMenu />,
   },
   {
     id: 'content',
-    text: 'Content',
+    heading: 'Content',
     ref: 'content',
     component: <ContentMenu />,
   },

@@ -1,16 +1,20 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 
-import appStyles from 'styles/appStyles';
-import AppHeader from 'components/AppHeader/';
+import AppHeader from 'components/AppHeader';
+import PageResizeControl from 'components/PageResizeControl';
 import { SideBar, SideBarControls } from 'components/SideBar';
 import Main from 'components/Main';
+
+import 'styles/appStyles';
 
 const Application = () => (
   <div>
     <article>
-      <AppHeader />
-      <section id="contentWrapper" className={appStyles.contentWrapper}>
+      <PageResizeControl>
+        <AppHeader />
+      </PageResizeControl>
+      <section id="contentWrapper" className="contentWrapper">
         <SideBarControls>
           <SideBar />
         </SideBarControls>

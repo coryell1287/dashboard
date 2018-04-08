@@ -1,0 +1,65 @@
+@import "./variables.css";
+
+.profileCircle {
+  border-radius: 95px;
+  display: inline-block;
+  padding: 3px;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  text-align: center;
+  background: var(--accent-color);
+}
+
+.profileIcon {
+  font-size: 1em;
+  position: relative;
+  top: 9px;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.profileIcon:hover {
+  cursor: pointer;
+}
+
+.accountCircle {
+  display: inline-flex;
+  position: relative;
+  top: -3px;
+  right: -13px;
+}
+
+.accountCircle .profileText {
+  color: var(--primary-font-color);
+}
+
+.environment {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 500;
+  right: 26px;
+  padding: 2px;
+  top: -4px;
+  color: var(--primary-font-color);
+  font-family: var(--default-font-family);
+}
+
+.profileName {
+  line-height: 32px;
+  font-weight: bold;
+  position: relative;
+  font-family: var(--default-font-family);
+}
+
+.menuIcon {
+  display: inline-block;
+  cursor: pointer;
+  margin: 15px 15px auto auto
+}
+
+
+.environmentIcon_language{
+  position: relative;
+  top: -5px;
+}

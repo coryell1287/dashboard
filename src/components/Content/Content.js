@@ -1,10 +1,72 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { withRouter } from 'react-router';
+import {
+  Table,
+  TableBody,
+  TableHeader,
+  TableHeaderColumn,
+  TableRow,
+  TableRowColumn,
+} from 'material-ui/Table';
+import Paper from 'material-ui/Paper';
+import autobind from 'autobind-decorator';
 
-const Content = () => (
-  <article>
-    <h3>Section of content</h3>
-  </article>
-);
+class TableExampleSimple extends Component {
 
-export default withRouter(Content);
+  @autobind
+  handleQuery() {
+    this.props.history.push({
+      pathname: '/query-string/id',
+      pagename: 'Query String',
+      query: {
+        id: 1,
+      },
+    });
+  }
+
+  render() {
+    return (
+      <Paper zDepth={1}>
+        <Table onRowSelection={this.handleQuery}>
+          <TableHeader>
+            <TableRow>
+              <TableHeaderColumn>ID</TableHeaderColumn>
+              <TableHeaderColumn>Name</TableHeaderColumn>
+              <TableHeaderColumn>Status</TableHeaderColumn>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            <TableRow>
+              <TableRowColumn>1</TableRowColumn>
+              <TableRowColumn>John Smith</TableRowColumn>
+              <TableRowColumn>Employed</TableRowColumn>
+            </TableRow>
+            <TableRow>
+              <TableRowColumn>2</TableRowColumn>
+              <TableRowColumn>Randal White</TableRowColumn>
+              <TableRowColumn>Unemployed</TableRowColumn>
+            </TableRow>
+            <TableRow>
+              <TableRowColumn>3</TableRowColumn>
+              <TableRowColumn>Stephanie Sanders</TableRowColumn>
+              <TableRowColumn>Employed</TableRowColumn>
+            </TableRow>
+            <TableRow>
+              <TableRowColumn>4</TableRowColumn>
+              <TableRowColumn>Steve Brown</TableRowColumn>
+              <TableRowColumn>Employed</TableRowColumn>
+            </TableRow>
+            <TableRow>
+              <TableRowColumn>5</TableRowColumn>
+              <TableRowColumn>Christopher Nolan</TableRowColumn>
+              <TableRowColumn>Unemployed</TableRowColumn>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </Paper>
+    );
+  }
+}
+
+
+export default withRouter(TableExampleSimple);

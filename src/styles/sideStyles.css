@@ -1,0 +1,130 @@
+@import './variables.css';
+
+.sideBar {
+  width: 11%;
+  transition: width 0.5s ease;
+}
+
+.sideBarContainer {
+  width: 11%;
+  padding-top: 25px;
+  background: var(--secondary-color);
+  height: 100vh;
+  position: fixed;
+  transition: width 0.5s ease;
+}
+
+.menuController {
+  font-family: var(--default-font-family);
+  font-size: 15px;
+  color: var(--default-color);
+  padding: 2px 15px 10px;
+}
+
+.menuContainer div:first-child {
+  padding-top: 5px;
+}
+
+.navigationIcons,
+.menuControllerContainer,
+.arrowControls {
+  display: inline-block;
+}
+
+.navigationIcons {
+  width: 15%;
+}
+
+.sideBar_iconSize {
+  font-size: 15px;
+  vertical-align: top;
+}
+
+.menuControllerContainer {
+  width: 65%;
+}
+
+.menuControllerContainer h2 {
+  font-size: 16px;
+}
+
+.arrowControls {
+  width: 10%;
+  position: relative;
+  top: 5px;
+}
+
+.menuController.dashboard {
+  background: var(--accent-color);
+  color: var(--default-color);
+}
+
+.menuController:hover {
+  @apply --hover-effect;
+}
+
+.navigationWrapper {
+  background: var(--primary-color);
+  height: 0;
+  transition: height 0.5s ease;
+  overflow: hidden;
+}
+
+.navigationWrapper li a {
+  display: inline-block;
+  padding: 10px 38px 15px;
+  color: var(--default-color);
+  text-decoration: none;
+  transition: color 0.5s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navigationWrapper li:hover a {
+  color: var(--default-color);
+  transition: color 0.5s ease;
+  cursor: pointer;
+}
+
+.navigationWrapper li a.activeController {
+  background: var(--accent-color);
+  color: var(--default-color);
+}
+
+.navigationWrapper li:hover {
+  cursor: pointer;
+  background: var(--secondary-color);
+  transition: color ease 0.5s, background ease 0.5s;
+}
+
+.arrowController {
+  display: inherit;
+  transition: opacity 0.5s ease;
+}
+
+.transformArrow {
+  transform: rotate(180deg);
+  transition: transform ease 0.5s;
+}
+
+.arrowTransition {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.resetArrow {
+  transition: transform ease 0.5s;
+}
+
+.resizeSideBar {
+  width: 2.5%;
+  transition: width 0.5s ease;
+}
+
+.sideHeader {
+  transition: all 0.5s ease;
+}
+
+.sideHeaderTransition {
+  display: none;
+}

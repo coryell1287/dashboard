@@ -1,15 +1,10 @@
 import React from 'react';
-import sideBarStyles from 'components/SideBar/sideStyles';
+import { NavLink } from 'react-router-dom';
 
-const IntentMenu = (props) => (
-  <nav className={sideBarStyles.navigationWrapper}>
+const IntentMenu = () => (
+  <nav className="navigationWrapper">
     <ul>
-      <li><a href="">Suggested Intent</a></li>
-      <li><a href="">Suggested Intent</a></li>
-      <li><a href="">Suggested Intent</a></li>
-      <li><a href="">Suggested Intent</a></li>
-      <li><a href="">Suggested Intent</a></li>
-      <li><a href="">Suggested Intent</a></li>
+      <li><NavLink to="/">Page Coming Soon</NavLink></li>
     </ul>
   </nav>
 );

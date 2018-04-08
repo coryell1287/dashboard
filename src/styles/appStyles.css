@@ -1,5 +1,11 @@
 @import './variables.css';
 @import './reset.css';
+@import './appHeaderStyles.css';
+@import './cardSnapShotStyles.css';
+@import './mainStyles.css';
+@import './mainHeaderStyles.css';
+@import './progressStyles.css';
+@import './sideStyles.css';
 
 h1 {
   font-size: 1.5em;
@@ -15,16 +21,22 @@ a {
 
 @font-face {
   font-family: 'Roboto Regular';
-  src: url('fonts/Roboto-Regular.eot');
-  src: url('fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'), url('fonts/Roboto-Regular.woff') format('woff'), url('fonts/Roboto-Regular.ttf') format('truetype'), url('fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+  src: url('../fonts/Roboto-Regular.eot');
+  src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Roboto-Regular.woff') format('woff'),
+  url('../fonts/Roboto-Regular.ttf') format('truetype'),
+  url('../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'Material Icons';
-  src: url('fonts/MaterialIcons-Regular.eot');
-  src: url('fonts/MaterialIcons-Regular.eot?#iefix') format('embedded-opentype'), url('fonts/MaterialIcons-Regular.woff') format('woff'), url('fonts/MaterialIcons-Regular.ttf') format('truetype'), url('fonts/MaterialIcons-Regular.svg#MaterialIcons-Regular') format('svg');
+  src: url('../fonts/MaterialIcons-Regular.eot');
+  src: url('../fonts/MaterialIcons-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/MaterialIcons-Regular.woff') format('woff'),
+  url('../fonts/MaterialIcons-Regular.ttf') format('truetype'),
+  url('../fonts/MaterialIcons-Regular.svg#MaterialIcons-Regular') format('svg');
   font-style: normal;
   font-weight: normal;
 }
@@ -32,6 +44,7 @@ a {
 body {
   font-family: var(--default-font-family);
   width: 100%;
+  background: var(--main-background-color);
 }
 
 main {
@@ -107,22 +120,7 @@ main {
 
 .appBar {
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02);
-}
-
-.sideBar {
-  width: 10%;
-  height: 100vh;
-}
-
-.contentWrapper .mainContent, .contentWrapper .sideBar {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.mainContent {
-  min-height: 500px;
-  padding: 20px;
-  box-sizing: border-box;
-  width: 90%;
-  height: 100vh;
+  z-index: 99;
+  position: fixed;
+  width: 100vw;
 }
