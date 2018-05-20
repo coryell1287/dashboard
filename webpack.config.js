@@ -34,7 +34,8 @@ const devPlugins = [
 ];
 const whichPlugins = () => (isDev ? devPlugins : prodPlugins);
 const plugins = whichPlugins();
-
+const ifProd = then => (isDev ? null : then);
+const identifyPlugins = plugin => plugin;
 module.exports = {
 
   target: 'web',
@@ -86,26 +87,26 @@ module.exports = {
     nodeEnv: environment,
     namedModules: true,
     minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: true // set to true if you want JS source maps
-      }),
-      new OptimizeCSSAssetsPlugin({})
-    ],
+     ifProd( new UglifyJsPlugin({
+       cache: true,
+       parallel: true,
+       sourceMap: true, // set to true if you want JS source maps
+     })),
+      ifProd(new OptimizeCSSAssetsPlugin({})),
+    ].filter(identifyPlugins),
     splitChunks: {
       cacheGroups: {
         commons: {
           name: 'common',
-          chunks: "initial",
+          chunks: 'initial',
           minChunks: 2,
           maxInitialRequests: 5, // The default limit is too small to showcase the effect
           minSize: 0 // This is example is too small to create commons chunks
         },
         vendor: {
           test: /node_modules/,
-          chunks: "initial",
-          name: "vendor",
+          chunks: 'initial',
+          name: 'vendor',
           priority: 10,
           enforce: true
         },
