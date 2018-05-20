@@ -12,13 +12,13 @@ const Application = () => (
   <div>
     <article>
       <PageResizeControl>
-        <AppHeader />
+        <AppHeader/>
       </PageResizeControl>
       <section id="contentWrapper" className="contentWrapper">
         <SideBarControls>
-          <SideBar />
+          <SideBar/>
         </SideBarControls>
-        <Main />
+        <Main/>
       </section>
     </article>
   </div>

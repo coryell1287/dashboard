@@ -1,4 +1,4 @@
-.signInBackground{
+.signInBackground {
   background: #ABBBCA;
   width: 100vw;
   height: 100vh;
@@ -124,58 +124,58 @@
 
 @keyframes slideHeightDown {
   0% {
-    height: 380px;
+	height: 380px;
   }
   100% {
-    height: 550px;
+	height: 550px;
   }
 }
 
 @keyframes slideHeightUp {
   0% {
-    height: 550px;
+	height: 550px;
   }
   100% {
-    height: 380px;
+	height: 380px;
   }
 }
 
 @keyframes signOutslideOut {
   0% {
-    right: 0;
+	right: 0;
   }
   100% {
-    right: 470px;
+	right: 470px;
   }
 }
 
 @keyframes signOutslideIn {
   0% {
-    right: 470px;
+	right: 470px;
   }
   100% {
-    right: 0;
+	right: 0;
   }
 }
 
 @keyframes signInslideIn {
   0% {
-    right: -540px;
-    opacity: 0;
+	right: -540px;
+	opacity: 0;
   }
   100% {
-    right: 0;
-    opacity: 1;
+	right: 0;
+	opacity: 1;
   }
 }
 
 @keyframes signInslideOut {
   0% {
-    right: 0;
-    opacity: 1;
+	right: 0;
+	opacity: 1;
   }
   100% {
-    right: -540px;
-    opacity: 0;
+	right: -540px;
+	opacity: 0;
   }
 }

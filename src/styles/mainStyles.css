@@ -1,5 +1,5 @@
 @import "./variables.css";
-  
+
 .contentWrapper .mainContent, .sideBar {
   height: 100vh;
   display: inline-block;

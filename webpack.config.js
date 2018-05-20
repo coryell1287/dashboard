@@ -1,151 +1,147 @@
-const { resolve } = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const identity = i => i;
+const yargs = require('yargs');
+const { resolve } = require('path');
 
-module.exports = (env) => {
+const args = yargs.argv;
 
-  const isDev = env === 'dev';
-  const isProd = env !== 'dev';
+console.log(args.mode);
+const isDev = args.mode === 'development';
+const environment = args.mode;
 
-  const ifEnv = (condition1, condition2) => (isDev ? condition1 : condition2);
-
-  const ifDev = then => (isDev ? then : null);
-  const ifProd = then => (env === 'prod' ? then : null);
-  const vendor = [
-    'axios',
-    'react',
-    'redux',
-    'lodash',
-    'es5-shim',
-    'es6-shim',
-    'react-dom',
-    'react-redux',
-    'redux-thunk',
-    'react-router',
-    'react-helmet',
-    'babel-polyfill',
-    'core-decorators',
-    'react-router-dom',
-    'redux-async-await',
-    'autobind-decorator',
-    'connected-react-router',
-    'react-addons-transition-group',
-  ];
-  const app = [
-    ifDev('react-hot-loader/patch'),
-    ifDev('webpack-dev-server/client?http://localhost:8000'),
-    ifDev('webpack/hot/only-dev-server'),
-    './appLoader'].filter(identity);
-
-  return {
-    target: 'web',
-    profile: true,
-    stats: {
-      children: false,
+const prodPlugins = [
+  new ManifestPlugin({
+    fileName: 'manifest.json',
+    seed: {
+      name: 'Assets Manifest file',
     },
-    entry: { app, vendor },
-    performance: { maxEntrypointSize: 400000 },
-    context: resolve(__dirname, './src'),
-    devtool: 'source-map',
-    devServer: {
-      port: 8000,
-      host: 'localhost',
-      stats: 'errors-only',
-      hot: true,
-      compress: true,
-      historyApiFallback: true,
-      disableHostCheck: true,
-      contentBase: resolve(__dirname, './dist'),
-      overlay: { warnings: true, errors: true },
+  }),
+  new CopyWebpackPlugin([
+    { from: 'fonts/', to: './fonts' },
+    { from: 'images/', to: './images' },
+  ]),
+  new CleanWebpackPlugin(['dist'], { verbose: true })
+];
+const devPlugins = [
+  new webpack.HotModuleReplacementPlugin(),
+];
+const whichPlugins = () => (isDev ? devPlugins : prodPlugins);
+const plugins = whichPlugins();
+
+module.exports = {
+
+  target: 'web',
+  profile: true,
+  stats: {
+    children: false,
+  },
+  entry: { app: './appLoader.js' },
+  performance: { maxEntrypointSize: 400000 },
+  context: resolve(__dirname, './src'),
+  devtool: 'source-map',
+  devServer: {
+    port: 8000,
+    host: 'localhost',
+    stats: 'errors-only',
+    hot: true,
+    compress: true,
+    historyApiFallback: true,
+    disableHostCheck: true,
+    contentBase: resolve(__dirname, './dist'),
+    overlay: { warnings: true, errors: true },
+  },
+  resolve: {
+    modules: [
+      resolve(__dirname, './src'),
+      'node_modules',
+    ],
+    extensions: ['.js', '.json', '.css'],
+    alias: {
+      actions: resolve(__dirname, './src/actions/'),
+      api: resolve(__dirname, 'src/api/'),
+      components: resolve(__dirname, './src/components/'),
+      containers: resolve(__dirname, 'src/containers/'),
+      fonts: resolve(__dirname, './src/fonts/'),
+      images: resolve(__dirname, './src/images/'),
+      reducers: resolve(__dirname, './src/reducers/'),
+      routes: resolve(__dirname, 'src/routes/'),
+      store: resolve(__dirname, 'src/store/'),
+      styles: resolve(__dirname, './src/styles/'),
+      utils: resolve(__dirname, './src/utils/'),
     },
-    resolve: {
-      modules: [
-        resolve(__dirname, './src'),
-        'node_modules',
-      ],
-      extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.css'],
-      alias: {
-        actions: resolve(__dirname, './src/actions/'),
-        api: resolve(__dirname, 'src/api/'),
-        components: resolve(__dirname, './src/components/'),
-        containers: resolve(__dirname, 'src/containers/'),
-        fonts: resolve(__dirname, './src/fonts/'),
-        images: resolve(__dirname, './src/images/'),
-        reducers: resolve(__dirname, './src/reducers/'),
-        routes: resolve(__dirname, 'src/routes/'),
-        store: resolve(__dirname, 'src/store/'),
-        styles: resolve(__dirname, './src/styles/'),
-        utils: resolve(__dirname, './src/utils/'),
+  },
+  output: {
+    path: resolve(__dirname, './dist'),
+    publicPath: isDev ? '/' : '',
+    filename: isDev ? '[name].bundle.js' : '[name].[hash].js',
+  },
+  optimization: {
+    nodeEnv: environment,
+    namedModules: true,
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true // set to true if you want JS source maps
+      }),
+      new OptimizeCSSAssetsPlugin({})
+    ],
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          name: 'common',
+          chunks: "initial",
+          minChunks: 2,
+          maxInitialRequests: 5, // The default limit is too small to showcase the effect
+          minSize: 0 // This is example is too small to create commons chunks
+        },
+        vendor: {
+          test: /node_modules/,
+          chunks: "initial",
+          name: "vendor",
+          priority: 10,
+          enforce: true
+        },
+        styles: {
+          name: 'styles',
+          test: /\.css$/,
+          chunks: 'all',
+          enforce: true
+        }
+      }
+    }
+  },
+  module: {
+    rules: [{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader'
+      }
+    },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: { minimize: true }
+          }
+        ]
       },
-    },
-    output: {
-      publicPath: '/',
-      path: resolve(__dirname, './dist'),
-      filename: ifEnv('[name].bundle.js', '[name].[chunkhash].js'),
-    },
-    plugins: [
-      new webpack.optimize.CommonsChunkPlugin({
-        name: ['vendor'],
-        minChunks: Infinity,
-      }),
-      ifProd(new webpack.optimize.UglifyJsPlugin()),
-      ifProd(new CleanWebpackPlugin(['dist'], { verbose: true })),
-      ifProd(new CopyWebpackPlugin([
-        { from: 'fonts/', to: './fonts' },
-        { from: 'assets/', to: './assets' },
-      ])),
-      new webpack.EnvironmentPlugin({
-        DEBUG: isDev,
-        NODE_ENV: ifEnv('development', 'production'),
-      }),
-      ifProd(new ManifestPlugin({
-        fileName: 'manifest.json',
-        seed: {
-          name: 'Assets Manifest file',
-        },
-      })),
-      new HtmlWebpackPlugin({
-        template: 'index.html',
-        inject: true,
-        minify: {
-          collapseWhitespace: true,
-        },
-      }),
-      ifDev(new webpack.HotModuleReplacementPlugin()),
-      ifDev(new webpack.NamedModulesPlugin()),
-      new ExtractTextPlugin({
-        filename: ifEnv('[name].bundle.[contenthash].css', 'styles/[name].bundle.[contenthash].css'),
-        disable: isDev,
-      }),
-    ].filter(identity),
-    module: {
-      rules: [{
-        use: 'babel-loader',
-        test: /\.jsx?$/,
-        include: [resolve(__dirname, './src')],
-      }, {
+      {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                sourceMap: isDev,
-                importLoaders: 1,
-                url: true,
-                minimize: isDev ? false : { discardComments: { removeAll: true } },
-              },
-            },
-            { loader: 'postcss-loader' },
-          ],
-        }),
+        use: [
+          isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+        ],
       }, {
         test: /\.(jpe?g|png|gif|svg|ico)$/,
         use: [{
@@ -163,13 +159,22 @@ module.exports = (env) => {
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            useRelativePath: isProd,
+            useRelativePath: !isDev,
           },
         },
         ],
       },
-      ],
-    },
-  };
+    ],
+  },
+  plugins: [
+    ...plugins,
+    new HtmlWebPackPlugin({
+      template: 'index.html',
+    }),
+    new MiniCssExtractPlugin({
+      filename: isDev ? '[name].css' : '[name].[hash].css',
+      chunkFilename: isDev ? '[name].css' : '[name].[chunkhash].css',
+    }),
+  ],
 };
 

@@ -11,12 +11,12 @@ export default [
     id: 'intent',
     heading: 'Intent',
     ref: 'intent',
-    component: <IntentMenu />,
+    component: <IntentMenu/>,
   },
   {
     id: 'content',
     heading: 'Content',
     ref: 'content',
-    component: <ContentMenu />,
+    component: <ContentMenu/>,
   },
 ];

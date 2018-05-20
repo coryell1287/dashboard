@@ -8,11 +8,11 @@ import MainHeader from 'components/MainHeader';
 
 const Main = () => (
   <main id="mainContent" className="mainContent">
-    <MainHeader />
+    <MainHeader/>
     <Switch>
-      <Route exact path="/" component={Dashboard} />
-      <Route path="/content" component={Content} />
-      <Route path="/query-string/:id" component={QueryString} />
+      <Route exact path="/" component={Dashboard}/>
+      <Route path="/content" component={Content}/>
+      <Route path="/query-string/:id" component={QueryString}/>
     </Switch>
   </main>
 

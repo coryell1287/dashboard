@@ -13,9 +13,6 @@ const failedServiceRequest = err => ({
 });
 
 
-
-
-
 const getBaseUrl = () => {
   const pipeline = sessionStorage.getItem('pipeline') || 'undefined';
   let url;

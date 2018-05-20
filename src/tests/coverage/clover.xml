@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1523940318982" clover="3.2.0">
+  <project timestamp="1523940318982" name="All files">
+    <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0" elements="4" coveredelements="2" complexity="0" loc="3" ncloc="3" packages="1" files="2" classes="2">
+      <file name="polyfills.js" path="/home/coryell/Development/Dashboard/src/tests/polyfills.js">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+      </file>
+      <file name="setup.js" path="/home/coryell/Development/Dashboard/src/tests/setup.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </metrics>
+  </project>
+</coverage>

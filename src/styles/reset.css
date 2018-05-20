@@ -53,14 +53,17 @@ table {
   border-spacing: 0;
 }
 
-
-
 button::-moz-focus-inner {
   border: 0;
 }
 
-:focus {outline:none;}
-::-moz-focus-inner {border:0;}
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
 
 a::-moz-focus-inner {
   border: 0;

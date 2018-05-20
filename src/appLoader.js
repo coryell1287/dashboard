@@ -24,7 +24,7 @@ const renderUI = (Component) => {
       <AppContainer>
         <ReactHelmet>
           <Provider store={store}>
-            <Component />
+            <Component/>
           </Provider>
         </ReactHelmet>
       </AppContainer>

@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
@@ -14,11 +15,11 @@ const SignInPage = ({ formWrapper }) => (
   <main className={signInStyles.signInBackground}>
     <article id="formWrapper" className={classnames(signInStyles.signInWrapper, formWrapper)}>
       <SignInLinkState>
-        <SignInLinks />
+        <SignInLinks/>
       </SignInLinkState>
       <SignInFormValidation containerStyle={signInStyles.container}>
-        <SignInForm />
-        <SignUpForm />
+        <SignInForm/>
+        <SignUpForm/>
       </SignInFormValidation>
     </article>
   </main>
@@ -29,3 +30,4 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(SignInPage);
+*/
