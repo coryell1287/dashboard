@@ -8,7 +8,7 @@
 .sideBarContainer {
   width: 11%;
   padding-top: 25px;
-  background: var(--secondary-color);
+  background: var(--primary-color);
   height: 100vh;
   position: fixed;
   transition: width 0.5s ease;
@@ -32,7 +32,7 @@
 }
 
 .navigationIcons {
-  width: 15%;
+  width: 20%;
 }
 
 .sideBar_iconSize {
@@ -60,7 +60,10 @@
 }
 
 .menuController:hover {
-  @apply --hover-effect;
+  cursor: pointer;
+  color: var(--primary-font-color);
+  background: var(--accent-color);
+  transition: background 0.5s ease, color 0.5s ease;
 }
 
 .navigationWrapper {
@@ -93,7 +96,7 @@
 
 .navigationWrapper li:hover {
   cursor: pointer;
-  background: var(--secondary-color);
+  background: var(--primary-color);
   transition: color ease 0.5s, background ease 0.5s;
 }
 

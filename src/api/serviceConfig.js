@@ -12,29 +12,25 @@ const failedServiceRequest = err => ({
   err: err.message,
 });
 
-
 const getBaseUrl = () => {
-  const pipeline = sessionStorage.getItem('pipeline') || 'undefined';
+  const { origin, hostname, protocol } = window.location;
   let url;
-  const { origin, hostname } = window.location;
 
   if (hostname === 'localhost') {
-    url = `http://localhost:8080/oculus/rest/${pipeline}/`;
+    url = 'http://localhost:8080/api/';
     return url;
   }
-  url = `${origin}/oculus/rest/${pipeline}/`;
+
+  url = !origin
+    ? `${protocol}//${hostname}/api/`
+    : `${origin}/api/`;
   return url;
 };
 
 const host = getBaseUrl();
 
-const config = {
-  timeout: 4000,
-  onSuccess: successfulServiceRequest,
-  onError: failedServiceRequest,
-};
-
-export {
-  config,
-  host,
-};
+axios.defaults.baseURL = host;
+axios.defaults.headers.common['Content-Type'] = 'application/json';
+axios.defaults.headers.common['Accept'] = 'application/json';
+axios.defaults.headers.post['Content-Type'] = 'application/json';
+axios.interceptors.request.use(request => request);

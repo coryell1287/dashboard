@@ -14,10 +14,10 @@ export default {
   spacing,
   fontFamily: 'Source Sans Pro, Arial, Helvetica, sans-serif',
   palette: {
-    primary1Color: '#2A3945',
+    primary1Color: '#343a40',
     primary2Color: '#2A3945',
     primary3Color: '#BBDEFB',
-    accent1Color: '#209E91',
+    accent1Color: '#63d8f1',
     accent2Color: grey100,
     accent3Color: grey500,
     textColor: '#212121',

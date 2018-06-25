@@ -9,6 +9,11 @@ const ContentMenu = () => (
           Router Issue
         </NavLink>
       </li>
+      <li>
+        <NavLink to="/ez-builder" activeClassName="activeController">
+          EZ Builder
+        </NavLink>
+      </li>
     </ul>
   </nav>
 );

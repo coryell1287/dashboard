@@ -7,7 +7,7 @@
 @import './progressStyles.css';
 @import './sideStyles.css';
 @import './signInPageStyles.css';
-
+@import './font-awesome.css';
 h1 {
   font-size: 1.5em;
 }
@@ -86,12 +86,8 @@ main {
 }
 
 .primaryColor {
-  background: var(--primary-button-color);
+  background: var(--primary-color);
   color: var(--default-color);
-}
-
-.secondaryColor {
-  background: var(--secondary-color);
 }
 
 .accentColor {

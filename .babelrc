@@ -5,7 +5,8 @@
 	"transform-decorators-legacy",
 	["transform-object-rest-spread", {"useBuiltIns": true}],
 	["transform-class-properties", {"spec": true}],
-	["transform-react-jsx-source"], ["add-module-exports"]
+	["transform-react-jsx-source"],
+	["add-module-exports"]
   ],
   "presets": [
 	"react",

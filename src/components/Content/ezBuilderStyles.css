@@ -1,0 +1,75 @@
+.ez-builder-controls {
+  min-height: 300px;
+  width: 290px;
+  content: "";
+  background: rgba(0, 0, 0, .2)
+}
+
+.ez-builder-controls-wrapper {
+  content: '';
+}
+
+.ez-builder-controls-wrapper::after, .ez-builder-controls-wrapper::before {
+  border-bottom: 16px solid transparent;
+  border-left: 16px solid rgba(0, 0, 0, .2);
+  border-top: 16px solid transparent;
+  right: -16px;
+}
+
+.ez-builder-button-wrapper {
+  position: fixed;
+  right: -38px;
+  top: 25%;
+  display: flex;
+}
+
+.ez-builder-button {
+  border-bottom-left-radius: 5%;
+  border-top-left-radius: 5%;
+  cursor: pointer;
+  height: 50px;
+  border: none;
+  outline: none;
+  width: 90px;
+  transition: right 0.2s ease;
+}
+
+.ez-builder-button:hover {
+  right: -30px;
+  transition: right 0.2s ease;
+}
+
+.ez-builder-button .fa-cogs {
+  color: #fff;
+  font-size: 25px;
+  position: relative;
+  right: 25px;
+}
+
+.ez-builder-arrow {
+  content: "";
+  /*position: absolute;*/
+  top: 50%;
+  width: 16px;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+}
+
+.ez-builder-first-section {
+  display: flex;
+}
+
+.handoff-selectors {
+  display: flex;
+  justify-content: center;
+}
+
+.handoff-selectors div {
+  border: 3px solid #8c8c8c;
+  width: 55px;
+  height: 90px;
+  border-radius: 5%;
+  margin-right: 10px;
+}

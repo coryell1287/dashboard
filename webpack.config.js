@@ -16,28 +16,11 @@ console.log(args.mode);
 const isDev = args.mode === 'development';
 const environment = args.mode;
 
-const prodPlugins = [
-  new ManifestPlugin({
-    fileName: 'manifest.json',
-    seed: {
-      name: 'Assets Manifest file',
-    },
-  }),
-  new CopyWebpackPlugin([
-    { from: 'fonts/', to: './fonts' },
-    { from: 'images/', to: './images' },
-  ]),
-  new CleanWebpackPlugin(['dist'], { verbose: true })
-];
-const devPlugins = [
-  new webpack.HotModuleReplacementPlugin(),
-];
-const whichPlugins = () => (isDev ? devPlugins : prodPlugins);
-const plugins = whichPlugins();
+const identity = i => i;
+const ifDev = then => (isDev ? then : null);
 const ifProd = then => (isDev ? null : then);
-const identifyPlugins = plugin => plugin;
-module.exports = {
 
+module.exports = {
   target: 'web',
   profile: true,
   stats: {
@@ -87,88 +70,97 @@ module.exports = {
     nodeEnv: environment,
     namedModules: true,
     minimizer: [
-     ifProd( new UglifyJsPlugin({
-       cache: true,
-       parallel: true,
-       sourceMap: true, // set to true if you want JS source maps
-     })),
+      ifProd(new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true,
+      })),
       ifProd(new OptimizeCSSAssetsPlugin({})),
-    ].filter(identifyPlugins),
+    ].filter(identity),
     splitChunks: {
       cacheGroups: {
         commons: {
           name: 'common',
           chunks: 'initial',
           minChunks: 2,
-          maxInitialRequests: 5, // The default limit is too small to showcase the effect
-          minSize: 0 // This is example is too small to create commons chunks
+          maxInitialRequests: 5,
+          minSize: 0,
         },
         vendor: {
           test: /node_modules/,
           chunks: 'initial',
           name: 'vendor',
           priority: 10,
-          enforce: true
+          enforce: true,
         },
         styles: {
           name: 'styles',
           test: /\.css$/,
           chunks: 'all',
-          enforce: true
-        }
-      }
-    }
+          enforce: true,
+        },
+      },
+    },
   },
   module: {
     rules: [{
       test: /\.js$/,
       exclude: /node_modules/,
       use: {
-        loader: 'babel-loader'
-      }
+        loader: 'babel-loader',
+      },
+    }, {
+      test: /\.html$/,
+      use: [
+        {
+          loader: 'html-loader',
+          options: { minimize: true },
+        },
+      ],
+    }, {
+      test: /\.css$/,
+      use: [
+        isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+        'css-loader',
+        'postcss-loader',
+      ],
+    }, {
+      test: /\.(jpe?g|png|gif|svg|ico)$/,
+      use: [{
+        loader: 'url-loader',
+        options: {
+          name: 'images/[name].[ext]',
+          limit: 40000,
+          context: './images',
+        },
+      },
+      ],
+    }, {
+      test: /\.(woff|woff2|eot|ttf|otf)$/,
+      use: [{
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          useRelativePath: !isDev,
+        },
+      },
+      ],
     },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
-            options: { minimize: true }
-          }
-        ]
-      },
-      {
-        test: /\.css$/,
-        use: [
-          isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
-        ],
-      }, {
-        test: /\.(jpe?g|png|gif|svg|ico)$/,
-        use: [{
-          loader: 'url-loader',
-          options: {
-            name: 'images/[name].[ext]',
-            limit: 40000,
-            context: './images',
-          },
-        },
-        ],
-      }, {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            useRelativePath: !isDev,
-          },
-        },
-        ],
-      },
     ],
   },
   plugins: [
-    ...plugins,
+    ifProd(new ManifestPlugin({
+      fileName: 'manifest.json',
+      seed: {
+        name: 'Assets Manifest file',
+      },
+    })),
+    ifProd(new CopyWebpackPlugin([
+      { from: 'fonts/', to: './fonts' },
+      { from: 'images/', to: './images' },
+    ])),
+    ifProd(new CleanWebpackPlugin(['dist'], { verbose: true })),
+    ifDev(new webpack.HotModuleReplacementPlugin()),
     new HtmlWebPackPlugin({
       template: 'index.html',
     }),
@@ -176,6 +168,6 @@ module.exports = {
       filename: isDev ? '[name].css' : '[name].[hash].css',
       chunkFilename: isDev ? '[name].css' : '[name].[chunkhash].css',
     }),
-  ],
+  ].filter(identity),
 };
 
