@@ -6,7 +6,7 @@
   height: 32px;
   overflow: hidden;
   text-align: center;
-  background: var(--accent-color);
+  background: var(--primary-color-light);
 }
 
 .profileIcon {
@@ -24,7 +24,7 @@
 .accountCircle {
   display: inline-flex;
   position: relative;
-  top: -3px;
+  top: -8px;
   right: 20px;
 }
 

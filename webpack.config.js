@@ -6,6 +6,8 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const postcssPresetEnv = require('postcss-preset-env');
+const autoprefixer = require('autoprefixer');
 
 const yargs = require('yargs');
 const { resolve } = require('path');
@@ -122,7 +124,15 @@ module.exports = {
       use: [
         isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
         'css-loader',
-        'postcss-loader',
+        {
+          loader: 'postcss-loader',
+          options: {
+            ident: 'postcss',
+            plugins: () => [
+              postcssPresetEnv({ browsers: 'last 2 versions' }, autoprefixer({ grid: true })),
+            ],
+          },
+        },
       ],
     }, {
       test: /\.(jpe?g|png|gif|svg|ico)$/,

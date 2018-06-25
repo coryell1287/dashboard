@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
-import {
-  Table,
-  TableBody,
-  TableHeader,
-  TableHeaderColumn,
-  TableRow,
-  TableRowColumn,
-} from 'material-ui/Table';
-import Paper from 'material-ui/Paper';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
 import autobind from 'autobind-decorator';
 
 class TableExampleSimple extends Component {
@@ -28,38 +25,38 @@ class TableExampleSimple extends Component {
     return (
       <Paper zDepth={1}>
         <Table onRowSelection={this.handleQuery}>
-          <TableHeader>
+          <TableHead>
             <TableRow>
-              <TableHeaderColumn>ID</TableHeaderColumn>
-              <TableHeaderColumn>Name</TableHeaderColumn>
-              <TableHeaderColumn>Status</TableHeaderColumn>
+              <TableCell>ID</TableCell>
+              <TableCell>Name</TableCell>
+              <TableCell>Status</TableCell>
             </TableRow>
-          </TableHeader>
+          </TableHead>
           <TableBody>
             <TableRow>
-              <TableRowColumn>1</TableRowColumn>
-              <TableRowColumn>John Smith</TableRowColumn>
-              <TableRowColumn>Employed</TableRowColumn>
+              <TableCell>1</TableCell>
+              <TableCell>John Smith</TableCell>
+              <TableCell>Employed</TableCell>
             </TableRow>
             <TableRow>
-              <TableRowColumn>2</TableRowColumn>
-              <TableRowColumn>Randal White</TableRowColumn>
-              <TableRowColumn>Unemployed</TableRowColumn>
+              <TableCell>2</TableCell>
+              <TableCell>Randal White</TableCell>
+              <TableCell>Unemployed</TableCell>
             </TableRow>
             <TableRow>
-              <TableRowColumn>3</TableRowColumn>
-              <TableRowColumn>Stephanie Sanders</TableRowColumn>
-              <TableRowColumn>Employed</TableRowColumn>
+              <TableCell>3</TableCell>
+              <TableCell>Stephanie Sanders</TableCell>
+              <TableCell>Employed</TableCell>
             </TableRow>
             <TableRow>
-              <TableRowColumn>4</TableRowColumn>
-              <TableRowColumn>Steve Brown</TableRowColumn>
-              <TableRowColumn>Employed</TableRowColumn>
+              <TableCell>4</TableCell>
+              <TableCell>Steve Brown</TableCell>
+              <TableCell>Employed</TableCell>
             </TableRow>
             <TableRow>
-              <TableRowColumn>5</TableRowColumn>
-              <TableRowColumn>Christopher Nolan</TableRowColumn>
-              <TableRowColumn>Unemployed</TableRowColumn>
+              <TableCell>5</TableCell>
+              <TableCell>Christopher Nolan</TableCell>
+              <TableCell>Unemployed</TableCell>
             </TableRow>
           </TableBody>
         </Table>

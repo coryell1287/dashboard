@@ -1,11 +1,12 @@
 :root {
-  --primary-color: rgba(52, 58, 64, 1);
+  --primary-color: #7986cb;
   --primary-button-color: var(--primary-color);
   --primary-font-color: rgba(250, 250, 250, 1);
+  --primary-color-light: #aab6fe;
   --main-background-color: rgba(240, 243, 244, 1);
-  --accent-color: rgba(99, 216, 241, 1);
+  --accent-color:#49599a;
   --default-color: rgba(250, 250, 250, 1);
   --default-font-color: rgba(66, 66, 66, 1);
-  --default-font-family: 'Roboto Regular', Arial, Helvetica, sans-serif;
+  --default-font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
   --material-icons: 'Material Icons';
 }

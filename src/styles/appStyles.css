@@ -21,12 +21,12 @@ a {
 }
 
 @font-face {
-  font-family: 'Roboto Regular';
-  src: url('../fonts/Roboto-Regular.eot');
-  src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/Roboto-Regular.woff') format('woff'),
-  url('../fonts/Roboto-Regular.ttf') format('truetype'),
-  url('../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+  font-family: 'Source Sans Pro';
+  src: url('../fonts/source-sans-pro-v11-latin-regular.eot');
+  src: url('../fonts/source-sans-pro-v11-latin-regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/source-sans-pro-v11-latin-regular.woff') format('woff'),
+  url('../fonts/source-sans-pro-v11-latin-regular.ttf') format('truetype'),
+  url('../fonts/source-sans-pro-v11-latin-regular.svg#source-sans-pro-v11-latin-regular') format('svg');
   font-style: normal;
   font-weight: normal;
 }
