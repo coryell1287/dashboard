@@ -14,7 +14,6 @@ import rootReducer from 'reducers';
 
 const theme = createMuiTheme(coreTheme);
 
-
 const renderUI = (Component) => {
   render(
     <MuiThemeProvider theme={theme}>

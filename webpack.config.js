@@ -8,6 +8,8 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const postcssPresetEnv = require('postcss-preset-env');
 const autoprefixer = require('autoprefixer');
+const frontend = require('./package');
+
 
 const yargs = require('yargs');
 const { resolve } = require('path');
@@ -16,6 +18,7 @@ const args = yargs.argv;
 
 console.log(args.mode);
 const isDev = args.mode === 'development';
+const isProd = args.mode === 'production';
 const environment = args.mode;
 
 const identity = i => i;
@@ -41,7 +44,10 @@ module.exports = {
     historyApiFallback: true,
     disableHostCheck: true,
     contentBase: resolve(__dirname, './dist'),
-    overlay: { warnings: true, errors: true },
+    overlay: {
+      warnings: true,
+      errors: true,
+    },
   },
   resolve: {
     modules: [
@@ -65,7 +71,7 @@ module.exports = {
   },
   output: {
     path: resolve(__dirname, './dist'),
-    publicPath: isDev ? '/' : '',
+    publicPath: '',
     filename: isDev ? '[name].bundle.js' : '[name].[hash].js',
   },
   optimization: {
@@ -95,12 +101,6 @@ module.exports = {
           priority: 10,
           enforce: true,
         },
-        styles: {
-          name: 'styles',
-          test: /\.css$/,
-          chunks: 'all',
-          enforce: true,
-        },
       },
     },
   },
@@ -123,7 +123,10 @@ module.exports = {
       test: /\.css$/,
       use: [
         isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-        'css-loader',
+        {
+          loader: 'css-loader',
+          options: { importLoaders: 1, import: true },
+        },
         {
           loader: 'postcss-loader',
           options: {
@@ -150,8 +153,8 @@ module.exports = {
       use: [{
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]',
-          useRelativePath: !isDev,
+          name: 'fonts/[name].[ext]',
+          useRelativePath: isDev,
         },
       },
       ],
@@ -166,13 +169,27 @@ module.exports = {
       },
     })),
     ifProd(new CopyWebpackPlugin([
-      { from: 'fonts/', to: './fonts' },
-      { from: 'images/', to: './images' },
+      {
+        from: 'fonts/',
+        to: './fonts'
+      },
+      {
+        from: 'images/',
+        to: './images'
+      },
     ])),
     ifProd(new CleanWebpackPlugin(['dist'], { verbose: true })),
     ifDev(new webpack.HotModuleReplacementPlugin()),
     new HtmlWebPackPlugin({
       template: 'index.html',
+    }),
+    new webpack.DefinePlugin({
+      PRODUCTION: JSON.stringify(isProd),
+      'process.env.NODE_ENV': JSON.stringify(environment),
+      'process.env': {
+        NODE_ENV: JSON.stringify(environment),
+        frontend_version: JSON.stringify(frontend.version),
+      },
     }),
     new MiniCssExtractPlugin({
       filename: isDev ? '[name].css' : '[name].[hash].css',

@@ -1,0 +1,12 @@
+version: '3'
+services:
+    web:
+      build: .
+      container_name: ai-dashboard
+      ports:
+        - 3000:3000
+      depends_on:
+        - database
+    database:
+      image: cassandra:3.11.2
+      container_name: ai-dashboard-cassandra
