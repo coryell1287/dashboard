@@ -13,6 +13,9 @@ import App from 'routes';
 import rootReducer from 'reducers';
 
 const theme = createMuiTheme(coreTheme);
+import styles from 'styles/appStyles';
+
+console.log(styles);
 
 const renderUI = (Component) => {
   render(

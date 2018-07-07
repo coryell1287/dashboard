@@ -10,7 +10,6 @@ const postcssPresetEnv = require('postcss-preset-env');
 const autoprefixer = require('autoprefixer');
 const frontend = require('./package');
 
-
 const yargs = require('yargs');
 const { resolve } = require('path');
 
@@ -71,8 +70,8 @@ module.exports = {
   },
   output: {
     path: resolve(__dirname, './dist'),
-    publicPath: '',
-    filename: isDev ? '[name].bundle.js' : '[name].[hash].js',
+    publicPath: isProd ? '' : '/',
+    filename: '[name].bundle.js',
   },
   optimization: {
     nodeEnv: environment,
@@ -138,22 +137,22 @@ module.exports = {
         },
       ],
     }, {
-      test: /\.(jpe?g|png|gif|svg|ico)$/,
+      test: /\.(jpe?g|png|gif|ico)$/,
       use: [{
         loader: 'url-loader',
         options: {
-          name: 'images/[name].[ext]',
+          name: 'images/[name].[hash].[ext]',
           limit: 40000,
           context: './images',
         },
       },
       ],
     }, {
-      test: /\.(woff|woff2|eot|ttf|otf)$/,
+      test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
       use: [{
         loader: 'file-loader',
         options: {
-          name: 'fonts/[name].[ext]',
+          name: isDev ? '[name].[ext]' : 'fonts/[name].[hash].[ext]',
           useRelativePath: isDev,
         },
       },
@@ -171,11 +170,11 @@ module.exports = {
     ifProd(new CopyWebpackPlugin([
       {
         from: 'fonts/',
-        to: './fonts'
+        to: './fonts',
       },
       {
         from: 'images/',
-        to: './images'
+        to: './images',
       },
     ])),
     ifProd(new CleanWebpackPlugin(['dist'], { verbose: true })),

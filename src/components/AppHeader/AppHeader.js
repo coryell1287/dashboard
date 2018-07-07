@@ -30,7 +30,7 @@ class AppHeader extends PureComponent {
     const AccountCircle = () => (
       <div className="accountCircle">
         <i className="material-icons profileIcon">
-          <span className="profileCircle"><abbr className="profileName">JL</abbr></span>
+          <span className="profileCircle"><abbr className="profileName">DF</abbr></span>
         </i>
       </div>
     );

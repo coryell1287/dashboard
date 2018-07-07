@@ -6,7 +6,6 @@ import PageResizeControl from 'components/PageResizeControl';
 import { SideBar, SideBarControls } from 'components/SideBar';
 import Main from 'components/Main';
 
-import 'styles/appStyles';
 
 const Application = () => (
   <div>

@@ -12,7 +12,7 @@ const compression = require('compression');
 const port = process.env.PORT || 4000;
 const app = express();
 const publicPath = path.join(__dirname, '../dist');
-const server = http.createServer(app);
+const index = http.createServer(app);
 
 app.use(cors());
 app.use(helmet());
@@ -28,6 +28,6 @@ app.get('*', (request, response) => {
   response.sendFile(path.resolve(publicPath, 'index.html'));
 });
 
-server.listen(port, () => {
+index.listen(port, () => {
   console.log(`Server has started and is listening on ${port}`);
 });
