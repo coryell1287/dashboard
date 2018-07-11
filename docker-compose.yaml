@@ -10,3 +10,4 @@ services:
     database:
       image: cassandra:3.11.2
       container_name: ai-dashboard-cassandra
+
