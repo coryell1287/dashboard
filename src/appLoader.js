@@ -4,6 +4,7 @@ import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import '@babel/polyfill';
 import 'api/serviceConfig';
 
 import coreTheme from 'styles/theme/material-ui-theme';
@@ -11,11 +12,9 @@ import { store, history } from 'store/configureStore';
 import { ReactHelmet } from 'containers';
 import App from 'routes';
 import rootReducer from 'reducers';
+import 'styles/appStyles.css'
 
 const theme = createMuiTheme(coreTheme);
-import styles from 'styles/appStyles';
-
-console.log(styles);
 
 const renderUI = (Component) => {
   render(

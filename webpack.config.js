@@ -70,8 +70,8 @@ module.exports = {
   },
   output: {
     path: resolve(__dirname, './dist'),
-    publicPath: isProd ? '' : '/',
-    filename: '[name].bundle.js',
+    publicPath: isProd ? '/' : '.',
+    filename: isDev ? '[name].bundle.js' : '[name].[chunkhash].js',
   },
   optimization: {
     nodeEnv: environment,

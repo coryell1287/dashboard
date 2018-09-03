@@ -1,0 +1,46 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["plugin:compat/recommended", "eslint:recommended", "plugin:react/recommended", "plugin:import/errors"],
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "ecmaFeatures": {
+      "modules": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "quotes": [
+      2,
+      "single"
+    ],
+    "strict": [
+      2,
+      "never"
+    ],
+    "babel/generator-star-spacing": 1,
+    "babel/new-cap": 1,
+    "babel/object-shorthand": 1,
+    "babel/arrow-parens": 1,
+    "babel/no-await-in-loop": 1,
+    "react/jsx-uses-react": 2,
+    "react/prop-types": 0,
+    "react/jsx-uses-vars": 2,
+    "react/react-in-jsx-scope": 2,
+    "react/jsx-filename-extension": 0,
+    "react/prefer-stateless-function": 2,
+    "import/no-extraneous-dependencies": 0,
+    "jsx-a11y/href-no-hash": "off",
+    "import/no-unresolved": 0,
+    "import/extensions": ["error", "never"],
+    "no-underscore-dangle": ["error", { "allowAfterThis": true }]
+  },
+  "plugins": [
+    "babel",
+    "react",
+    "jsx-a11y"
+  ]
+}
+
