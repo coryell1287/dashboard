@@ -1,4 +1,3 @@
-/*
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -31,4 +30,3 @@ const SignInLinks = ({ signInLinks, focused, ...rest }) => (
 );
 
 export default SignInLinks;
-*/

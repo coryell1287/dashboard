@@ -1,37 +1,37 @@
 {
   "sourceMaps": true,
-  "plugins": [
-	"@babel/plugin-transform-react-jsx-source",
-    "@babel/plugin-syntax-async-generators",
-    "@babel/plugin-transform-regenerator",
-    "@babel/plugin-proposal-object-rest-spread",
-	"@babel/plugin-proposal-function-sent",
-    "@babel/plugin-proposal-export-namespace-from",
-    "@babel/plugin-proposal-numeric-separator",
-    "@babel/plugin-proposal-throw-expressions",
-    "@babel/plugin-syntax-dynamic-import",
-    "@babel/plugin-syntax-import-meta",
-    "@babel/plugin-transform-react-constant-elements",
-    "@babel/plugin-transform-react-inline-elements",
-	"@babel/plugin-proposal-json-strings",
-	["@babel/plugin-proposal-decorators", { "legacy": true }],
-	["@babel/plugin-proposal-class-properties", { "loose": false }],
-	 ["@babel/plugin-transform-runtime", {
-      "corejs": false,
-      "helpers": true,
-      "regenerator": true,
-      "useESModules": false
-    }]
-  ],
   "presets": [
-     "next",
-	"@babel/preset-react",
 	["@babel/preset-env", {
-		"debug": true,
-		"loose": true,
-		"modules": false,
-		"useBuiltIns": "entry",
-	  }
-	]
-  ]
+	  "modules": false,
+	  "debug": false,
+	  "loose": true,
+	  "useBuiltIns": "entry"
+	}],
+	"@babel/preset-react"
+  ],
+  "plugins": [
+	"react-hot-loader/babel",
+	"@babel/plugin-syntax-async-generators",
+	"@babel/plugin-proposal-object-rest-spread",
+	"@babel/plugin-syntax-dynamic-import",
+	"@babel/plugin-transform-react-jsx",
+	"@babel/plugin-transform-react-jsx-source",
+	["@babel/plugin-proposal-decorators", { "legacy": true }],
+	["@babel/plugin-proposal-class-properties", { "loose": false }]
+  ],
+  "env": {
+	"production":{
+	  "presets":[
+		"@babel/plugin-transform-react-constant-elements",
+	  	"@babel/plugin-transform-react-inline-elements"
+	  ]
+	},
+	"test": {
+	  "presets": ["@babel/preset-env", "@babel/preset-react"],
+	  "plugins": ["transform-es2015-modules-commonjs",
+		["@babel/plugin-proposal-decorators", { "legacy": true }],
+		["@babel/plugin-proposal-class-properties", { "loose": false }]
+	  ]
+	}
+  }
 }

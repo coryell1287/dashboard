@@ -1,4 +1,3 @@
-/*
 import React from 'react';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
@@ -54,4 +53,3 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(SignInForm);
-*/

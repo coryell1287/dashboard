@@ -23,8 +23,8 @@ class TableExampleSimple extends Component {
 
   render() {
     return (
-      <Paper zDepth={1}>
-        <Table onRowSelection={this.handleQuery}>
+      <Paper elevation={1}>
+        <Table>
           <TableHead>
             <TableRow>
               <TableCell>ID</TableCell>

@@ -8,11 +8,9 @@ const dummyText = 8000;
 const CardSnapshot = props => (
   <Card style={{ width: '350px' }}>
     <CardContent>
-      <Typography>
-        <h1>{props.title}</h1>
-        <h3>Two days agao</h3>
-        <h1>{dummyText}</h1>
-      </Typography>
+      <Typography variant="title" gutterBottom>{props.title}</Typography>
+      <Typography variant="subheading" gutterBottom>Three Days ago</Typography>
+      <Typography variant="title" gutterBottom>{dummyText}</Typography>
     </CardContent>
   </Card>
 );

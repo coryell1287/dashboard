@@ -12,10 +12,10 @@ const ezBuilderStyles = {
 
 const EZBuilder = () => {
   return (
-    <Paper style={{ minHeight: '300px' }} zDepth={1}>
+    <Paper style={{ minHeight: '300px' }} elevation={1}>
       <aside className="ez-builder-controls-wrapper">
         <section className="ez-builder-button-wrapper">
-          <Paper style={ezBuilderStyles} className="ez-builder-controls" zDepth={1}>
+          <Paper style={ezBuilderStyles} className="ez-builder-controls" elevation={1}>
             <article>
               <section className="ez-builder-first-section">
                 <div className="handoff-selectors">
