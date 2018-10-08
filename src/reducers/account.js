@@ -1,18 +1,15 @@
-const profile = {
-  username: 'Ben',
-  firstname: 'Ben',
-  surname: 'Shapiro',
-  password: '12345678',
-  email: 'myemail@mail.com',
-  picture: 'data:images',
-  roles: [
-    { role: 'tech', privilege: 'read' },
-  ],
+import * as types from 'actions';
+import { combineReducers } from 'redux';
+
+const testReducer = (state = '', action) => {
+  switch (action.type) {
+    case types.CREATE_ACTION:
+      return 'testReducer is working';
+    default:
+      return state;
+  }
 };
 
-/*{
-  "code": 403,
-  "message" : "Authentication failed",
-  "description" : "Invalid username or password"
-}*/
-// /v2.11/{user-id}/accounts
+export default combineReducers({
+  testReducer,
+});

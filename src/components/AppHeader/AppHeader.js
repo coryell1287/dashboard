@@ -4,6 +4,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import { withStyles } from '@material-ui/core/styles';
+import { connect } from 'react-redux';
+import { createAction } from 'actions';
 
 const styles = theme => ({
 
@@ -40,7 +42,7 @@ class AppHeader extends PureComponent {
         <AppBar className={this.props.classes.root} position="static">
           <Toolbar>
             <IconButton
-              onClick={this.props.onPageResize}
+              onClick={this.props.createAction}
               className={this.props.classes.menuButton}
               color="inherit"
               aria-label="Menu"
@@ -48,7 +50,7 @@ class AppHeader extends PureComponent {
               <i className="material-icons">menu</i>
             </IconButton>
             <Typography variant="title" className={this.props.classes.flex}>
-              Chatter
+              Platter
             </Typography>
             <AccountCircle initials={this.props.initials}/>
           </Toolbar>
@@ -56,6 +58,6 @@ class AppHeader extends PureComponent {
       </section>
     );
   }
-};
+}
 
-export default AppHeader;
+export default connect(null, { createAction })(AppHeader);

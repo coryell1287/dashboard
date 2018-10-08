@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import autobind from 'autobind-decorator';
 
 import { signUpUser, signInUser } from 'actions/SignInActions';
 
@@ -11,25 +10,32 @@ class SignInLinkState extends Component {
     this.state = {
       focused: 0,
       signInLinks: [
-        { id: 'signIn', name: 'Sign in' },
-        { id: 'signUp', name: 'Sign up' },
+        {
+          id: 'signIn',
+          name: 'Sign in'
+        },
+        {
+          id: 'signUp',
+          name: 'Sign up'
+        },
       ],
     };
   }
 
-  @autobind
-  handleLinkSelection(e, index) {
+  handleLinkSelection = (e, index) => {
     e.preventDefault();
+    const form = e.currentTarget.id;
+    console.log(form, 'here is the form id');
     this.setState({ focused: index });
-    if (e.target.id === 'signUp') {
+    if (form === 'signUp') {
       return this.props.signUpUser();
     }
     return this.props.signInUser();
-  }
+  };
 
   render() {
     return (
-      <aside>
+      <>
         {React.Children.map(this.props.children,
           child => React.cloneElement(child, {
             ...child.props,
@@ -38,11 +44,14 @@ class SignInLinkState extends Component {
             onSelectedLink: this.handleLinkSelection,
           }),
         )}
-      </aside>
+      </>
     );
   }
 }
 
 const mapDispatchToProps = dispatch =>
-  bindActionCreators({ signUpUser, signInUser }, dispatch);
+  bindActionCreators({
+    signUpUser,
+    signInUser
+  }, dispatch);
 export default connect(null, mapDispatchToProps)(SignInLinkState);

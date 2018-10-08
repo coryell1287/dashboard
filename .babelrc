@@ -5,12 +5,13 @@
 	  "modules": false,
 	  "debug": false,
 	  "loose": true,
-	  "useBuiltIns": "entry"
+	  "useBuiltIns": "usage"
 	}],
 	"@babel/preset-react"
   ],
   "plugins": [
 	"react-hot-loader/babel",
+	"@babel/plugin-transform-modules-commonjs",
 	"@babel/plugin-syntax-async-generators",
 	"@babel/plugin-proposal-object-rest-spread",
 	"@babel/plugin-syntax-dynamic-import",
@@ -28,7 +29,7 @@
 	},
 	"test": {
 	  "presets": ["@babel/preset-env", "@babel/preset-react"],
-	  "plugins": ["transform-es2015-modules-commonjs",
+	  "plugins": ["@babel/plugin-transform-modules-commonjs",
 		["@babel/plugin-proposal-decorators", { "legacy": true }],
 		["@babel/plugin-proposal-class-properties", { "loose": false }]
 	  ]

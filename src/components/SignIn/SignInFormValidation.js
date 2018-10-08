@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 class SignInFormValidation extends Component {
   state = {
@@ -12,12 +11,12 @@ class SignInFormValidation extends Component {
     signInFormControls: {
       signInErrors: {
         username: '',
-        password: '',
+        signInPassword: '',
       },
       signInFlags: {
         formValid: false,
         username: false,
-        password: false,
+        signInPassword: false,
       },
     },
     signUpFormControls: {
@@ -37,20 +36,20 @@ class SignInFormValidation extends Component {
     },
     signInFields: [{
       id: 'signInFields',
-      name: 'username',
+      name: 'signInUsername',
       label: 'username',
       type: 'text',
       value: '',
     }, {
       id: 'signInFields',
-      name: 'password',
+      name: 'signInPassword',
       label: 'password',
       type: 'password',
       value: '',
     }],
     signUpFields: [{
       id: 'signUpFields',
-      name: 'username',
+      name: 'signUpUsername',
       label: 'username',
       type: 'text',
       value: '',
@@ -62,7 +61,7 @@ class SignInFormValidation extends Component {
       value: '',
     }, {
       id: 'signUpFields',
-      name: 'password',
+      name: 'signUpPassword',
       label: 'password',
       type: 'password',
       value: '',
@@ -76,11 +75,12 @@ class SignInFormValidation extends Component {
   };
 
   handleUserSignIn = (e, index) => {
+    const target = e.target;
     const signInInput = [...this.state.signInFields];
-    const fieldName = e.target.name;
-    const fieldId = e.target.dataset.field;
+    const fieldName = target.name;
+    const fieldId = target.dataset.field;
 
-    signInInput[index].value = e.target.value;
+    signInInput[index].value = target.value;
     this.setState(
       {
         ...this.state,
@@ -90,11 +90,12 @@ class SignInFormValidation extends Component {
   };
 
   handleUserSignUp = (e, index) => {
+    const target = e.target;
     const signUpInput = [...this.state.signUpFields];
-    const fieldName = e.target.name;
-    const fieldId = e.target.dataset.field;
+    const fieldName = target.name;
+    const fieldId = target.dataset.field;
 
-    signUpInput[index].value = e.target.value;
+    signUpInput[index].value = target.value;
     this.setState(
       {
         ...this.state,
@@ -192,7 +193,7 @@ class SignInFormValidation extends Component {
 
   render() {
     return (
-      <section className={this.props.containerStyle}>
+      <section className="container">
         {
           React.Children.map(this.props.children,
             child => React.cloneElement(child, {
@@ -208,4 +209,4 @@ class SignInFormValidation extends Component {
   }
 }
 
-export default connect(null)(SignInFormValidation);
+export default SignInFormValidation;

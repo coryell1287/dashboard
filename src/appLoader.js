@@ -9,12 +9,10 @@ import 'api/serviceConfig';
 
 import coreTheme from 'styles/theme/material-ui-theme';
 import { store, history } from 'store/configureStore';
-import { ReactHelmet } from 'containers';
 import App from 'routes';
 import rootReducer from 'reducers';
 import 'styles/appStyles.css';
 
-import '@babel/polyfill';
 const theme = createMuiTheme(coreTheme);
 
 const renderUI = (Component) => {

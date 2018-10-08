@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import signInStyles, { activeLink } from 'components/SignIn/signInPageStyles';
+import 'components/SignIn/signInPageStyles.css';
 
 const RenderedLinks = ({ link, index, to, isSelected, onSelectedLink }) => (
   <li className={isSelected}>
-    <Link id={to} onClick={e => onSelectedLink(e, index)} to="">
+    <Link id={to} onClick={e => onSelectedLink(e, index)} to={to}>
       {link}
     </Link>
   </li>
@@ -13,12 +13,12 @@ const RenderedLinks = ({ link, index, to, isSelected, onSelectedLink }) => (
 
 
 const SignInLinks = ({ signInLinks, focused, ...rest }) => (
-  <nav className={signInStyles.navigation}>
-    <ul className={signInStyles.navList}>
+  <nav className="navigation">
+    <ul className="navList">
       {signInLinks.map((link, index) => (
         <RenderedLinks
           {...rest}
-          isSelected={focused === index ? activeLink : ''}
+          isSelected={focused === index ? 'activeLink' : ''}
           link={link.name}
           to={link.id}
           key={link.id}

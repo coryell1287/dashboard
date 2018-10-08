@@ -3,17 +3,16 @@ import { connect } from 'react-redux';
 import classnames from 'classnames';
 
 import SignInButtons from 'components/SignIn/SignInButtons';
-import { signInInputFields, inputError, signInLabel, signUpForm } from 'components/SignIn/signInPageStyles';
 
 const Input = (props) => (
   <label htmlFor={props.name}>
-    <span className={signInLabel}>{props.label}</span>
+    <span className="signInLabel">{props.label}</span>
     <input
       autoComplete="off"
       value={props.value}
       className={
-        classnames(signInInputFields, {
-          [inputError]: props.signUpFormControls.signUpFlags[props.name],
+        classnames('signInInputFields', {
+          inputError: props.signUpFormControls.signUpFlags[props.name],
         })}
       name={props.name}
       id={props.name}
@@ -24,8 +23,8 @@ const Input = (props) => (
   </label>
 );
 
-const SignUpForm = ({ signUp, signUpFields, buttons: { signUpButton, disableSignUpButton }, ...rest }) => (
-  <form id="signUp" className={classnames(signUpForm, signUp)}>
+const SignUpForm = ({ heightResize, signUpAnimation, signUpFields, buttons: { signUpButton, disableSignUpButton }, ...rest }) => (
+  <form id="signUp" className={[`${heightResize} ${signUpAnimation}`].join(' ')}>
     <div>
       {signUpFields.map((input, idx) => (
         <Input
@@ -42,13 +41,13 @@ const SignUpForm = ({ signUp, signUpFields, buttons: { signUpButton, disableSign
     </div>
     <SignInButtons
       {...rest}
-      disabledButton={!disableSignUpButton}
+      disabledButton={disableSignUpButton}
       control={signUpButton}/>
   </form>
 );
 
 const mapStateToProps = state => ({
-  signUp: state.signInState.signUpForm,
+  signUpAnimation: state.signInState.signUpAnimation,
 });
 
 export default connect(mapStateToProps)(SignUpForm);

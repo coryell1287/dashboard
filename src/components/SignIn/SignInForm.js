@@ -2,19 +2,17 @@ import React from 'react';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
 
-
 import SignInButtons from 'components/SignIn/SignInButtons';
-import { signInInputFields, inputError, signInForm, signInLabel } from 'components/SignIn/signInPageStyles';
 
 const Input = (props) => (
   <label htmlFor={props.name}>
-    <span className={signInLabel}>{props.label}</span>
+    <span className="signInLabel">{props.label}</span>
     <input
       autoComplete="off"
       value={props.value}
       className={
-        classnames(signInInputFields, {
-          [inputError]: props.signInFormControls.signInFlags[props.name],
+        classnames('signInInputFields', {
+          inputError: props.signInFormControls.signInFlags[props.name],
         })}
       data-field={props.fieldId}
       name={props.name}
@@ -25,8 +23,8 @@ const Input = (props) => (
   </label>
 );
 
-const SignInForm = ({ signIn, signInFields, buttons: { signInButton, disableSignInButton }, ...rest }) => (
-  <form id="signIn" className={classnames(signInForm, signIn)}>
+const SignInForm = ({ heightResize, signInAnimation, signInFields, buttons: { signInButton, disableSignInButton }, ...rest }) => (
+  <form id="signIn" className={[`${heightResize} ${signInAnimation}`].join(' ')}>
     <div>
       {signInFields.map((input, idx) => (
         <Input
@@ -42,14 +40,14 @@ const SignInForm = ({ signIn, signInFields, buttons: { signInButton, disableSign
       ))}
     </div>
     <SignInButtons
-      disableButton={!disableSignInButton}
+      disableButton={disableSignInButton}
       control={signInButton}
     />
   </form>
 );
 
 const mapStateToProps = state => ({
-  signIn: state.signInState.signInForm,
+  signInAnimation: state.signInState.signInAnimation,
 });
 
 export default connect(mapStateToProps)(SignInForm);

@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 
 const dummyText = 8000;
 
-const CardSnapshot = props => (
+export const CardSnapshot = props => (
   <Card style={{ width: '350px' }}>
     <CardContent>
       <Typography variant="title" gutterBottom>{props.title}</Typography>

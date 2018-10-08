@@ -9,15 +9,18 @@ class Authentication extends PureComponent {
 
 
   render() {
-    console.log('Something is working. Is it not?');
     const { component: Component, ...rest } = this.props;
     return (
       <Route
         exact
         {...rest}
-        render={() => (
-          <Component {...this.props}/>
-        )}
+        render={() => {
+          return (
+            this.state.authenticated
+              ? <Component {...this.props}/>
+              : <SignInPage/>
+          );
+        }}
       />
     );
   }

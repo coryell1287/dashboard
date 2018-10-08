@@ -13,9 +13,9 @@ export default {
       contrastText: '#fff',
     },
     text: {
-      primary: '#272727',
+      primary: '#fff',
       secondary: '#2A3945',
-      default: '#fff',
+      contrastText: '#272727',
     },
   },
   typography: {

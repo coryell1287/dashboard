@@ -1,68 +1,55 @@
-import {
-  slideInSignUpForm,
-  slideOutSignUpForm,
-  slideOutSignInForm,
-  slideInSignInForm,
-  expandForm,
-  resetHeight,
-} from 'components/SignIn/signInPageStyles';
+import { store } from 'store/configureStore';
 
-export default class SignInActions {
-  static showSignInForm() {
-    return {
-      type: 'SHOW_SIGNIN_FORM',
-      signIn: slideInSignInForm,
-    };
-  }
+export const showSignInForm = () => {
+  return {
+    type: 'SHOW_SIGNIN_FORM',
+    signInAnimation: 'slideInSignInForm',
+  };
+};
 
-  static hideSignInForm() {
-    return {
-      type: 'HIDE_SIGNIN_FORM',
-      signIn: slideOutSignInForm,
-    };
-  }
+export const hideSignInForm = () => {
+  return {
+    type: 'HIDE_SIGNIN_FORM',
+    signInAnimation: 'slideOutSignInForm',
+  };
+};
 
-  static showSignUpForm() {
-    return {
-      type: 'SHOW_SIGNUP_FORM',
-      signUp: slideInSignUpForm,
-    };
-  }
+export const showSignUpForm = () => {
+  return {
+    type: 'SHOW_SIGNUP_FORM',
+    signUpAnimation: 'slideInSignUpForm',
+  };
+};
 
-  static hideSignUpForm() {
-    return {
-      type: 'HIDE_SIGNUP_FORM',
-      signUp: slideOutSignUpForm,
-    };
-  }
+export const hideSignUpForm = () => {
+  return {
+    type: 'HIDE_SIGNUP_FORM',
+    signUpAnimation: 'slideOutSignUpForm',
+  };
+};
 
-  static expandForm() {
-    return {
-      type: 'EXPAND_FORM',
-      formWrapper: expandForm,
-    };
-  }
+export const expandForm = () => {
+  return {
+    type: 'EXPAND_FORM',
+    heightResize: 'expandForm',
+  };
+};
 
-  static resetHeight() {
-    return {
-      type: 'RESET_HEIGHT',
-      formWrapper: resetHeight,
-    };
-  }
+export const resetHeight = () => {
+  return {
+    type: 'RESET_HEIGHT',
+    heightResize: 'resetHeight',
+  };
+};
 
-  static signUpUser() {
-    return [
-      SignInActions.hideSignInForm(),
-      SignInActions.showSignUpForm(),
-      SignInActions.expandForm(),
-    ];
-  }
+export const signUpUser = () => {
+  store.dispatch(hideSignInForm());
+  store.dispatch(showSignUpForm());
+  store.dispatch(expandForm());
+};
 
-  static signInUser() {
-    return [
-      SignInActions.showSignInForm(),
-      SignInActions.hideSignUpForm(),
-      SignInActions.resetHeight(),
-    ];
-  }
-}
+export const signInUser = () => {
+  store.dispatch(showSignInForm());
+  store.dispatch(hideSignUpForm());
+  store.dispatch(resetHeight());
+};

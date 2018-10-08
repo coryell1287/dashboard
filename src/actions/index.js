@@ -1,23 +1,5 @@
-import { get } from 'api';
-import { config } from 'api/serviceConfig';
+export const CREATE_ACTION = 'CREATE_ACTION';
 
-export const asyncGet = () => (dispatch) => {
-
-  const options = {
-    ...config,
-    url: '',
-  };
-  dispatch(get(options.url, config));
-};
-
-
-class AsyncGet {
-  static getSomething() {
-    return (dispatch) => {
-      const options = {
-        url: '',
-      }
-      dispatch(get(options));
-    };
-  }
-}
+export const createAction = () => ({
+  type: CREATE_ACTION
+});
