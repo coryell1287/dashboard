@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
+import Paper from '@material-ui/core/Paper';
 
 import SignInButtons from 'components/SignIn/SignInButtons';
 
@@ -23,31 +24,35 @@ const Input = (props) => (
   </label>
 );
 
-const SignInForm = ({ heightResize, signInAnimation, signInFields, buttons: { signInButton, disableSignInButton }, ...rest }) => (
-  <form id="signIn" className={[`${heightResize} ${signInAnimation}`].join(' ')}>
-    <div>
-      {signInFields.map((input, idx) => (
-        <Input
-          key={input.name}
-          label={input.label}
-          name={input.name}
-          index={idx}
-          fieldId={input.id}
-          type={input.type}
-          value={signInFields[idx].value}
-          {...rest}
+const SignInForm = ({ signInAnimation, signInFields, buttons: { signInButton, disableSignInButton }, ...rest }) => {
+  console.log(signInAnimation);
+  return (
+    <form id="signIn" className={`signInForm ${signInAnimation}`}>
+        <div>
+          {signInFields.map((input, idx) => (
+            <Input
+              key={input.name}
+              label={input.label}
+              name={input.name}
+              index={idx}
+              fieldId={input.id}
+              type={input.type}
+              value={signInFields[idx].value}
+              {...rest}
+            />
+          ))}
+        </div>
+        <SignInButtons
+          disableButton={disableSignInButton}
+          control={signInButton}
         />
-      ))}
-    </div>
-    <SignInButtons
-      disableButton={disableSignInButton}
-      control={signInButton}
-    />
-  </form>
-);
+    </form>
+  );
+};
 
 const mapStateToProps = state => ({
-  signInAnimation: state.signInState.signInAnimation,
+  signInAnimation: state.signInState.signInForm.signInAnimation,
+  heightResize: state.signInState.formWrapper.heightResize,
 });
 
 export default connect(mapStateToProps)(SignInForm);

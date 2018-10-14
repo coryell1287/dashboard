@@ -42,14 +42,14 @@ export const resetHeight = () => {
   };
 };
 
-export const signUpUser = () => {
-  store.dispatch(hideSignInForm());
-  store.dispatch(showSignUpForm());
-  store.dispatch(expandForm());
+export const signUpUser = () => dispatch => {
+  dispatch(hideSignInForm());
+  dispatch(showSignUpForm());
+  dispatch(expandForm());
 };
 
-export const signInUser = () => {
-  store.dispatch(showSignInForm());
-  store.dispatch(hideSignUpForm());
-  store.dispatch(resetHeight());
+export const signInUser = () => dispatch => {
+  dispatch(showSignInForm());
+  dispatch(hideSignUpForm());
+  dispatch(resetHeight());
 };

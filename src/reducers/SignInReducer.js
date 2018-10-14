@@ -1,38 +1,56 @@
 import { combineReducers } from 'redux';
 
-export const signInAnimation = (state = '', action) => {
+export const signInForm = (state = { signInAnimation: 'signIn-form' }, action) => {
   switch (action.type) {
     case 'SHOW_SIGNIN_FORM': {
-      return action.signInAnimation;
+      return {
+        ...state,
+        signInAnimation: action.signInAnimation,
+      };
     }
     case 'HIDE_SIGNIN_FORM': {
-      return action.signInAnimation;
+      return {
+        ...state,
+        signInAnimation: action.signInAnimation,
+      };
     }
     default:
       return state;
   }
 };
 
-export const heightResize = (state = '', action) => {
+export const formWrapper = (state = { heightResize: 'form-size' }, action) => {
   switch (action.type) {
     case 'EXPAND_FORM': {
-      return action.heightResize;
+      return {
+        ...state,
+        heightResize: action.heightResize,
+      };
     }
     case 'RESET_HEIGHT': {
-      return action.heightResize;
+      return {
+        ...state,
+        heightResize: action.heightResize,
+      };
     }
     default:
       return state;
   }
 };
 
-export const signUpAnimation = (state = '', action) => {
+export const signUpForm = (state = { signUpAnimation: 'signup-form' }, action) => {
   switch (action.type) {
     case 'SHOW_SIGNUP_FORM': {
-      return action.signUpAnimation;
+      return {
+        ...state,
+        signUpAnimation: action.signUpAnimation
+      };
     }
     case 'HIDE_SIGNUP_FORM': {
-      return action.signUpAnimation;
+      return {
+        ...state,
+        signUpAnimation: action.signUpAnimation,
+      }
     }
     default:
       return state;
@@ -40,9 +58,9 @@ export const signUpAnimation = (state = '', action) => {
 };
 
 const reducers = {
-  signInAnimation,
-  signUpAnimation,
-  heightResize,
+  signInForm,
+  signUpForm,
+  formWrapper,
 };
 
 export default combineReducers(reducers);

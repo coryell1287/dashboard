@@ -9,9 +9,9 @@ import SignInFormValidation from 'components/SignIn/SignInFormValidation';
 
 import 'components/SignIn/signInPageStyles.css';
 
-const SignInPage = ({ formWrapper }) => (
+const SignInPage = ({ heightResize }) => (
   <main className="signInBackground">
-    <article id="formWrapper" className={[`signInWrapper ${formWrapper}`].join(' ')}>
+    <article id="formWrapper" className={[`signInWrapper ${heightResize}`].join(' ')}>
       <SignInLinkState>
         <SignInLinks/>
       </SignInLinkState>
@@ -24,7 +24,7 @@ const SignInPage = ({ formWrapper }) => (
 );
 
 const mapStateToProps = state => ({
-  formWrapper: state.signInState.formWrapper,
+  heightResize: state.signInState.formWrapper.heightResize,
 });
 
 export default connect(mapStateToProps)(SignInPage);

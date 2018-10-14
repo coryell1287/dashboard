@@ -23,31 +23,35 @@ const Input = (props) => (
   </label>
 );
 
-const SignUpForm = ({ heightResize, signUpAnimation, signUpFields, buttons: { signUpButton, disableSignUpButton }, ...rest }) => (
-  <form id="signUp" className={[`${heightResize} ${signUpAnimation}`].join(' ')}>
-    <div>
-      {signUpFields.map((input, idx) => (
-        <Input
-          key={input.name}
-          label={input.label}
-          name={input.name}
-          value={signUpFields[idx].value}
-          type={input.type}
-          fieldId={input.id}
-          index={idx}
-          {...rest}
-        />
-      ))}
-    </div>
-    <SignInButtons
-      {...rest}
-      disabledButton={disableSignUpButton}
-      control={signUpButton}/>
-  </form>
-);
+const SignUpForm = ({ signUpAnimation, signUpFields, buttons: { signUpButton, disableSignUpButton }, ...rest }) => {
+  console.log(signUpAnimation, 'signupform');
+  return (
+    <form id="signUp" className={`signUpForm ${signUpAnimation}`}>
+      <div>
+        {signUpFields.map((input, idx) => (
+          <Input
+            key={input.name}
+            label={input.label}
+            name={input.name}
+            value={signUpFields[idx].value}
+            type={input.type}
+            fieldId={input.id}
+            index={idx}
+            {...rest}
+          />
+        ))}
+      </div>
+      <SignInButtons
+        {...rest}
+        disabledButton={disableSignUpButton}
+        control={signUpButton}/>
+    </form>
+  );
+};
 
 const mapStateToProps = state => ({
-  signUpAnimation: state.signInState.signUpAnimation,
+  signUpAnimation: state.signInState.signUpForm.signUpAnimation,
+  heightResize: state.signInState.formWrapper.heightResize,
 });
 
 export default connect(mapStateToProps)(SignUpForm);

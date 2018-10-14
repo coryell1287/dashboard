@@ -25,7 +25,6 @@ class SignInLinkState extends Component {
   handleLinkSelection = (e, index) => {
     e.preventDefault();
     const form = e.currentTarget.id;
-    console.log(form, 'here is the form id');
     this.setState({ focused: index });
     if (form === 'signUp') {
       return this.props.signUpUser();
