@@ -1,7 +1,6 @@
 const path = require('path');
 const express = require('express');
 const cors = require('cors');
-const errorhandler = require('errorhandler');
 const http = require('http');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
@@ -12,9 +11,6 @@ const app = express();
 const publicPath = path.join(__dirname, '../dist');
 const server = http.createServer(app);
 
-if (process.env.NODE_ENV === 'development') {
-  app.use(errorhandler())
-}
 
 app.use(cors());
 app.use(helmet());

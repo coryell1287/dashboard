@@ -4,7 +4,6 @@ import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-// import '@babel/polyfill';
 import 'api/serviceConfig';
 
 import coreTheme from 'styles/theme/material-ui-theme';
