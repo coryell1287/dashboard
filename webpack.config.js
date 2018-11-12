@@ -1,7 +1,5 @@
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
@@ -70,7 +68,7 @@ module.exports = {
   },
   output: {
     path: resolve(__dirname, './dist'),
-    publicPath: isDev ? '/' : '.',
+    publicPath: isDev ? '/' : '',
     filename: isDev ? '[name].bundle.js' : '[name].[chunkhash].js',
   },
   optimization: {
@@ -82,20 +80,19 @@ module.exports = {
         parallel: true,
         sourceMap: true,
       })),
-      ifProd(new OptimizeCSSAssetsPlugin({})),
     ].filter(identity),
     splitChunks: {
       cacheGroups: {
         commons: {
           name: 'common',
-          chunks: 'initial',
+          chunks: 'all',
           minChunks: 2,
           maxInitialRequests: 5,
           minSize: 0,
         },
         vendor: {
           test: /node_modules/,
-          chunks: 'initial',
+          chunks: 'all',
           name: 'vendor',
           priority: 10,
           enforce: true,
@@ -181,6 +178,7 @@ module.exports = {
     ifDev(new webpack.HotModuleReplacementPlugin()),
     new HtmlWebPackPlugin({
       template: 'index.html',
+      chunks: ['vendor', 'common', 'app']
     }),
     new webpack.DefinePlugin({
       PRODUCTION: JSON.stringify(isProd),
@@ -189,10 +187,6 @@ module.exports = {
         NODE_ENV: JSON.stringify(environment),
         frontend_version: JSON.stringify(frontend.version),
       },
-    }),
-    new MiniCssExtractPlugin({
-      filename: isDev ? '[name].css' : '[name].[hash].css',
-      chunkFilename: isDev ? '[name].css' : '[name].[chunkhash].css',
     }),
   ].filter(identity),
 };

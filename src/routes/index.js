@@ -3,12 +3,12 @@ import { ConnectedRouter } from 'connected-react-router';
 
 import { history } from 'store/configureStore';
 import Application from 'containers/Application';
-import Authentication from 'components/Authentication/Authentication';
+import Authentication from 'components/Authentication';
 
-const Routes = () => (
+const app = () => (
   <ConnectedRouter history={history}>
-    <Authentication component={<Application/>}/>
+    <Authentication component={Application}/>
   </ConnectedRouter>
 );
 
-export default Routes;
+export default app;

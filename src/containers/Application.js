@@ -6,10 +6,12 @@ import PageResizeControl from 'components/PageResizeControl';
 import { SideBar, SideBarControls } from 'components/SideBar';
 import Main from 'components/Main';
 import ReactHelment from 'containers/ReactHelmet'
+import routes from 'routes/routes';
+import MainHeader from 'components/MainHeader';
 
 const Application = () => (
   <div>
-    <ReactHelment />
+    <ReactHelment/>
     <article>
       <PageResizeControl>
         <AppHeader/>
@@ -18,7 +20,10 @@ const Application = () => (
         <SideBarControls>
           <SideBar/>
         </SideBarControls>
-        <Main/>
+        <Main>
+          <MainHeader/>
+          {routes}
+        </Main>
       </section>
     </article>
   </div>
