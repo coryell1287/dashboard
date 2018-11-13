@@ -6,12 +6,10 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import autobind from 'autobind-decorator';
 
 class TableExampleSimple extends Component {
 
-  @autobind
-  handleQuery() {
+  handleQuery = () => {
     this.props.history.push({
       pathname: '/query-string/id',
       pagename: 'Query String',

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import autobind from 'autobind-decorator';
 import { connect } from 'react-redux';
+
 import { resizePage } from 'components/PageResizeControl/PageResizeAction';
 import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router';
@@ -25,8 +25,7 @@ class SideBarControls extends Component {
     return false;
   }
 
-  @autobind
-  handlePageReset() {
+  handlePageReset = () => {
     if (this.props.resize) {
       return this.props.resizePage();
     }
@@ -37,8 +36,7 @@ class SideBarControls extends Component {
     this.setState({ arrowStyle: id });
   }
 
-  @autobind
-  handleMenuItemSelected(e) {
+  handleMenuItemSelected = (e) => {
     const navItem = e.currentTarget;
     const navID = e.currentTarget.id;
 
