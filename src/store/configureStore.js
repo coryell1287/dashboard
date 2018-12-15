@@ -19,7 +19,7 @@ if (env === 'development') {
   );
 }
 
-const devTools = compose(window.devToolsExtension ? window.devToolsExtension() : f => f);
+const devTools = compose(window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 const middlewareEnhancer = applyMiddleware(...middleware, routerMiddleware(history), asyncAwait);
 const enhancers = [middlewareEnhancer, devTools];
 const composedEnhancers = compose(...enhancers);
@@ -30,3 +30,4 @@ const store = createStore(
 );
 
 export { env, store, history };
+

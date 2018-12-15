@@ -1,0 +1,29 @@
+Server has started and is listening on 5000
+Here is the console log method.
+[0mGET /api/profile/fairy [32m200 [0m5.132 ms - 32[0m
+[0mGET / [36m304 [0m1.490 ms - -[0m
+[0mGET /vendor.4f38c52306c6a01ef5c5.js [36m304 [0m0.925 ms - -[0m
+[0mGET /app.41132f010e8285d9dea3.js [36m304 [0m0.998 ms - -[0m
+Server has started and is listening on 5000
+Here is the console log method.
+[0mGET /api/profile/fairy [32m200 [0m5.245 ms - 32[0m
+Here is the console log method.
+[0mGET /api/profile/fairy [32m200 [0m0.810 ms - 32[0m
+Server has started and is listening on 5000
+Here is the console log method.
+[0mGET /api/profile/fairy [32m200 [0m6.492 ms - 28[0m
+Here is the console log method.
+[0mGET /api/profile/fairy [32m200 [0m0.752 ms - 28[0m
+Here is the console log method.
+[0mGET /api/profile/fairy [32m200 [0m0.533 ms - 28[0m
+[0mGET / [36m304 [0m1.573 ms - -[0m
+[0mGET /vendor.4f38c52306c6a01ef5c5.js [36m304 [0m0.406 ms - -[0m
+[0mGET /app.41132f010e8285d9dea3.js [36m304 [0m0.940 ms - -[0m
+[0mGET /fonts/source-sans-pro-v11-latin-regular.f94f84eb867a3e3d65da0c5cad065437.woff [32m200 [0m2.793 ms - 19616[0m
+[0mGET /fonts/MaterialIcons-Regular.012cf6a10129e2275d79d6adac7f3b02.woff [32m200 [0m2.460 ms - 57620[0m
+[0mGET /fonts/fontawesome-webfont.af7ae505a9eed503f8b8e6982036873e.woff2 [32m200 [0m1.916 ms - 77160[0m
+[0mGET / [36m304 [0m0.412 ms - -[0m
+[0mGET /vendor.4f38c52306c6a01ef5c5.js [36m304 [0m0.641 ms - -[0m
+[0mGET /app.41132f010e8285d9dea3.js [36m304 [0m0.637 ms - -[0m
+Here is the console log method.
+[0mGET /api/profile/fairy [32m200 [0m0.604 ms - 28[0m

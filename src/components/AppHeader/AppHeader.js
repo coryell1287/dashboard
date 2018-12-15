@@ -50,7 +50,7 @@ class AppHeader extends PureComponent {
               <i className="material-icons">menu</i>
             </IconButton>
             <Typography variant="title" className={this.props.classes.flex}>
-              Platter
+              Chatter
             </Typography>
             <AccountCircle initials={this.props.initials}/>
           </Toolbar>
