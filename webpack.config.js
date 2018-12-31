@@ -51,7 +51,7 @@ module.exports = {
       resolve(__dirname, './src'),
       'node_modules',
     ],
-    extensions: ['.js', '.json', '.css'],
+    extensions: ['.js', '.json', '.css', '.mjs'],
     alias: {
       actions: resolve(__dirname, './src/actions/'),
       api: resolve(__dirname, 'src/api/'),
@@ -116,45 +116,50 @@ module.exports = {
         },
       ],
     }, {
-      test: /\.css$/,
-      use: [
-        'style-loader',
-        {
-          loader: 'css-loader',
-          options: { importLoaders: 1, import: true },
-        },
-        {
-          loader: 'postcss-loader',
+      test: /\.mjs$/,
+      include: /node_modules/,
+      type: 'javascript/auto',
+    },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: { importLoaders: 1, import: true },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: () => [
+                postcssPresetEnv({ browsers: 'last 2 versions' }, autoprefixer({ grid: true })),
+              ],
+            },
+          },
+        ],
+      }, {
+        test: /\.(jpe?g|png|gif|ico)$/,
+        use: [{
+          loader: 'url-loader',
           options: {
-            ident: 'postcss',
-            plugins: () => [
-              postcssPresetEnv({ browsers: 'last 2 versions' }, autoprefixer({ grid: true })),
-            ],
+            name: 'images/[name].[hash].[ext]',
+            limit: 40000,
+            context: './images',
           },
         },
-      ],
-    }, {
-      test: /\.(jpe?g|png|gif|ico)$/,
-      use: [{
-        loader: 'url-loader',
-        options: {
-          name: 'images/[name].[hash].[ext]',
-          limit: 40000,
-          context: './images',
+        ],
+      }, {
+        test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: isDev ? '[name].[ext]' : 'fonts/[name].[hash].[ext]',
+            useRelativePath: isDev,
+          },
         },
+        ],
       },
-      ],
-    }, {
-      test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
-      use: [{
-        loader: 'file-loader',
-        options: {
-          name: isDev ? '[name].[ext]' : 'fonts/[name].[hash].[ext]',
-          useRelativePath: isDev,
-        },
-      },
-      ],
-    },
     ],
   },
   plugins: [

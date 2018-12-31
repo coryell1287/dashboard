@@ -24,7 +24,6 @@ const Input = (props) => (
 );
 
 const SignUpForm = ({ signUpAnimation, signUpFields, buttons: { signUpButton, disableSignUpButton }, ...rest }) => {
-  console.log(signUpAnimation, 'signupform');
   return (
     <form id="signUp" className={`signUpForm ${signUpAnimation}`}>
       <div>

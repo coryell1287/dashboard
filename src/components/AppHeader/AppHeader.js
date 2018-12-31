@@ -1,11 +1,14 @@
 import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import { withStyles } from '@material-ui/core/styles';
-import { connect } from 'react-redux';
 import { createAction } from 'actions';
+
+import AccountCircle from 'components/AppHeader/AccountCirlce';
+import Initials from 'components/AppHeader/FirstNameSurname.query';
 
 const styles = theme => ({
 
@@ -29,13 +32,6 @@ const styles = theme => ({
 class AppHeader extends PureComponent {
 
   render() {
-    const AccountCircle = () => (
-      <div className="accountCircle">
-        <i className="material-icons profileIcon">
-          <span className="profileCircle"><abbr className="profileName">DF</abbr></span>
-        </i>
-      </div>
-    );
 
     return (
       <section id="appBar" className="appBar">
@@ -49,10 +45,10 @@ class AppHeader extends PureComponent {
             >
               <i className="material-icons">menu</i>
             </IconButton>
-            <Typography variant="title" className={this.props.classes.flex}>
+            <Typography component="h5" variant="h5" className={this.props.classes.flex}>
               Chatter
             </Typography>
-            <AccountCircle initials={this.props.initials}/>
+            <AccountCircle initials={Initials}/>
           </Toolbar>
         </AppBar>
       </section>

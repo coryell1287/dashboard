@@ -11,11 +11,13 @@ class SignInFormValidation extends Component {
     signInFormControls: {
       signInErrors: {
         username: '',
+        email: '',
         signInPassword: '',
       },
       signInFlags: {
         formValid: false,
         username: false,
+        email: false,
         signInPassword: false,
       },
     },
@@ -42,11 +44,18 @@ class SignInFormValidation extends Component {
       value: '',
     }, {
       id: 'signInFields',
+      name: 'signInEmail',
+      label: 'email',
+      type: 'email',
+      value: '',
+    }, {
+      id: 'signInFields',
       name: 'signInPassword',
       label: 'password',
       type: 'password',
       value: '',
-    }],
+    }
+    ],
     signUpFields: [{
       id: 'signUpFields',
       name: 'signUpUsername',

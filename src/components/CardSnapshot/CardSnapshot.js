@@ -8,9 +8,9 @@ const dummyText = 8000;
 export const CardSnapshot = props => (
   <Card style={{ width: '350px' }}>
     <CardContent>
-      <Typography variant="title" gutterBottom>{props.title}</Typography>
-      <Typography variant="subheading" gutterBottom>Three Days ago</Typography>
-      <Typography variant="title" gutterBottom>{dummyText}</Typography>
+      <Typography color="secondary" component="h5" variant="h5" gutterBottom>{props.title}</Typography>
+      <Typography color="secondary" component="h2" variant="subtitle1" gutterBottom>Three Days ago</Typography>
+      <Typography color="secondary" component="h5" variant="h5" gutterBottom>{dummyText}</Typography>
     </CardContent>
   </Card>
 );

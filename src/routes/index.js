@@ -5,10 +5,11 @@ import { history } from 'store/configureStore';
 import Application from 'containers/Application';
 import Authentication from 'components/Authentication';
 
-const app = () => (
+const App = () => (
   <ConnectedRouter history={history}>
-    <Authentication component={Application}/>
+    <Application/>
+    {/*<Authentication component={Application} />*/}
   </ConnectedRouter>
 );
 
-export default app;
+export default App;

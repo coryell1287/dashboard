@@ -1,0 +1,979 @@
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+Error: Cannot find module '@babel/preset-plugin-transform-react-constant-elements' from '/home/coryell/Development/Dashboard'
+- If you want to resolve "@babel/plugin-transform-react-constant-elements", use "module:@babel/plugin-transform-react-constant-elements"
+- Did you accidentally pass a plugin as a preset?
+    at Function.module.exports [as sync] (/home/coryell/Development/Dashboard/node_modules/resolve/lib/sync.js:40:15)
+    at resolveStandardizedName (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:101:31)
+    at resolvePreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:58:10)
+    at loadPreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:77:20)
+    at createDescriptor (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:154:9)
+    at items.map (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:50)
+    at Array.map (<anonymous>)
+    at createDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:29)
+    at createPresetDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:101:10)
+    at presets (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:47:19)
+Error: Cannot find module '@babel/preset-plugin-transform-react-constant-elements' from '/home/coryell/Development/Dashboard'
+- If you want to resolve "@babel/plugin-transform-react-constant-elements", use "module:@babel/plugin-transform-react-constant-elements"
+- Did you accidentally pass a plugin as a preset?
+    at Function.module.exports [as sync] (/home/coryell/Development/Dashboard/node_modules/resolve/lib/sync.js:40:15)
+    at resolveStandardizedName (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:101:31)
+    at resolvePreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:58:10)
+    at loadPreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:77:20)
+    at createDescriptor (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:154:9)
+    at items.map (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:50)
+    at Array.map (<anonymous>)
+    at createDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:29)
+    at createPresetDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:101:10)
+    at presets (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:47:19)
+Error: Cannot find module '@babel/preset-plugin-transform-react-constant-elements' from '/home/coryell/Development/Dashboard'
+- If you want to resolve "@babel/plugin-transform-react-constant-elements", use "module:@babel/plugin-transform-react-constant-elements"
+- Did you accidentally pass a plugin as a preset?
+    at Function.module.exports [as sync] (/home/coryell/Development/Dashboard/node_modules/resolve/lib/sync.js:40:15)
+    at resolveStandardizedName (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:101:31)
+    at resolvePreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:58:10)
+    at loadPreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:77:20)
+    at createDescriptor (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:154:9)
+    at items.map (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:50)
+    at Array.map (<anonymous>)
+    at createDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:29)
+    at createPresetDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:101:10)
+    at presets (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:47:19)
+Error: Cannot find module '@babel/preset-plugin-transform-react-constant-elements' from '/home/coryell/Development/Dashboard'
+- If you want to resolve "@babel/plugin-transform-react-constant-elements", use "module:@babel/plugin-transform-react-constant-elements"
+- Did you accidentally pass a plugin as a preset?
+    at Function.module.exports [as sync] (/home/coryell/Development/Dashboard/node_modules/resolve/lib/sync.js:40:15)
+    at resolveStandardizedName (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:101:31)
+    at resolvePreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:58:10)
+    at loadPreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:77:20)
+    at createDescriptor (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:154:9)
+    at items.map (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:50)
+    at Array.map (<anonymous>)
+    at createDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:29)
+    at createPresetDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:101:10)
+    at presets (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:47:19)
+Error: Cannot find module '@babel/preset-plugin-transform-react-constant-elements' from '/home/coryell/Development/Dashboard'
+- If you want to resolve "@babel/plugin-transform-react-constant-elements", use "module:@babel/plugin-transform-react-constant-elements"
+- Did you accidentally pass a plugin as a preset?
+    at Function.module.exports [as sync] (/home/coryell/Development/Dashboard/node_modules/resolve/lib/sync.js:40:15)
+    at resolveStandardizedName (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:101:31)
+    at resolvePreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:58:10)
+    at loadPreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:77:20)
+    at createDescriptor (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:154:9)
+    at items.map (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:50)
+    at Array.map (<anonymous>)
+    at createDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:29)
+    at createPresetDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:101:10)
+    at presets (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:47:19)
+Error: Cannot find module '@babel/preset-plugin-transform-react-constant-elements' from '/home/coryell/Development/Dashboard'
+- If you want to resolve "@babel/plugin-transform-react-constant-elements", use "module:@babel/plugin-transform-react-constant-elements"
+- Did you accidentally pass a plugin as a preset?
+    at Function.module.exports [as sync] (/home/coryell/Development/Dashboard/node_modules/resolve/lib/sync.js:40:15)
+    at resolveStandardizedName (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:101:31)
+    at resolvePreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:58:10)
+    at loadPreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:77:20)
+    at createDescriptor (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:154:9)
+    at items.map (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:50)
+    at Array.map (<anonymous>)
+    at createDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:29)
+    at createPresetDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:101:10)
+    at presets (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:47:19)
+Error: Cannot find module '@babel/preset-plugin-transform-react-constant-elements' from '/home/coryell/Development/Dashboard'
+- If you want to resolve "@babel/plugin-transform-react-constant-elements", use "module:@babel/plugin-transform-react-constant-elements"
+- Did you accidentally pass a plugin as a preset?
+    at Function.module.exports [as sync] (/home/coryell/Development/Dashboard/node_modules/resolve/lib/sync.js:40:15)
+    at resolveStandardizedName (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:101:31)
+    at resolvePreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:58:10)
+    at loadPreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:77:20)
+    at createDescriptor (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:154:9)
+    at items.map (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:50)
+    at Array.map (<anonymous>)
+    at createDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:29)
+    at createPresetDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:101:10)
+    at presets (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:47:19)
+Error: Cannot find module '@babel/preset-plugin-transform-react-constant-elements' from '/home/coryell/Development/Dashboard'
+- If you want to resolve "@babel/plugin-transform-react-constant-elements", use "module:@babel/plugin-transform-react-constant-elements"
+- Did you accidentally pass a plugin as a preset?
+    at Function.module.exports [as sync] (/home/coryell/Development/Dashboard/node_modules/resolve/lib/sync.js:40:15)
+    at resolveStandardizedName (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:101:31)
+    at resolvePreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:58:10)
+    at loadPreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:77:20)
+    at createDescriptor (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:154:9)
+    at items.map (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:50)
+    at Array.map (<anonymous>)
+    at createDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:29)
+    at createPresetDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:101:10)
+    at presets (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:47:19)
+Error: Cannot find module '@babel/preset-plugin-transform-react-constant-elements' from '/home/coryell/Development/Dashboard'
+- If you want to resolve "@babel/plugin-transform-react-constant-elements", use "module:@babel/plugin-transform-react-constant-elements"
+- Did you accidentally pass a plugin as a preset?
+    at Function.module.exports [as sync] (/home/coryell/Development/Dashboard/node_modules/resolve/lib/sync.js:40:15)
+    at resolveStandardizedName (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:101:31)
+    at resolvePreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:58:10)
+    at loadPreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:77:20)
+    at createDescriptor (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:154:9)
+    at items.map (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:50)
+    at Array.map (<anonymous>)
+    at createDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:29)
+    at createPresetDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:101:10)
+    at presets (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:47:19)
+Error: Cannot find module '@babel/preset-plugin-transform-react-constant-elements' from '/home/coryell/Development/Dashboard'
+- If you want to resolve "@babel/plugin-transform-react-constant-elements", use "module:@babel/plugin-transform-react-constant-elements"
+- Did you accidentally pass a plugin as a preset?
+    at Function.module.exports [as sync] (/home/coryell/Development/Dashboard/node_modules/resolve/lib/sync.js:40:15)
+    at resolveStandardizedName (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:101:31)
+    at resolvePreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:58:10)
+    at loadPreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:77:20)
+    at createDescriptor (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:154:9)
+    at items.map (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:50)
+    at Array.map (<anonymous>)
+    at createDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:29)
+    at createPresetDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:101:10)
+    at presets (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:47:19)
+Error: Cannot find module '@babel/preset-plugin-transform-react-constant-elements' from '/home/coryell/Development/Dashboard'
+- If you want to resolve "@babel/plugin-transform-react-constant-elements", use "module:@babel/plugin-transform-react-constant-elements"
+- Did you accidentally pass a plugin as a preset?
+    at Function.module.exports [as sync] (/home/coryell/Development/Dashboard/node_modules/resolve/lib/sync.js:40:15)
+    at resolveStandardizedName (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:101:31)
+    at resolvePreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:58:10)
+    at loadPreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:77:20)
+    at createDescriptor (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:154:9)
+    at items.map (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:50)
+    at Array.map (<anonymous>)
+    at createDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:29)
+    at createPresetDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:101:10)
+    at presets (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:47:19)
+Error: Cannot find module '@babel/preset-plugin-transform-react-constant-elements' from '/home/coryell/Development/Dashboard'
+- If you want to resolve "@babel/plugin-transform-react-constant-elements", use "module:@babel/plugin-transform-react-constant-elements"
+- Did you accidentally pass a plugin as a preset?
+    at Function.module.exports [as sync] (/home/coryell/Development/Dashboard/node_modules/resolve/lib/sync.js:40:15)
+    at resolveStandardizedName (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:101:31)
+    at resolvePreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:58:10)
+    at loadPreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:77:20)
+    at createDescriptor (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:154:9)
+    at items.map (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:50)
+    at Array.map (<anonymous>)
+    at createDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:29)
+    at createPresetDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:101:10)
+    at presets (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:47:19)
+Error: Cannot find module '@babel/preset-plugin-transform-react-constant-elements' from '/home/coryell/Development/Dashboard'
+- If you want to resolve "@babel/plugin-transform-react-constant-elements", use "module:@babel/plugin-transform-react-constant-elements"
+- Did you accidentally pass a plugin as a preset?
+    at Function.module.exports [as sync] (/home/coryell/Development/Dashboard/node_modules/resolve/lib/sync.js:40:15)
+    at resolveStandardizedName (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:101:31)
+    at resolvePreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:58:10)
+    at loadPreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:77:20)
+    at createDescriptor (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:154:9)
+    at items.map (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:50)
+    at Array.map (<anonymous>)
+    at createDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:29)
+    at createPresetDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:101:10)
+    at presets (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:47:19)
+Error: Cannot find module '@babel/preset-plugin-transform-react-constant-elements' from '/home/coryell/Development/Dashboard'
+- If you want to resolve "@babel/plugin-transform-react-constant-elements", use "module:@babel/plugin-transform-react-constant-elements"
+- Did you accidentally pass a plugin as a preset?
+    at Function.module.exports [as sync] (/home/coryell/Development/Dashboard/node_modules/resolve/lib/sync.js:40:15)
+    at resolveStandardizedName (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:101:31)
+    at resolvePreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:58:10)
+    at loadPreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:77:20)
+    at createDescriptor (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:154:9)
+    at items.map (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:50)
+    at Array.map (<anonymous>)
+    at createDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:29)
+    at createPresetDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:101:10)
+    at presets (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:47:19)
+Error: Cannot find module '@babel/preset-plugin-transform-react-constant-elements' from '/home/coryell/Development/Dashboard'
+- If you want to resolve "@babel/plugin-transform-react-constant-elements", use "module:@babel/plugin-transform-react-constant-elements"
+- Did you accidentally pass a plugin as a preset?
+    at Function.module.exports [as sync] (/home/coryell/Development/Dashboard/node_modules/resolve/lib/sync.js:40:15)
+    at resolveStandardizedName (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:101:31)
+    at resolvePreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:58:10)
+    at loadPreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:77:20)
+    at createDescriptor (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:154:9)
+    at items.map (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:50)
+    at Array.map (<anonymous>)
+    at createDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:29)
+    at createPresetDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:101:10)
+    at presets (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:47:19)
+Error: Cannot find module '@babel/preset-plugin-transform-react-constant-elements' from '/home/coryell/Development/Dashboard'
+- If you want to resolve "@babel/plugin-transform-react-constant-elements", use "module:@babel/plugin-transform-react-constant-elements"
+- Did you accidentally pass a plugin as a preset?
+    at Function.module.exports [as sync] (/home/coryell/Development/Dashboard/node_modules/resolve/lib/sync.js:40:15)
+    at resolveStandardizedName (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:101:31)
+    at resolvePreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:58:10)
+    at loadPreset (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/files/plugins.js:77:20)
+    at createDescriptor (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:154:9)
+    at items.map (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:50)
+    at Array.map (<anonymous>)
+    at createDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:109:29)
+    at createPresetDescriptors (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:101:10)
+    at presets (/home/coryell/Development/Dashboard/node_modules/@babel/core/lib/config/config-descriptors.js:47:19)
+
+  When setting `useBuiltIns: 'usage'`, polyfills are automatically imported when needed.
+  Please remove the `import '@babel/polyfill'` call or use `useBuiltIns: 'entry'` instead.
+
+  When setting `useBuiltIns: 'usage'`, polyfills are automatically imported when needed.
+  Please remove the `import '@babel/polyfill'` call or use `useBuiltIns: 'entry'` instead.
+
+  When setting `useBuiltIns: 'usage'`, polyfills are automatically imported when needed.
+  Please remove the `import '@babel/polyfill'` call or use `useBuiltIns: 'entry'` instead.
+
+  When setting `useBuiltIns: 'usage'`, polyfills are automatically imported when needed.
+  Please remove the `import '@babel/polyfill'` call or use `useBuiltIns: 'entry'` instead.
+
+  When setting `useBuiltIns: 'usage'`, polyfills are automatically imported when needed.
+  Please remove the `import '@babel/polyfill'` call or use `useBuiltIns: 'entry'` instead.
+
+  When setting `useBuiltIns: 'usage'`, polyfills are automatically imported when needed.
+  Please remove the `import '@babel/polyfill'` call or use `useBuiltIns: 'entry'` instead.
+
+  When setting `useBuiltIns: 'usage'`, polyfills are automatically imported when needed.
+  Please remove the `import '@babel/polyfill'` call or use `useBuiltIns: 'entry'` instead.
+
+  When setting `useBuiltIns: 'usage'`, polyfills are automatically imported when needed.
+  Please remove the `import '@babel/polyfill'` call or use `useBuiltIns: 'entry'` instead.
+
+  When setting `useBuiltIns: 'usage'`, polyfills are automatically imported when needed.
+  Please remove the `import '@babel/polyfill'` call or use `useBuiltIns: 'entry'` instead.
+
+  When setting `useBuiltIns: 'usage'`, polyfills are automatically imported when needed.
+  Please remove the `import '@babel/polyfill'` call or use `useBuiltIns: 'entry'` instead.
+
+  When setting `useBuiltIns: 'usage'`, polyfills are automatically imported when needed.
+  Please remove the `import '@babel/polyfill'` call or use `useBuiltIns: 'entry'` instead.
+
+  When setting `useBuiltIns: 'usage'`, polyfills are automatically imported when needed.
+  Please remove the `import '@babel/polyfill'` call or use `useBuiltIns: 'entry'` instead.
+
+  When setting `useBuiltIns: 'usage'`, polyfills are automatically imported when needed.
+  Please remove the `import '@babel/polyfill'` call or use `useBuiltIns: 'entry'` instead.
+
+  When setting `useBuiltIns: 'usage'`, polyfills are automatically imported when needed.
+  Please remove the `import '@babel/polyfill'` call or use `useBuiltIns: 'entry'` instead.
+
+  When setting `useBuiltIns: 'usage'`, polyfills are automatically imported when needed.
+  Please remove the `import '@babel/polyfill'` call or use `useBuiltIns: 'entry'` instead.
+
+  When setting `useBuiltIns: 'usage'`, polyfills are automatically imported when needed.
+  Please remove the `import '@babel/polyfill'` call or use `useBuiltIns: 'entry'` instead.
+
+  When setting `useBuiltIns: 'usage'`, polyfills are automatically imported when needed.
+  Please remove the `import '@babel/polyfill'` call or use `useBuiltIns: 'entry'` instead.

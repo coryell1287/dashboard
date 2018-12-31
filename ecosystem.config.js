@@ -7,6 +7,7 @@ module.exports = {
     log_type: 'txt',
     merge_logs: true,
     mode: 'cluster',
+    exec_interpreter : 'babel-node',
     instance: 4,
     env: {
       NODE_ENV: 'development',

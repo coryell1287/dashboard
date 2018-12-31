@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
-import Paper from '@material-ui/core/Paper';
 
 import SignInButtons from 'components/SignIn/SignInButtons';
 
@@ -25,7 +24,6 @@ const Input = (props) => (
 );
 
 const SignInForm = ({ signInAnimation, signInFields, buttons: { signInButton, disableSignInButton }, ...rest }) => {
-  console.log(signInAnimation);
   return (
     <form id="signIn" className={`signInForm ${signInAnimation}`}>
         <div>
