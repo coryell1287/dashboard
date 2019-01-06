@@ -1,13 +1,9 @@
 FROM keymetrics/pm2:latest-alpine
 
 WORKDIR ./
-COPY ./ ./
-COPY package.json ./
-COPY ecosystem.config.js .
+COPY package-lock.json package.json ecosystem.config.js . ./
 RUN npm install
-RUN npm run build
-CMD [ "pm2-runtime", "start", "ecosystem.config.js" ]
-
+CMD npm start
 
 ENV PORT 3000
 EXPOSE 3000

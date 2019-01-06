@@ -45,7 +45,8 @@ process.on('SIGINT', async () => {
 
 (async () => {
   await server.listen(port);
+  console.log('🏭 This is the production build.');
   console.log(`🚀 Server has started and is listening on ${port}`);
-  console.info('Graphql is listing on has started and is listening on', apollo.graphqlPath);
+  console.info('Graphql has started and is listening on', apollo.graphqlPath);
 })();
 

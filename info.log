@@ -4153,3 +4153,30 @@ BC
 BC
 BC
 BC
+🚀 Server has started and is listening on 5000
+Graphql is listing on has started and is listening on /graphql
+[0mGET / [32m200 [0m5.899 ms - 280[0m
+[0mGET /app.acd7e6a8d711a5de8fbf.js [32m200 [0m4.686 ms - -[0m
+[0mGET /vendor.f6347e1b121bc058e1d9.js [32m200 [0m4.721 ms - -[0m
+[0mGET /2.263a179c5fdc0e245fa8.js [32m200 [0m0.810 ms - -[0m
+[0mGET /fonts/source-sans-pro-v11-latin-regular.f94f84eb867a3e3d65da0c5cad065437.woff [32m200 [0m0.596 ms - 19616[0m
+[0mGET /fonts/MaterialIcons-Regular.012cf6a10129e2275d79d6adac7f3b02.woff [32m200 [0m1.041 ms - 57620[0m
+[0mGET /fonts/fontawesome-webfont.af7ae505a9eed503f8b8e6982036873e.woff2 [32m200 [0m1.158 ms - 77160[0m
+[0mGET /favicon.ico [32m200 [0m1.967 ms - 280[0m
+[0mGET / [36m304 [0m0.831 ms - -[0m
+[0mGET /vendor.f6347e1b121bc058e1d9.js [36m304 [0m0.764 ms - -[0m
+[0mGET /app.acd7e6a8d711a5de8fbf.js [36m304 [0m0.764 ms - -[0m
+[0mGET /2.263a179c5fdc0e245fa8.js [36m304 [0m0.378 ms - -[0m
+SIGINT signal received.
+🏭 This is the production build.
+🚀 Server has started and is listening on 5000
+Graphql is listing on has started and is listening on /graphql
+[0mGET / [36m304 [0m3.894 ms - -[0m
+[0mGET /vendor.f6347e1b121bc058e1d9.js [36m304 [0m0.868 ms - -[0m
+[0mGET /app.acd7e6a8d711a5de8fbf.js [36m304 [0m0.845 ms - -[0m
+[0mGET /2.263a179c5fdc0e245fa8.js [36m304 [0m0.259 ms - -[0m
+SIGINT signal received.
+🏭 This is the production build.
+🚀 Server has started and is listening on 5000
+Graphql is listing on has started and is listening on /graphql
+SIGINT signal received.

@@ -1,19 +1,16 @@
 version: '3'
 services:
-  frontend:
-    image: webpack
+  web:
     container_name: ai-dashboard
+    image: webpack
     build:
-    context: ./
+      context: ./
     ports:
-  - 3000:3000
-    volumes:
-  - ./:/bindmount:rw
-  - node_modules:/src/node_modules
-    volumes:
-      node_modules:
-  depends_on:
-  - database
-    database:
+      - 3000:3000
+    depends_on:
+      - database
+  database:
       image: cassandra:3.11.2
       container_name: ai-dashboard-cassandra
+
+

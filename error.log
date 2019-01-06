@@ -977,3 +977,243 @@ Error: Cannot find module '@babel/preset-plugin-transform-react-constant-element
 
   When setting `useBuiltIns: 'usage'`, polyfills are automatically imported when needed.
   Please remove the `import '@babel/polyfill'` call or use `useBuiltIns: 'entry'` instead.
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+/home/coryell/Development/Dashboard/server/index.js:1
+(function (exports, require, module, __filename, __dirname) { import path from 'path';
+                                                                     ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Object.<anonymous> (/home/coryell/.nvm/versions/node/v10.13.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:48:21)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)

@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-	"build": "webpack --mode production",
+	"clean:dir": "rm -rf build && babel server --out-dir build",
+	"client:build": "webpack --mode production",
 	"dev": "webpack-dev-server --mode development --hot",
+	"prebuild": "npm run client:build && npm run clean:dir && npm run server:build",
 	"server": "nodemon ./server/index.js --exec babel-node",
-	"start": "pm2-runtime start ecosystem.config.js --env production",
+	"server:build": "pm2-runtime start ecosystem.config.js --env production",
+	"start": "npm run prebuild",
 	"test": "jest --coverage --watchAll --config=jest.json"
   },
   "repository": {
