@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 
 function getUserId({ req }) {
   if (!req.get('Authorization')) {
-    throw new Error('Authentication is required.');
+    throw new Error('User does not have authorization.');
   }
   const auth = req.get('Authorization').replace('Bearer', '').trim();
   const verified = jwt.verify(auth, process.env.JWT_SECRET);
@@ -10,3 +10,4 @@ function getUserId({ req }) {
 }
 
 export default getUserId;
+

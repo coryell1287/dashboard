@@ -1,13 +1,21 @@
-import { signInUser } from '../user/user.controller';
+import { authenticateUser, getUserProfile } from '../user/user.controller';
 
 const rootQueryResolvers = {
-  async signIn(parent, args, { client }, info) {
+  async authentication(_, args, { client }) {
     try {
-      return signInUser(client, args);
+      return authenticateUser(client, args);
     } catch (error) {
       throw new Error(error);
     }
   },
+
+  async user(_, args, { client }) {
+    try {
+      return getUserProfile(client, args);
+    } catch (error) {
+      throw new Error(error);
+    }
+  }
 };
 
 export default rootQueryResolvers;

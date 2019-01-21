@@ -2,7 +2,7 @@ import { gql } from 'apollo-server-express';
 
 const userProfileDef = gql`
   type UserProfile {
-   signIn(email: String!, password: String!): User
+   user(email: String!): User
   }
   
   type User {
@@ -10,8 +10,8 @@ const userProfileDef = gql`
     surname: String!
     email: String!
     initial: String!
-    password: String!
-    tokens: Tokens
+    online: Boolean!
+    tokens: Tokens!
     authorization: Auth! 
   }
   

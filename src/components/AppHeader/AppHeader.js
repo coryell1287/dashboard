@@ -8,7 +8,6 @@ import { withStyles } from '@material-ui/core/styles';
 import { createAction } from 'actions';
 
 import AccountCircle from 'components/AppHeader/AccountCirlce';
-import Initials from 'components/AppHeader/FirstNameSurname.query';
 
 const styles = theme => ({
 
@@ -48,7 +47,7 @@ class AppHeader extends PureComponent {
             <Typography component="h5" variant="h5" className={this.props.classes.flex}>
               Chatter
             </Typography>
-            <AccountCircle initials={Initials}/>
+            <AccountCircle/>
           </Toolbar>
         </AppBar>
       </section>

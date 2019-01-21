@@ -7,8 +7,7 @@ import Authentication from 'components/Authentication';
 
 const App = () => (
   <ConnectedRouter history={history}>
-    <Application/>
-    {/*<Authentication component={Application} />*/}
+    <Authentication component={Application}/>
   </ConnectedRouter>
 );
 

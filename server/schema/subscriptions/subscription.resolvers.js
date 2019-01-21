@@ -1,6 +1,6 @@
 const subscriptionResolvers = {
   activeUsers: {
-    subscribe(parent, args, { pubSub }, info) {
+    subscribe(_, args, { pubSub }) {
       console.log(pubSub);
       let count = 0;
 

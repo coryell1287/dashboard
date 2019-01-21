@@ -10,19 +10,19 @@ const styles = theme => ({
 
   disabled: {
     color: theme.palette.text.default,
-    background: theme.palette.primary.main
+    cursor: 'none'
   }
 
 });
 
-const SignInButtons = ({ control, disableButton, classes }) => (
+const SignInButtons = ({ control, disableButton, classes, onUserSignIn }) => (
   <div className="actionButtons">
     {
       disableButton ?
         (<Button variant="contained" className={classes.disabled}>
           {control}
         </Button>)
-        : (<Button variant="contained" color="primary" className={classes.primary}>
+        : (<Button onClick={onUserSignIn} variant="contained" color="primary" className={classes.primary}>
           {control}
         </Button>)
     }

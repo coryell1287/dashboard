@@ -3,12 +3,10 @@ import { connectRouter } from 'connected-react-router';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
-import ApolloClient from 'apollo-boost';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import gql from 'graphql-tag';
 import { ApolloProvider } from 'react-apollo';
 
-import 'api/serviceConfig';
+import client from 'apolloClient';
 import coreTheme from 'styles/theme/material-ui-theme';
 import { store, history } from 'store/configureStore';
 import App from 'routes';
@@ -16,10 +14,6 @@ import rootReducer from 'reducers';
 
 import 'styles/appStyles.css';
 const theme = createMuiTheme(coreTheme);
-
-const client = new ApolloClient({
-  uri: 'http://localhost:5000/graphql'
-});
 
 
 const renderUI = () => {

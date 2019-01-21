@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Route } from 'react-router-dom';
+
 import SignInPage from 'components/SignIn/SignInPage';
 
 class Authentication extends PureComponent {
@@ -7,6 +8,17 @@ class Authentication extends PureComponent {
     authenticated: false,
   };
 
+  getToken = (email, token) => {
+    sessionStorage.setItem('token', token);
+    sessionStorage.setItem('email', email);
+    this.setState({ authenticated: token.length > 0 });
+  };
+
+  componentDidMount() {
+    if (sessionStorage.getItem('token')) {
+      this.setState({ authenticated: true })
+    }
+  }
 
   render() {
     const { component: Component, ...rest } = this.props;
@@ -18,7 +30,7 @@ class Authentication extends PureComponent {
           return (
             this.state.authenticated
               ? <Component {...this.props}/>
-              : <SignInPage/>
+              : <SignInPage onUserAuth={this.getToken}/>
           );
         }}
       />

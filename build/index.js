@@ -132,7 +132,7 @@ regeneratorRuntime.mark(function _callee3() {
         case 2:
           console.log('🏭 This is the production build.');
           console.log("\uD83D\uDE80 Server has started and is listening on " + port);
-          console.info('Graphql is listing on has started and is listening on', _schema.default.graphqlPath);
+          console.info('Graphql has started and is listening on', _schema.default.graphqlPath);
 
         case 5:
         case "end":

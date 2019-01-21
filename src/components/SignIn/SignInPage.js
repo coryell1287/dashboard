@@ -9,13 +9,13 @@ import SignInFormValidation from 'components/SignIn/SignInFormValidation';
 
 import 'components/SignIn/signInPageStyles.css';
 
-const SignInPage = ({ heightResize }) => (
+const SignInPage = ({ heightResize, onUserAuth }) => (
   <main className="signInBackground">
     <article id="formWrapper" className={[`signInWrapper ${heightResize}`].join(' ')}>
       <SignInLinkState>
         <SignInLinks/>
       </SignInLinkState>
-      <SignInFormValidation containerStyle="container">
+      <SignInFormValidation onUserAuth={onUserAuth} containerStyle="container">
         <SignInForm/>
         <SignUpForm/>
       </SignInFormValidation>
