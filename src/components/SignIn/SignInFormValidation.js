@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { signIn } from 'components/SignIn/signIn.action';
-import { GET_TOKEN } from 'components/SignIn/authentication.query';
+import { CREATE_NEW_USER, GET_TOKEN } from 'components/SignIn/authentication.query';
 import client from 'apolloClient';
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({ signIn }, dispatch);
@@ -12,18 +12,14 @@ class SignInFormValidation extends Component {
   state = {
     buttons: {
       signInButton: 'Sign In',
-      disableSignInButton: false,
-      disableSignUpButton: false,
       signUpButton: 'Sign Up',
     },
     signInFormControls: {
       signInErrors: {
-        username: '',
         email: '',
         password: '',
       },
       signInFlags: {
-        username: false,
         email: false,
         password: false,
       },
@@ -31,13 +27,16 @@ class SignInFormValidation extends Component {
     signUpFormControls: {
       signUpErrors: {
         username: '',
+        firstname: '',
+        surname: '',
         password: '',
         confirm: '',
         email: '',
       },
       signUpFlags: {
-        formValid: false,
         username: false,
+        firstname: false,
+        surname: false,
         email: false,
         password: false,
         confirm: false,
@@ -45,19 +44,13 @@ class SignInFormValidation extends Component {
     },
     signInFields: [{
       id: 'signInFields',
-      name: 'signInUsername',
-      label: 'username',
-      type: 'text',
-      value: '',
-    }, {
-      id: 'signInFields',
-      name: 'signInEmail',
+      name: 'email',
       label: 'email',
       type: 'email',
       value: '',
     }, {
       id: 'signInFields',
-      name: 'signInPassword',
+      name: 'password',
       label: 'password',
       type: 'password',
       value: '',
@@ -65,8 +58,20 @@ class SignInFormValidation extends Component {
     ],
     signUpFields: [{
       id: 'signUpFields',
-      name: 'signUpUsername',
+      name: 'username',
       label: 'username',
+      type: 'text',
+      value: '',
+    }, {
+      id: 'signUpFields',
+      name: 'firstname',
+      label: 'first name',
+      type: 'text',
+      value: '',
+    }, {
+      id: 'signUpFields',
+      name: 'surname',
+      label: 'surname',
       type: 'text',
       value: '',
     }, {
@@ -77,20 +82,21 @@ class SignInFormValidation extends Component {
       value: '',
     }, {
       id: 'signUpFields',
-      name: 'signUpPassword',
+      name: 'password',
       label: 'password',
       type: 'password',
       value: '',
     }, {
       id: 'signUpFields',
       name: 'confirm',
-      label: 'confirm password',
+      label: 'confirm',
       type: 'password',
       value: '',
     }],
   };
 
-  handleUserInput = ({ target }) => {
+
+  handleSignInInput = ({ target }) => {
     const index = this.state.signInFields.findIndex(element => element.name === target.name);
     const arrayCopy = [...this.state.signInFields];
     arrayCopy[index].value = target.value;
@@ -98,24 +104,24 @@ class SignInFormValidation extends Component {
     this.setState({ ...this.state, arrayCopy, });
   };
 
+  handleSignUpInput = ({ target }) => {
+    const index = this.state.signUpFields.findIndex(element => element.name === target.name);
+    const arrayCopy = [...this.state.signUpFields];
+    arrayCopy[index].value = target.value;
 
-  handleUserSignIn = () => {
-    this.state.signInFields.map(({ label, id, value }) => this.validateUserInput(label, id, value));
+    this.setState({ ...this.state, arrayCopy, });
   };
 
-  handleUserSignUp = (e, index) => {
-    const target = e.target;
-    const signUpInput = [...this.state.signUpFields];
-    const fieldName = target.name;
-    const fieldId = target.dataset.field;
+  handleUserSignIn = () => {
+    this.state.signInFields.map(({ name, id, value }) => {
+      this.validateUserInput(name, id, value)
+    });
+  };
 
-    signUpInput[index].value = target.value;
-    this.setState(
-      {
-        ...this.state,
-        signUpInput,
-      },
-      () => this.validateUserInput(fieldName, fieldId, signUpInput[index].value));
+  handleUserSignUp = () => {
+    this.state.signUpFields.map(({ name, id, value }) => {
+      this.validateUserInput(name, id, value)
+    });
   };
 
   validateUserInput = (fieldName, fieldId, value) => {
@@ -123,30 +129,25 @@ class SignInFormValidation extends Component {
     let passError;
     let emailError;
     let confirmError;
-
     const isSignInForm = fieldId === 'signInFields';
     const isSignUpForm = fieldId === 'signUpFields';
 
     const signInControls = { ...this.state.signInFormControls };
     const signUpControls = { ...this.state.signUpFormControls };
 
-
     switch (fieldName) {
       case 'username':
-        if (isSignInForm) {
-          userError = (value.length === 0 && isSignInForm);
-          signInControls.signInFlags.username = userError;
-          return this.setState(
-            {
-              ...this.state,
-              signInControls,
-            },
-            () => this.validateForm(),
-          );
-        }
         userError = (value.length === 0 && isSignUpForm);
         signUpControls.signUpFlags.username = userError;
-        return this.setState({ ...this.state, signUpControls });
+        return this.setState({ ...this.state, signUpControls }, () => this.validateSignUpForm());
+      case 'firstname':
+        userError = (value.length === 0 && isSignUpForm);
+        signUpControls.signUpFlags.firstname = userError;
+        return this.setState({ ...this.state, signUpControls }, () => this.validateSignUpForm());
+      case 'surname':
+        userError = (value.length === 0 && isSignUpForm);
+        signUpControls.signUpFlags.surname = userError;
+        return this.setState({ ...this.state, signUpControls }, () => this.validateSignUpForm());
       case 'password':
         if (isSignInForm) {
           passError = (value.length === 0 && isSignInForm);
@@ -156,17 +157,18 @@ class SignInFormValidation extends Component {
               ...this.state,
               signInControls,
             },
-            () => this.validateForm(),
+            () => this.validateSignInForm(),
           );
         }
         passError = (value.length === 0 && isSignUpForm);
         signUpControls.signUpFlags.password = passError;
+        this.setState({ ...this.state, signUpControls }, () => this.validateSignUpForm());
         return this.setState(
           {
             ...this.state,
             signUpControls,
           },
-          () => this.validateForm(),
+          () => this.validateSignUpForm(),
         );
       case 'email':
         if (isSignInForm) {
@@ -177,32 +179,50 @@ class SignInFormValidation extends Component {
               ...this.state,
               signInControls,
             },
-            () => this.validateForm(),
+            () => this.validateSignInForm(),
           );
         }
         emailError = (value.length === 0 && isSignUpForm);
         signUpControls.signUpFlags.email = emailError;
+        this.setState({ ...this.state, signUpControls }, () => this.validateSignUpForm());
         return this.setState(
           {
             ...this.state,
             signUpControls,
           },
-          () => this.validateForm(),
+          () => this.validateSignUpForm(),
         );
       case 'confirm':
-        confirmError = (value.length === 0 && isSignUpForm);
-        signUpControls.signUpFlags.confirm = confirmError;
+        if (isSignUpForm) {
+          confirmError = (value.length === 0 && isSignUpForm);
+          signUpControls.signUpFlags.confirm = confirmError;
+          return this.setState({ ...this.state, signUpControls }, () => this.validateSignUpForm());
+        }
         return this.setState(
           {
             ...this.state,
             signUpControls,
           },
-          () => this.validateForm(),
+          () => this.validateSignUpForm(),
         );
       default:
         break;
     }
   };
+
+  submitSignUpForm(username, firstname, surname, email, password) {
+    const variables = {
+      username, firstname, surname, email, password
+    };
+    client.mutate({
+      mutation: CREATE_NEW_USER,
+      variables: {
+        ...variables
+      }
+    }).then(({ data }) => {
+      console.log(data.signUp.applied)
+    }).catch(error => new Error(error));
+  }
 
   submitForm(email, password) {
     client.query({
@@ -219,18 +239,36 @@ class SignInFormValidation extends Component {
       .catch(error => new Error(error))
   }
 
-  validateForm() {
-    const buttons = { ...this.state.buttons };
-    buttons.disableSignInButton = true;
-    const { signInFormControls: { signInFlags: { username, password, email } } } = this.state;
-    if (username || password || email) {
-      return this.setState({ ...this.state, buttons });
+  validateSignUpForm() {
+    const hasValues = this.state.signUpFields.every(element => element.value.length > 0);
+
+    const confirm = this.state.signUpFields.find(item => {
+      return item.label === 'confirm';
+    });
+    const password = this.state.signUpFields.find(item => {
+      return item.label === 'password';
+    });
+
+    if ((confirm.value !== password.value) && !hasValues) {
+      const copyControls = { ...this.state.signUpFormControls };
+      copyControls.signUpFlags.confirm = true;
+      copyControls.signUpFlags.password = true;
+      this.setState({ copyControls });
+      return;
     }
-    buttons.disableSignInButton = false;
-    return this.setState({
-      ...this.state,
-      buttons
-    }, () => this.submitForm(this.state.signInFields[1].value, this.state.signInFields[2].value));
+    this.submitSignUpForm(this.state.signUpFields[0].value,
+      this.state.signUpFields[1].value,
+      this.state.signUpFields[2].value,
+      this.state.signUpFields[3].value,
+      this.state.signUpFields[4].value)
+
+  }
+
+  validateSignInForm() {
+    const { signInFormControls: { signInFlags: { password, email } } } = this.state;
+    if (!password || !email) {
+      return this.submitForm(this.state.signInFields[0].value, this.state.signInFields[1].value);
+    }
   }
 
   render() {
@@ -244,7 +282,8 @@ class SignInFormValidation extends Component {
               ...this.state,
               onUserSignIn: this.handleUserSignIn,
               onUserSignUp: this.handleUserSignUp,
-              onUserInput: this.handleUserInput
+              onSignInInput: this.handleSignInInput,
+              onSignUpInput: this.handleSignUpInput
             }),
           )}
       </section>

@@ -2,8 +2,21 @@ import React from 'react';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
 
-import SignInButtons from 'components/SignIn/SignInButtons';
+import Button from '@material-ui/core/Button';
+import { withStyles } from '@material-ui/core/styles';
 
+const styles = theme => ({
+  primary: {
+    color: theme.palette.text.primary,
+    background: theme.palette.primary.main
+  },
+
+  disabled: {
+    color: theme.palette.text.default,
+    cursor: 'none'
+  }
+
+});
 const Input = (props) => {
   return (
     <label htmlFor={props.name}>
@@ -22,17 +35,17 @@ const Input = (props) => {
         name={props.name}
         id={props.name}
         type={props.type}
-        onChange={props.onUserInput}
+        onChange={props.onSignInInput}
       />
     </label>
   );
-}
+};
 
-const SignInForm = ({ signInAnimation, onUserSignIn, signInFields, buttons: { signInButton, disableSignInButton }, ...rest }) => {
+const SignInForm = (props) => {
   return (
-    <form id="signIn" className={`signInForm ${signInAnimation}`}>
+    <form id="signIn" className={`signInForm ${props.signInAnimation}`}>
       <div>
-        {signInFields.map((input, idx) => (
+        {props.signInFields.map((input, idx) => (
           <Input
             key={input.name}
             label={input.label}
@@ -40,16 +53,21 @@ const SignInForm = ({ signInAnimation, onUserSignIn, signInFields, buttons: { si
             index={idx}
             fieldId={input.id}
             type={input.type}
-            value={signInFields[idx].value}
-            {...rest}
+            value={props.signInFields[idx].value}
+            {...props}
           />
         ))}
       </div>
-      <SignInButtons
-        onUserSignIn={onUserSignIn}
-        disableButton={disableSignInButton}
-        control={signInButton}
-      />
+      <div className="actionButtons">
+        <Button
+          onClick={props.onUserSignIn}
+          variant="contained"
+          color="primary"
+          className={props.classes.primary}
+        >
+          {props.buttons.signInButton}
+        </Button>
+      </div>
     </form>
   );
 };
@@ -59,4 +77,4 @@ const mapStateToProps = state => ({
   heightResize: state.signInState.formWrapper.heightResize,
 });
 
-export default connect(mapStateToProps)(SignInForm);
+export default connect(mapStateToProps)(withStyles(styles)(SignInForm));

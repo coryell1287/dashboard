@@ -15,18 +15,19 @@ const styles = theme => ({
 
 });
 
-const SignInButtons = ({ control, disableButton, classes, onUserSignIn }) => (
-  <div className="actionButtons">
-    {
-      disableButton ?
-        (<Button variant="contained" className={classes.disabled}>
-          {control}
-        </Button>)
-        : (<Button onClick={onUserSignIn} variant="contained" color="primary" className={classes.primary}>
-          {control}
-        </Button>)
-    }
-  </div>
-);
+const SignInButtons = ({ control, classes, onUserSignIn }) => {
+  return (
+    <div className="actionButtons">
+      <Button
+        onClick={onUserSignIn}
+        variant="contained"
+        color="primary"
+        className={classes.primary}
+      >
+        {control}
+      </Button>
+    </div>
+  );
+}
 
 export default withStyles(styles)(SignInButtons);

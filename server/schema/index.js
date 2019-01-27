@@ -19,10 +19,10 @@ const SchemaDefinition = gql`
 
 const apollo = new ApolloServer({
   typeDefs: [SchemaDefinition, RootQuery, RootMutation, Subscriptions, UserType, AuthType],
-  context(request) {
-    return { client, pubSub, request }
-  },
   resolvers,
+  context({ req }) {
+    return { client, pubSub, req }
+  },
   introspection: isDev,
   playground: isDev,
 });

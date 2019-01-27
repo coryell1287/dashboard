@@ -8,25 +8,30 @@ const userProfileDef = gql`
   type User {
     firstname: String!
     surname: String!
+    username: String!
     email: String!
     initial: String!
     online: Boolean!
-    tokens: Tokens!
+    tokens: String!
     authorization: Auth! 
   }
   
   type Auth {
-    read: Boolean!
-    write: Boolean!
+    roles: [String]!
+    permissions: Permissions!
   }
   
-  type Tokens {
-     access: String
-     token: String
+  type Permissions {
+     read: Boolean!
+     write: Boolean!
   }
   
   type Applied {
    applied: Boolean
+  }
+  
+  type Message {
+    message: String!
   }
   
 `;
