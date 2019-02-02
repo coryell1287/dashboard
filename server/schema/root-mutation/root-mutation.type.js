@@ -9,7 +9,8 @@ const RootMutation = gql`
       email: String!
       password: String!
     ): Applied
-   signOut(email: String!): Message 
+   signOut(email: String!): Message
+   uploadImage(file: Upload): Avatar 
   }
 `;
 

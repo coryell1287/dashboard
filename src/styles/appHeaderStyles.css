@@ -48,6 +48,8 @@
   font-weight: bold;
   position: relative;
   font-family: var(--default-font-family);
+  top: -14px;
+  right: 19px;
 }
 
 .menuIcon {

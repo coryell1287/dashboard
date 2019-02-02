@@ -1,4 +1,4 @@
-import { userExists, insertUser, signOutUser } from '../user/user.controller';
+import { userExists, insertUser, signOutUser, uploadAvatar } from '../user/user.controller';
 
 const rootMutationResolver = {
 
@@ -18,7 +18,16 @@ const rootMutationResolver = {
     } catch (error) {
       throw new Error(error);
     }
+  },
+
+  async uploadImage(_, args, { client }) {
+    try {
+      return uploadAvatar(client, args);
+    } catch (error) {
+      throw new Error(error);
+    }
   }
+
 };
 
 export default rootMutationResolver;

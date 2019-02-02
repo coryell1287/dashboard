@@ -17,8 +17,12 @@ const SchemaDefinition = gql`
     subscription: Subscription
   }`;
 
+const upload = gql`
+  scalar Upload
+`;
+
 const apollo = new ApolloServer({
-  typeDefs: [SchemaDefinition, RootQuery, RootMutation, Subscriptions, UserType, AuthType],
+  typeDefs: [SchemaDefinition, RootQuery, RootMutation, Subscriptions, upload, UserType, AuthType],
   resolvers,
   context({ req }) {
     return { client, pubSub, req }

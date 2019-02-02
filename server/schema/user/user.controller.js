@@ -1,5 +1,7 @@
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
+import fs from 'fs';
+import base64Img from 'base64-img';
 
 export async function userExists(client, email) {
   const query = 'SELECT email from user_profile WHERE email = ?';
@@ -98,5 +100,43 @@ export async function getUserProfile(client, args) {
       }
     }
   }
+}
 
+export async function storeFile(filename, stream) {
+  const dir = './upload';
+  const path = `${dir}/${filename}`;
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir);
+  }
+
+  return new Promise((resolve, reject) => {
+    stream.on('error', error => {
+      if (stream.truncated) {
+        fs.unlinkSync(path);
+        reject(error);
+      }
+    })
+      .pipe(fs.createWriteStream(path))
+      .on('error', error => reject(error))
+      .on('finish', () => resolve({ path }));
+  });
+}
+
+export async function uploadAvatar(client, { file }) {
+  try {
+    const { filename, createReadStream, mimetype } = await file;
+    const stream = createReadStream();
+    const results = await storeFile(filename, stream);
+
+    const files = await fs.readFileSync(`./upload/${filename}`);
+    const buff = Buffer.from(files, 'base64');
+    const data = base64Img.base64Sync(buff);
+    console.log(data);
+    await fs.writeFileSync(data, './upload/text.txt');
+  } catch (error) {
+    throw new Error(error);
+  }
+
+  // console.log(Buffer.from(file.filename, 'hex'));
+  // const { createStream, filename, mimetype, encoding } = await file;
 }

@@ -1,10 +1,13 @@
 import React from 'react';
-import { Query } from 'react-apollo';
-import { GET_INITIALS } from 'components/AppHeader/getInitials.query';
-import anonymous from 'images/anonymous.png';
 import { withStyles } from '@material-ui/core/styles';
+import { Query, Mutation } from 'react-apollo';
+import IconButton from '@material-ui/core/IconButton';
 
-const styles = {
+import { GET_INITIALS } from 'components/AppHeader/getInitials.query';
+import { UPLOAD_AVATAR } from 'components/AppHeader/upload.query';
+import anonymous from 'images/anonymous.png';
+
+const styles = (theme) => ({
   imageWrapper: {
     left: '-3px',
     position: 'relative',
@@ -12,8 +15,18 @@ const styles = {
   image: {
     width: '40px',
     height: '40px'
+  },
+  root: {
+    fontSize: '19px',
+    position: 'relative',
+    left: '6px',
+    top: '4px',
+    color: theme.palette.text.primary,
+  },
+  input: {
+    display: 'none'
   }
-};
+});
 
 
 const Initials = (props) => {
@@ -28,7 +41,7 @@ const Initials = (props) => {
         if (loading) return <Anonymous {...props} />;
         if (error) return `Error!: ${error}`;
         return (
-         <span>{data.user.initial}</span>
+          <span>{data.user.initial}</span>
         );
       }}
     </Query>
@@ -49,7 +62,26 @@ const AccountCircle = (props) => {
       <i className="material-icons profileIcon">
           <span className="profileCircle">
           <abbr className="profileName">
+            <Mutation mutation={UPLOAD_AVATAR}>
+              {
+                uploadImage => (
+                  <input
+                    onChange={({ target: { validity, files: [file] } }) =>
+                      validity.valid && uploadImage({ variables: { file } })
+                    }
+                    accept="image/*"
+                    className={props.classes.input}
+                    id="upload-file"
+                    type="file"
+                  />
+                )
+              }
+            </Mutation>
+        <label htmlFor="upload-file">
+          <IconButton className={props.classes.root} variant="contained" component="span">
             <Initials {...props}/>
+        </IconButton>
+        </label>
           </abbr>
           </span>
       </i>

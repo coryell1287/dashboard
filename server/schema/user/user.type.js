@@ -34,6 +34,12 @@ const userProfileDef = gql`
     message: String!
   }
   
+  type Avatar {
+    filename: String!
+    mimetype: String!
+    encoding: String!
+  }
+  
 `;
 
 export default userProfileDef;
