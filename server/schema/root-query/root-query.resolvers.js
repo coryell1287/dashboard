@@ -9,7 +9,7 @@ const rootQueryResolvers = {
     }
   },
 
-  async user(_, args, { client }) {
+  async user(_, args, { client, req }) {
     try {
       return getUserProfile(client, args);
     } catch (error) {

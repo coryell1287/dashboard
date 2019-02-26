@@ -1,7 +1,11 @@
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import fs from 'fs';
-import base64Img from 'base64-img';
+import { promisify } from 'util';
+import im from 'imagemagick';
+import uuidv1 from 'uuid/v1';
+
+const readFile = promisify(fs.readFile);
 
 export async function userExists(client, email) {
   const query = 'SELECT email from user_profile WHERE email = ?';
@@ -87,12 +91,14 @@ export async function getUserProfile(client, args) {
   const results = await client.execute(query, params);
   if (results.rows.length === 0) throw new Error('User doesn\'t exists.');
   const user = { ...results.rows[0] };
-  let initialArr = [];
-  initialArr.push(user.firstname, user.surname);
-  const initial = initialArr.map(n => n[0]).join('');
+  let initialsArr = [];
+  initialsArr.push(user.firstname, user.surname);
+  const initials = initialsArr.map(n => n[0]).join('');
+  const id = uuidv1();
   return {
     ...user,
-    initial,
+    id,
+    initials,
     authorization: {
       roles: [...user.roles],
       permissions: {
@@ -101,6 +107,8 @@ export async function getUserProfile(client, args) {
     }
   }
 }
+
+
 
 export async function storeFile(filename, stream) {
   const dir = './upload';
@@ -122,21 +130,33 @@ export async function storeFile(filename, stream) {
   });
 }
 
-export async function uploadAvatar(client, { file }) {
+export async function resizeImage(filename) {
+  return await im.resize({
+    srcPath: `./upload/${filename}`,
+    dstPath: `./upload/small-${filename}`,
+    width: 90,
+    height: 90,
+    quality: 1,
+    progressive: true
+  });
+}
+
+export async function uploadAvatar(client, { file, email }) {
+  const update = 'UPDATE user_profile SET avatar = ? WHERE email = ?';
+
   try {
     const { filename, createReadStream, mimetype } = await file;
     const stream = createReadStream();
-    const results = await storeFile(filename, stream);
 
-    const files = await fs.readFileSync(`./upload/${filename}`);
-    const buff = Buffer.from(files, 'base64');
-    const data = base64Img.base64Sync(buff);
-    console.log(data);
-    await fs.writeFileSync(data, './upload/text.txt');
+    await storeFile(filename, stream);
+    await resizeImage(filename);
+    const files = await readFile(`./upload/small-${filename}`);
+    const base64String = `data:${mimetype};base64,${files.toString('base64')}`;
+    const params = [base64String, email];
+    await client.execute(update, params, { prepare: true });
+    return { avatar: base64String };
   } catch (error) {
     throw new Error(error);
   }
-
-  // console.log(Buffer.from(file.filename, 'hex'));
-  // const { createStream, filename, mimetype, encoding } = await file;
 }
+

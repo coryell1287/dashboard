@@ -6,13 +6,15 @@ const userProfileDef = gql`
   }
   
   type User {
+    id: ID!
     firstname: String!
     surname: String!
     username: String!
     email: String!
-    initial: String!
+    initials: String!
     online: Boolean!
     tokens: String!
+    avatar: String
     authorization: Auth! 
   }
   
@@ -35,11 +37,8 @@ const userProfileDef = gql`
   }
   
   type Avatar {
-    filename: String!
-    mimetype: String!
-    encoding: String!
+    avatar: String
   }
-  
 `;
 
 export default userProfileDef;

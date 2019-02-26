@@ -1,10 +1,11 @@
 import gql from 'graphql-tag';
 
-export const GET_INITIALS = gql`
-  
+export const GET_PROFILE = gql`
  query($email: String!){
   user(email: $email) {
-    initial 
+    id,
+    initials,
+    avatar,
   }
  } 
 `;

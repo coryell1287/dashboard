@@ -11,9 +11,9 @@ const port = process.env.PORT || 5000;
 
 const app = express();
 const publicPath = path.join(__dirname, '../dist');
+apollo.applyMiddleware({ app });
 const server = http.createServer(app);
 
-apollo.applyMiddleware({ app });
 app.use(cors());
 app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: false }));

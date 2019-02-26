@@ -10,6 +10,7 @@ import Subscriptions from './subscriptions/subscription.type';
 const pubSub = new PubSub();
 const isDev = process.env.NODE_ENV === 'development';
 
+
 const SchemaDefinition = gql`
   schema {
     query: RootQuery,
